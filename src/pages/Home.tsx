@@ -4,7 +4,7 @@ import { Navbar } from '../components/Navbar';
 export function Home() {
     return (
         <>
-            <section className='max-h-auto height relative h-auto min-h-screen w-full overflow-auto overflow-x-hidden'>
+            <section className='max-h-auto height relative h-auto min-h-screen w-full overflow-hidden overflow-x-hidden'>
             <Navbar/>
             <Main/>
             </section>
