@@ -9,10 +9,11 @@ import {
   PulseNova,
   RSG,
 } from "../sections";
+import "../css/arkforge.css";
 
 export function ArkforgePage() {
   return (
-    <>
+    <div id="arkforge">
       <Introduction />
       <DetailBanner />
       <Brands />
@@ -22,6 +23,6 @@ export function ArkforgePage() {
       <AghsLab />
       <BannerTagline />
       <InvestorForm />
-    </>
+    </div>
   );
 }

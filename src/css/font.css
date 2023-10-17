@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
+@font-face {
+  font-family: "airif";
+  src: url("/src/assets/font/airif.otf") format("opentype");
 }
 
-.roboto{
-    font-family: 'Roboto', sans-serif;
+.airif {
+  font-family: "airif";
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
 }
