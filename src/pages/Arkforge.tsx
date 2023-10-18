@@ -19,15 +19,17 @@ export function ArkforgePage() {
       <Navbar/>
     <div id="arkforge">
       <Introduction />
-      <DetailBanner /> {/* done */}
-      <Brands /> {/* done */}
+      <DetailBanner />
+      <Brands />
       <Navigation /> {/* need fix */}
       <hr className="w-full mb-10 -mt-4 border border-[#3A3A3A]" />
       <PulseNova />
       <RSG />
       <AghsLab />
-      <BannerTagline /> {/* need fix */}
-      <InvestorForm /> {/* done */}
+      <div className="mt-20">
+        <BannerTagline /> {/* need fix */}
+      </div>
+      <InvestorForm />
       <Footer/>
     </div>
     </>
