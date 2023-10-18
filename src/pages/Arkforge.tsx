@@ -15,14 +15,15 @@ export function ArkforgePage() {
   return (
     <div id="arkforge">
       <Introduction />
-      <DetailBanner />
-      <Brands />
-      <Navigation />
+      <DetailBanner /> {/* done */}
+      <Brands /> {/* done */}
+      <Navigation /> {/* need fix */}
+      <hr className="w-full mb-10 -mt-4 border border-[#3A3A3A]" />
       <PulseNova />
       <RSG />
       <AghsLab />
-      <BannerTagline />
-      <InvestorForm />
+      <BannerTagline /> {/* need fix */}
+      <InvestorForm /> {/* done */}
     </div>
   );
 }
