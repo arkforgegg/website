@@ -10,9 +10,13 @@ import {
   RSG,
 } from "../sections";
 import "../css/arkforge.css";
+import { Footer } from "../components/footer";
+import { Navbar } from "../components/Navbar";
 
 export function ArkforgePage() {
   return (
+    <>
+      <Navbar/>
     <div id="arkforge">
       <Introduction />
       <DetailBanner /> {/* done */}
@@ -24,6 +28,8 @@ export function ArkforgePage() {
       <AghsLab />
       <BannerTagline /> {/* need fix */}
       <InvestorForm /> {/* done */}
+      <Footer/>
     </div>
+    </>
   );
 }
