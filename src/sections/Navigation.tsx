@@ -3,7 +3,7 @@ import nova from "../assets/img/navigation/pulse_nova.png";
 import aghs from "../assets/img/navigation/aghs.png";
 import { useEffect, useState } from "react";
 import { GrayArrow } from "../components";
-import { useStoreContext } from "../Context/Store";
+// import { useStoreContext } from "../Context/Store";
 
 const navs = [
   {
@@ -24,7 +24,7 @@ const navs = [
 ];
 
 export function Navigation() {
-  const {} = useStoreContext();
+  // const {} = useStoreContext();
   const [currentSection, setCurrentSection] = useState("");
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -38,11 +38,9 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the scroll position of the window
       const scrollPosition = window.scrollY;
 
-      // Find the section that is currently in view
-      const sectionIds = ["aghs", "nova", "rsg"]; // Array of your section IDs
+      const sectionIds = ["aghs", "nova", "rsg"];
       let found = false;
 
       sectionIds.forEach((sectionId) => {
@@ -52,7 +50,6 @@ export function Navigation() {
           const sectionTop = section.offsetTop - 5;
           const sectionHeight = section.offsetHeight;
 
-          // Check if the section is in the viewport
           if (
             scrollPosition >= sectionTop &&
             scrollPosition < sectionTop + sectionHeight
@@ -64,17 +61,13 @@ export function Navigation() {
           }
         }
       });
-
-      // If no section is in view, you can handle it here, for example, setting a default section ID.
       if (!found) {
-        setCurrentSection("default"); // Set your default section ID
+        setCurrentSection("default");
       }
     };
 
-    // Attach the scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
