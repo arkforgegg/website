@@ -11,15 +11,13 @@ import {
 } from "../sections";
 import "../css/arkforge.css";
 
-
-
 export function ArkforgePage() {
   return (
     <div id="arkforge">
       <Introduction />
       <DetailBanner />
       <Brands />
-      <Navigation /> {/* need fix */}
+      <Navigation />
       <hr className="w-full mb-10 -mt-4 border border-[#3A3A3A]" />
       <PulseNova />
       <RSG />
