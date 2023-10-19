@@ -82,14 +82,14 @@ export function InvestorForm() {
     >
       <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">
-        <p className="text-sm my-3 text-[#6C6C6C] airif">
+        {/* <p className="text-sm my-3 text-[#6C6C6C] airif">
           Empowering Investors with information and Access. Explore our
           downloadable resources and reach out to us for any inquiries or
           opportunities.
-        </p>
+        </p> */}
       </div>
 
-      <div className="my-10 border border-[#CB0000]">
+      <div className="my-14 border border-[#CB0000]">
         <section className="bg-[#CB0000] p-3">
           <b className="montserrat xl:text-3xl">GET IN TOUCH</b>
           <p className="text-sm my-3 xl:mx-5 airif">

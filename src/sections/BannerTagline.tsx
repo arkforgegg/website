@@ -1,10 +1,13 @@
 export function BannerTagline() {
   const details = [
     {
-      desc: "EMPOWERING INFLUENCE",
+      desc: "EMPOWERING GAMING",
     },
     {
-      desc: "CREATING VALUE",
+      desc: "AMPLIFYING INFLUENCE",
+    },
+    {
+      desc: "ASIA'S BIGGEST GAMER COMMUNITY",
     },
   ];
 

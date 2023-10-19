@@ -51,6 +51,7 @@ export function RSG() {
   return (
     <div>
       <GridComponent
+        linkWebsite={`https://www.rsg.gg/`}
         id="rsg"
         logo={logo}
         reverseFlex={true}

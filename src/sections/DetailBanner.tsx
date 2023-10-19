@@ -8,7 +8,7 @@ export function DetailBanner() {
       desc: "FOUNDING YEAR",
     },
     {
-      title: "5 COUNTRIES",
+      title: "5 CONTINENTS",
       desc: "ACROSS SOUTHEAST ASIA",
     },
     {
@@ -16,7 +16,7 @@ export function DetailBanner() {
       desc: "COMMUNITY SIZE",
     },
     {
-      title: "20+",
+      title: "100+",
       desc: "GLOBAL BRANDS",
     },
   ];
