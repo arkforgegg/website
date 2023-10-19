@@ -19,3 +19,24 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.text-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-slide {
+  display: inline-block;
+  margin-right: 50px; /* Adjust margin as needed */
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -23,18 +23,18 @@ const navs = [
   },
 ];
 
+export const scrollToElement = (id: string) => {
+  const targetElement = document.getElementById(id);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export function Navigation() {
   // const {} = useStoreContext();
   const [currentSection, setCurrentSection] = useState("");
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-  const scrollToElement = (id: string) => {
-    const targetElement = document.getElementById(id);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {

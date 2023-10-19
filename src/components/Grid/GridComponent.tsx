@@ -116,7 +116,7 @@ export function GridComponent({
             <VisitWebsite />
           </div>
         </div>
-        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-40">
+        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52">
           <b className="mt-10 montserrat lg:text-3xl 3xl:text-[40px]">
             SUCCESS STORIES
           </b>
@@ -124,27 +124,27 @@ export function GridComponent({
             <div className="relative">
               <button
                 onClick={nextImage}
-                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 top-1/2 -translate-y-1/2"
+                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
               >
                 <WhiteArrow />
               </button>
               <button
                 onClick={prevImage}
-                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 top-1/2 -translate-y-1/2"
+                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
               >
                 <div className="rotate-180">
                   <WhiteArrow />
                 </div>
               </button>
-              <div className="h-40 lg:h-80">
+              <div className="h-40 sm:h-80 lg:h-80 flexcenter">
                 <img src={imageList[imgCrsl]} alt="" />
               </div>
             </div>
           </div>
-          <p className="airif text-sm lg:text-xl 3xl:text-3xl pt-5">
+          <p className="airif text-sm lg:text-xl 3xl:text-3xl 3xl:pt-10 pt-5">
             {storyTitle}
           </p>
-          <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-sm">
+          <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem]">
             {storyDesc}
           </p>
         </div>

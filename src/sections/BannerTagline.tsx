@@ -1,5 +1,3 @@
-// import React from "react";
-
 export function BannerTagline() {
   const details = [
     {
@@ -11,10 +9,10 @@ export function BannerTagline() {
   ];
 
   return (
-    <div className="bg-[#CB0000] overflow-x-auto w-full">
-      <div className={`flex items-center 2xl:px-24 py-4 xl:py-6 px-8 gap-8`}>
+    <div className="bg-[#CB0000] flex overflow-hidden gap-10">
+      <div className={`carousel-slide flex-shrink-0 p-5`}>
         {details.map((detail) => (
-          <b className="montsreat xl:text-[36px]">{detail.desc}</b>
+          <b className="montsreat xl:text-[36px] ml-10 lg:ml-28">{detail.desc}</b>
         ))}
       </div>
     </div>
