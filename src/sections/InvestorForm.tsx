@@ -68,13 +68,18 @@ export function InvestorForm() {
       title: "",
       className: "lg:col-span-2 lg:row-start-5 items-center mt-6 lg:mb-10",
       input: (
-        <button className="bg-[#FF0000] py-2 airif rounded-md w-full">SUBMIT</button>
+        <button className="bg-[#FF0000] py-2 airif rounded-md w-full">
+          SUBMIT
+        </button>
       ),
     },
   ];
 
   return (
-    <div className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56">
+    <div
+      id="contact"
+      className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
+    >
       <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">
         <p className="text-sm my-3 text-[#6C6C6C] airif">
