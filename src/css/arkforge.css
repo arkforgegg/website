@@ -1,0 +1,42 @@
+#arkforge {
+  @apply bg-[#000000] min-h-screen flex flex-col items-center text-white text-[20px];
+}
+
+#nova {
+  background-image: url("/src/assets/img/bg/nova.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#aghs {
+  background-image: url("/src/assets/img/bg/aghs.png");
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+#rsg {
+  background-image: url("/src/assets/img/bg/rsg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-slide {
+  display: inline-block;
+  margin-right: 50px; /* Adjust margin as needed */
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
