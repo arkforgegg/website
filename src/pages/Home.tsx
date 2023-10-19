@@ -1,5 +1,6 @@
 import { Main } from '../components/Main';
 import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/footer';
 
 export function Home() {
     return (
@@ -7,6 +8,7 @@ export function Home() {
             <section className='max-h-auto height relative h-auto min-h-screen w-full overflow-hidden overflow-x-hidden'>
             <Navbar/>
             <Main/>
+            <Footer/>
             </section>
         </>
     )
