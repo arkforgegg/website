@@ -9,6 +9,7 @@ import gaming from "../assets/img/pulse-nova/Gaming Management.png";
 import community from "../assets/img/pulse-nova/Community Management.png";
 import talent from "../assets/img/pulse-nova/Talent Management.png";
 import pr from "../assets/img/pulse-nova/Public Relations.png";
+import video from "../assets/img/pulse-nova/video.png";
 
 import { GridComponent } from "../components";
 
@@ -47,7 +48,7 @@ export function PulseNova() {
       ),
     },
     {
-      img: "",
+      img: video,
       service: (
         <span className="flexcenter text-[#4FAA94]">VIDEO PRODUCTION</span>
       ),
