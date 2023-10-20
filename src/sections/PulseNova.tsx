@@ -6,7 +6,7 @@ import eion1 from "../assets/img/section/eion1.png";
 
 import sponsor from "../assets/img/pulse-nova/Sponsorship.png";
 import gaming from "../assets/img/pulse-nova/Gaming Management-cropped.png";
-import community from "../assets/img/pulse-nova/Community Management.png";
+import community from "../assets/img/pulse-nova/Community Management-cropped.png";
 import talent from "../assets/img/pulse-nova/Talent Management - cropped.png";
 import pr from "../assets/img/pulse-nova/Public Relations - cropped.png";
 import video from "../assets/img/pulse-nova/video - cropped.png";
