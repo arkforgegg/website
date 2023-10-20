@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { WhiteArrow } from "../Icons";
+import { Link } from "react-router-dom";
 
 interface Props {
   id: "nova" | "aghs" | "rsg";
@@ -11,6 +12,7 @@ interface Props {
   imageList: string[];
   storyTitle: string;
   storyDesc: string;
+  linkWebsite?: string;
   reverseFlex?: boolean;
 }
 
@@ -24,6 +26,7 @@ export function GridComponent({
   imageList,
   storyDesc,
   storyTitle,
+  linkWebsite,
   reverseFlex,
 }: Props) {
   const [imgCrsl, setImgCrsl] = useState(0);
@@ -49,20 +52,28 @@ export function GridComponent({
   }, [imgCrsl]);
 
   const VisitWebsite = () => (
-    <button
-      className={`bg-gradient-to-r p-4 w-full rounded-md ${
-        id === "nova"
-          ? "from-[#0A604B] to-[#4EA993] hover:from-[#084032] hover:to-[#0B4A3B]"
-          : id === "rsg"
-          ? "from-[#002073] to-[#0047FE] hover:from-[#001A5C] hover:to-[#002B99]"
-          : id === "aghs"
-          ? "from-[#003A7E] to-[#0075FF] hover:from-[#012E63] hover:to-[#00499F]"
-          : ""
-      } text-[14px] airif flexcenter justify-between`}
+    <Link
+      className="w-full"
+      to={linkWebsite as string}
+      target={linkWebsite ? "_blank" : ""}
     >
-      <p className="3xl:text-lg">VISIT WEBSITE</p>
-      <WhiteArrow />
-    </button>
+      <button
+        className={`bg-gradient-to-r p-4 w-full rounded-md ${
+          id === "nova"
+            ? "from-[#0A604B] to-[#4EA993] hover:from-[#084032] hover:to-[#0B4A3B]"
+            : id === "rsg"
+            ? "from-[#002073] to-[#0047FE] hover:from-[#001A5C] hover:to-[#002B99]"
+            : id === "aghs"
+            ? "from-[#003A7E] to-[#0075FF] hover:from-[#012E63] hover:to-[#00499F]"
+            : ""
+        } text-[14px] airif flexcenter justify-between`}
+      >
+        <p className="3xl:text-lg">
+          {linkWebsite ? "VISIT WEBSITE" : "COMING SOON"}
+        </p>
+        {linkWebsite && <WhiteArrow />}
+      </button>
+    </Link>
   );
 
   return (
@@ -72,7 +83,7 @@ export function GridComponent({
           reverseFlex ? "lg:flex-row-reverse" : "lg:flex-row"
         } gap-4`}
       >
-        <div className="mx-2 lg:mx-10">
+        <div className="mx-2 lg:mx-10 lg:w-[50%]">
           <div className="hmontserrat flex items-center justify-center gap-3 lg:justify-start py-10">
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
@@ -100,15 +111,17 @@ export function GridComponent({
                       : ""
                   } to-[#000000]`}
                 >
-                  <div className="bg-[#242424] w-full h-full flexcenter rounded-md"></div>
+                  <div className="bg-[#242424] w-full h-full flexcenter rounded-md">
+                    <img className="aspect-square" src={item.img} alt="" />
+                  </div>
                 </div>
-                <p
+                <div
                   className={`airif text-[14px] mt-2 ${
                     id === "nova" ? "text-center" : "text-left"
                   } 3xl:text-xl`}
                 >
                   {item.service}
-                </p>
+                </div>
               </div>
             ))}
           </div>
@@ -116,11 +129,11 @@ export function GridComponent({
             <VisitWebsite />
           </div>
         </div>
-        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52">
+        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52 lg:w-[50%]">
           <b className="mt-10 montserrat lg:text-3xl 3xl:text-[40px]">
             SUCCESS STORIES
           </b>
-          <div className="my-6">
+          <div className="mb-6 mt-10">
             <div className="relative">
               <button
                 onClick={nextImage}

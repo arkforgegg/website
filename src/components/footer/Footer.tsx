@@ -1,12 +1,14 @@
-import logo from "../../assets/img/footer/logo_footer.png"
+import logos from "../../assets/img/footer/logo_footer.png";
+import logo from "../../assets/img/mini logo.png";
+
 import fb from "../../assets/img/Facebook.png";
 import linked from "../../assets/img/LinkedIn.png";
-import twitter from "../../assets/img/X.png"
+import twitter from "../../assets/img/X.png";
 
 const socmed = [
-  { image: linked, link: '#' },
-  { image: fb, link: '#' },
-  { image: twitter, link: '#' },
+  { image: linked, link: "#" },
+  { image: fb, link: "#" },
+  { image: twitter, link: "#" },
 ];
 
 export function Footer() {

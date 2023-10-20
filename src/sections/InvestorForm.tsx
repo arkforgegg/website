@@ -21,7 +21,12 @@ export function InvestorForm() {
       title: "EMAIL",
       className: "",
       input: (
-        <InputComponent state={email} setState={setEmail} placeholder="email" />
+        <InputComponent
+          type="email"
+          state={email}
+          setState={setEmail}
+          placeholder="email"
+        />
       ),
     },
     {
@@ -76,20 +81,20 @@ export function InvestorForm() {
   ];
 
   return (
-    <div
+    <form
       id="contact"
       className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
     >
       <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">
-        <p className="text-sm my-3 text-[#6C6C6C] airif">
+        {/* <p className="text-sm my-3 text-[#6C6C6C] airif">
           Empowering Investors with information and Access. Explore our
           downloadable resources and reach out to us for any inquiries or
           opportunities.
-        </p>
+        </p> */}
       </div>
 
-      <div className="my-10 border border-[#CB0000]">
+      <div className="my-14 border border-[#CB0000]">
         <section className="bg-[#CB0000] p-3">
           <b className="montserrat xl:text-3xl">GET IN TOUCH</b>
           <p className="text-sm my-3 xl:mx-5 airif">
@@ -101,8 +106,9 @@ export function InvestorForm() {
         </section>
 
         <section className="my-10 mx-4 lg:px-20 grid lg:grid-cols-2 gap-x-10">
-          {forms.map((form) => (
+          {forms.map((form, i) => (
             <div
+              key={i}
               className={`flex flex-col items-start justify-center w-full ${form.className}`}
             >
               <p className="airif text-left text-sm ml-1">{form.title}</p>
@@ -111,6 +117,6 @@ export function InvestorForm() {
           ))}
         </section>
       </div>
-    </div>
+    </form>
   );
 }
