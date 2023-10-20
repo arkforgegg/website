@@ -9,24 +9,41 @@ export function InvestorForm() {
   const [position, setPosition] = useState("");
   const [message, setMessage] = useState("");
 
-const handleSubmit = (event: any) => {
-  event.preventDefault();
+  const mandatory = () => {
+    return (
+      name.length > 0 &&
+      email.length > 0 &&
+      phone.length > 0 &&
+      company.length > 0 &&
+      position.length > 0 &&
+      message.length > 0
+    );
+  };
 
-  const subject = "Investor Relation Inquiry";
-  const body: string = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nPosition: ${position}\nMessage: \n${message}`;
+  console.log(name.length > 1);
 
-  const encodedBody = encodeURIComponent(body);
-  const mailtoLink = `mailto:afizahaziz97@gmail.com?subject=${subject}&body=${encodedBody}`;
-  window.location.href = mailtoLink;
-};
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
 
+    const subject = "Investor Relation Inquiry";
+    const body: string = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nPosition: ${position}\nMessage: \n${message}`;
+
+    const encodedBody = encodeURIComponent(body);
+    const mailtoLink = `mailto:afizahaziz97@gmail.com?subject=${subject}&body=${encodedBody}`;
+    window.location.href = mailtoLink;
+  };
 
   const forms = [
     {
       title: "NAME",
       className: "",
       input: (
-        <InputComponent type="text" state={name} setState={setName} placeholder="name" />
+        <InputComponent
+          type="text"
+          state={name}
+          setState={setName}
+          placeholder="name"
+        />
       ),
     },
     {
@@ -45,7 +62,12 @@ const handleSubmit = (event: any) => {
       title: "PHONE",
       className: "",
       input: (
-        <InputComponent type="text" state={phone} setState={setPhone} placeholder="phone" />
+        <InputComponent
+          type="text"
+          state={phone}
+          setState={setPhone}
+          placeholder="phone"
+        />
       ),
     },
     {
@@ -88,7 +110,12 @@ const handleSubmit = (event: any) => {
       title: "",
       className: "lg:col-span-2 lg:row-start-5 items-center mt-6 lg:mb-10",
       input: (
-        <button type="submit" onClick={handleSubmit} className="bg-[#FF0000] py-2 airif rounded-md w-full">
+        <button
+          disabled={!mandatory()}
+          type="submit"
+          onClick={handleSubmit}
+          className="bg-[#FF0000] py-2 airif rounded-md w-full"
+        >
           SUBMIT
         </button>
       ),

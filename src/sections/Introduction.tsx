@@ -15,21 +15,21 @@ const company = [
     name: "Pulse Nova",
     image_black: black_pulse,
     image_red: red_pulse,
-    text: "Empowering Gaming.",
+    text: "Empowering Influence, Creating Value",
   },
   {
     id: 2,
     name: "RSG",
     image_black: black_rsg,
     image_red: red_rsg,
-    text: "Amplifying Influence.",
+    text: "SEA’s Premier Esports Organization",
   },
   {
     id: 3,
     name: "Aghs Labs",
     image_black: black_AL,
     image_red: red_AL,
-    text: "Asia’s Biggest Gamer Community.",
+    text: "Bridging Web2 to Web3",
   },
 ];
 
@@ -44,8 +44,8 @@ export function Introduction() {
   let i = 0;
 
   useEffect(() => {
-    changeCompany(activeCompanyIndex);
-  }, []);
+    changeCompany();
+  }, [activeCompanyIndex]);
 
   useEffect(() => {
     return () => {
@@ -55,14 +55,18 @@ export function Introduction() {
     };
   }, []);
 
-  const changeCompany = (index: any) => {
-    setActiveCompanyIndex(index);
+  const changeCompany = () => {
+    setActiveCompanyIndex(activeCompanyIndex);
     setTypewriterText(""); // Reset typewriterText to an empty string when changing companies
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
     i = 0; // Reset the index when changing companies
-    startTypewriterAnimation(company[index].text);
+    if (activeCompanyIndex > company.length - 1) {
+      setActiveCompanyIndex(0);
+    } else {
+      startTypewriterAnimation(company[activeCompanyIndex].text);
+    }
   };
 
   const startTypewriterAnimation = (text: any) => {
@@ -85,8 +89,7 @@ export function Introduction() {
           setImageColor("black");
           setTimeout(() => {
             setImageColor("red");
-            const nextIndex = (activeCompanyIndex + 1) % company.length;
-            changeCompany(nextIndex);
+            setActiveCompanyIndex((prev) => prev + 1);
           }, 1000);
         }, 2000);
       }
@@ -113,7 +116,12 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10">
-              ArkForge has united over 200 million gamers worldwide by seamlessly merging engaging gameplay, community building, and innovative services. With a commitment to innovation and community engagement, ArkForge stands as a frontrunner, dedicated to crafting a globalized and engaged ecosystem for the world through gaming.
+              ArkForge has united over 200 million gamers worldwide by
+              seamlessly merging engaging gameplay, community building, and
+              innovative services. With a commitment to innovation and community
+              engagement, ArkForge stands as a frontrunner, dedicated to
+              crafting a globalized and engaged ecosystem for the world through
+              gaming.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button
@@ -142,7 +150,7 @@ export function Introduction() {
                 <img
                   key={index}
                   onClick={() => {
-                    changeCompany(index);
+                    setActiveCompanyIndex(index);
                   }}
                   src={
                     index === activeCompanyIndex
