@@ -26,10 +26,10 @@ export function Footer() {
                 </p> */}
           </div>
           <div className="flex flex-col md:mx-auto md:space-y-4 space-y-2 montserrat md:text-base text-sm">
-            <a href="#" className="font-bold">
+            <a href="https://pulsenova.gg/" className="font-bold">
               PULSE NOVA ENTERTAINMENT
             </a>
-            <a href="#" className="font-bold">
+            <a href="https://www.rsg.gg/" className="font-bold">
               RSG ESPORTS
             </a>
             <a href="#" className="font-bold">

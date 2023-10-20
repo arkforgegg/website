@@ -29,11 +29,10 @@ const company = [
     name: "Aghs Labs",
     image_black: black_AL,
     image_red: red_AL,
-    text: "Bridging Web2 to Web3",
+    text: "Bridging Web2 to Web3",
   },
 ];
 
-const companySequence = [0, 1, 2, 0, 1, 2];
 
 export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
@@ -166,7 +165,7 @@ export function Introduction() {
             </div>
             <div className="flex justify-center md:h-[40px] h-[28px] md:mt-10">
               <p
-                className={`airif text-[#CB0000] 2xl:text-4xl md:text-xl line-1 ${
+                className={`airif text-[#CB0000] 2xl:text-3xl lg:text-xl text-[17px] line-1 ${
                   imageColor === "red"
                 }`}
               >
