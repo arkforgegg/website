@@ -21,7 +21,12 @@ export function InvestorForm() {
       title: "EMAIL",
       className: "",
       input: (
-        <InputComponent state={email} setState={setEmail} placeholder="email" />
+        <InputComponent
+          type="email"
+          state={email}
+          setState={setEmail}
+          placeholder="email"
+        />
       ),
     },
     {
@@ -76,7 +81,7 @@ export function InvestorForm() {
   ];
 
   return (
-    <div
+    <form
       id="contact"
       className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
     >
@@ -112,6 +117,6 @@ export function InvestorForm() {
           ))}
         </section>
       </div>
-    </div>
+    </form>
   );
 }

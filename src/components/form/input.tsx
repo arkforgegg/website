@@ -2,15 +2,21 @@ interface Props {
   state: string;
   setState: React.Dispatch<React.SetStateAction<string>>;
   placeholder: string;
+  type?: "text" | "email";
 }
 
-export function InputComponent({ state, setState, placeholder }: Props) {
+export function InputComponent({
+  state,
+  setState,
+  placeholder,
+  type = "text",
+}: Props) {
   const hanldeInput = (e: any) => setState(e.target.value);
 
   return (
     <input
       className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md text-sm px-4 py-2 airif"
-      type="text"
+      type={type}
       value={state}
       placeholder={`Enter your ${placeholder.toLowerCase()} here`}
       onChange={hanldeInput}

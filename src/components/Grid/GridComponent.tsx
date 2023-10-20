@@ -52,7 +52,11 @@ export function GridComponent({
   }, [imgCrsl]);
 
   const VisitWebsite = () => (
-    <Link className="w-full" to={linkWebsite as string} target="_blank">
+    <Link
+      className="w-full"
+      to={linkWebsite as string}
+      target={linkWebsite ? "_blank" : ""}
+    >
       <button
         className={`bg-gradient-to-r p-4 w-full rounded-md ${
           id === "nova"
@@ -64,8 +68,10 @@ export function GridComponent({
             : ""
         } text-[14px] airif flexcenter justify-between`}
       >
-        <p className="3xl:text-lg">VISIT WEBSITE</p>
-        <WhiteArrow />
+        <p className="3xl:text-lg">
+          {linkWebsite ? "VISIT WEBSITE" : "COMING SOON"}
+        </p>
+        {linkWebsite && <WhiteArrow />}
       </button>
     </Link>
   );
