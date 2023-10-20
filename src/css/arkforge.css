@@ -40,3 +40,7 @@
     transform: translateX(-100%);
   }
 }
+
+.crop {
+  clip-path: inset(45% 15% 15% 15%);
+}
