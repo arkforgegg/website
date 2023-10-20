@@ -28,8 +28,8 @@
 
 .carousel-slide {
   display: inline-block;
-  margin-right: 50px; /* Adjust margin as needed */
-  animation: scroll 10s linear infinite;
+  margin-right: 50px;
+  animation: scroll 15s linear infinite;
 }
 
 @keyframes scroll {

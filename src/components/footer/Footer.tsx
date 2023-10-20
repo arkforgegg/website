@@ -6,9 +6,9 @@ import linked from "../../assets/img/LinkedIn.png";
 import twitter from "../../assets/img/X.png";
 
 const socmed = [
-  { image: linked, link: "#" },
-  { image: fb, link: "#" },
-  { image: twitter, link: "#" },
+  { image: linked, link: "https://www.linkedin.com/company/arkforge/" },
+  { image: fb, link: "https://www.facebook.com/ArkForge.gg" },
+  { image: twitter, link: "https://twitter.com/ArkForge" },
 ];
 
 export function Footer() {

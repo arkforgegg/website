@@ -74,7 +74,7 @@ export function Navigation() {
   }, [currentSection]);
 
   return (
-    <div className="sticky top-0 flex items-center justify-between lg:w-full xl:px-16 z-50">
+    <div className="sticky top-0 flex items-center justify-between lg:w-full xl:px-16 z-50 bg-black opacity-90">
       <button onClick={scrollToTop} className="flexcenter gap-3 hidden lg:flex">
         <GrayArrow />
         <p className="airif text-[#4B4B4B] text-[18px]">Back to Top</p>
