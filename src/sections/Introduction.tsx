@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import arrow from "../assets/img/down.png";
 import main from "../assets/img/main.png";
 import black_AL from "../assets/img/main/bl_al.png";
@@ -11,59 +11,96 @@ import { scrollToElement } from ".";
 
 const company = [
   {
+    id: 1,
     name: "Pulse Nova",
     image_black: black_pulse,
     image_red: red_pulse,
-    text: "EMPOWERING BRANDS",
+    text: "Empowering Gaming.",
   },
   {
+    id: 2,
     name: "RSG",
     image_black: black_rsg,
     image_red: red_rsg,
-    text: "EMPOWERING BRANDS",
+    text: "Amplifying Influence.",
   },
   {
+    id: 3,
     name: "Aghs Labs",
     image_black: black_AL,
     image_red: red_AL,
-    text: "BRIDGING WEB2 TO WEB3",
+    text: "Asia’s Biggest Gamer Community.",
   },
 ];
+
+const companySequence = [0, 1, 2, 0, 1, 2];
 
 export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
   const [typewriterText, setTypewriterText] = useState("");
   const [imageColor, setImageColor] = useState("red");
+  const [isAnimationInProgress, setIsAnimationInProgress] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  let i = 0;
 
   useEffect(() => {
-    const companyCount = company.length;
-    const activeCompany = company[activeCompanyIndex];
+    changeCompany(activeCompanyIndex);
+  }, []);
 
-    const typeText = async () => {
-      for (let i = 0; i <= activeCompany.text.length; i++) {
-        setTypewriterText(activeCompany.text.slice(0, i));
-        await new Promise((resolve) => setTimeout(resolve, 150)); // Adjust typing speed as needed
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
       }
+    };
+  }, []);
 
-      // Delay the image color change to black
-      await new Promise((resolve) => setTimeout(resolve, 3000)); // Adjust the timing as needed
+  const changeCompany = (index: any) => {
+    setActiveCompanyIndex(index);
+    setTypewriterText(""); // Reset typewriterText to an empty string when changing companies
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    i = 0; // Reset the index when changing companies
+    startTypewriterAnimation(company[index].text);
+  };
 
-      // After typing is complete, change to the next company
-      setImageColor("black");
-      await new Promise((resolve) => setTimeout(resolve, 500)); // Adjust the timing as needed
-      setActiveCompanyIndex((prevIndex) => (prevIndex + 1) % companyCount);
-      setTypewriterText("");
-      setImageColor("red");
+  const startTypewriterAnimation = (text: any) => {
+    setIsAnimationInProgress(true);
+
+    const updateText = () => {
+      if (i < text.length) {
+        const currentChar = text[i];
+        setTypewriterText((prevText) => prevText + currentChar);
+        if (currentChar === " ") {
+          setTypewriterText((prevText) => prevText + " "); // Add space to prevent typo / wrong sentence
+        }
+        i++;
+      } else {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+        setIsAnimationInProgress(false);
+        setTimeout(() => {
+          setImageColor("black");
+          setTimeout(() => {
+            setImageColor("red");
+            const nextIndex = (activeCompanyIndex + 1) % company.length;
+            changeCompany(nextIndex);
+          }, 1000);
+        }, 2000);
+      }
     };
 
-    const interval = setInterval(typeText, 5000); // Repeat every 5 seconds
+    updateText(); // Call the to start the animation
 
-    return () => clearInterval(interval); // Clear the interval on component unmount
-  }, [activeCompanyIndex]);
+    // Set an interval to continue updating the text
+    intervalRef.current = setInterval(updateText, 250);
+  };
 
   return (
     <>
-      <div className="bg-black lg:mx-40 mx-8  ">
+      <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden ">
         <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen w-full  md:-mt-8">
           <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
             <h1 className="montserrat font-bold lg:text-4xl text-2xl">
@@ -76,12 +113,7 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10">
-              ArkForge has united over 200 million gamers worldwide by
-              seamlessly merging engaging gameplay, community building, and
-              innovative services. With a commitment to innovation and community
-              engagement, ArkForge stands as a frontrunner, dedicated to
-              crafting a globalized and engaged ecosystem for the world through
-              gaming.
+              ArkForge has united over 200 million gamers worldwide by seamlessly merging engaging gameplay, community building, and innovative services. With a commitment to innovation and community engagement, ArkForge stands as a frontrunner, dedicated to crafting a globalized and engaged ecosystem for the world through gaming.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button
@@ -101,28 +133,33 @@ export function Introduction() {
               </button>
             </div>
           </div>
-          <div className="md:-mt-16 mt-16 relative">
-            <img src={main} alt="Arkforge" className="" />
-            <div className="flex flex-row absolute lg:top-72  md:top-60 top-40 space-x-10">
+          <div className="md:-mt-16 mt-16 relative md:flex-1 mx-auto">
+            <div className="flex justify-center">
+              <img src={main} alt="Arkforge" className="md:ml-10" />
+            </div>
+            <div className="flex flex-row absolute 3xl:left-28 lg:left-14 md:left-10 2xl:top-72 lg:top-56 md:top-44 top-40 space-x-10">
               {company.map((comp, index) => (
                 <img
                   key={index}
+                  onClick={() => {
+                    changeCompany(index);
+                  }}
                   src={
                     index === activeCompanyIndex
                       ? imageColor === "red"
                         ? comp.image_red
-                        : comp.image_black
+                        : comp.image_red
                       : comp.image_black
                   }
                   alt={comp.name}
-                  className="lg:w-40 md:w-32 w-20 lg:-ml-2 "
+                  className="2xl:w-36 lg:w-28 w-20 lg:-ml-2 cursor-pointer"
                 />
               ))}
             </div>
-            <div className="flex justify-center md:h-[37px] h-[22px]">
+            <div className="flex justify-center md:h-[40px] h-[28px] md:mt-10">
               <p
-                className={`airif text-[#CB0000] lg:text-4xl text-xl line-1 ${
-                  imageColor === "red" ? "" : ""
+                className={`airif text-[#CB0000] 2xl:text-4xl md:text-xl line-1 ${
+                  imageColor === "red"
                 }`}
               >
                 {typewriterText}

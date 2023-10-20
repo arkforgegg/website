@@ -9,12 +9,24 @@ export function InvestorForm() {
   const [position, setPosition] = useState("");
   const [message, setMessage] = useState("");
 
+const handleSubmit = (event: any) => {
+  event.preventDefault();
+
+  const subject = "Investor Relation Inquiry";
+  const body: string = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nPosition: ${position}\nMessage: \n${message}`;
+
+  const encodedBody = encodeURIComponent(body);
+  const mailtoLink = `mailto:afizahaziz97@gmail.com?subject=${subject}&body=${encodedBody}`;
+  window.location.href = mailtoLink;
+};
+
+
   const forms = [
     {
       title: "NAME",
       className: "",
       input: (
-        <InputComponent state={name} setState={setName} placeholder="name" />
+        <InputComponent type="text" state={name} setState={setName} placeholder="name" />
       ),
     },
     {
@@ -33,7 +45,7 @@ export function InvestorForm() {
       title: "PHONE",
       className: "",
       input: (
-        <InputComponent state={phone} setState={setPhone} placeholder="phone" />
+        <InputComponent type="text" state={phone} setState={setPhone} placeholder="phone" />
       ),
     },
     {
@@ -42,6 +54,7 @@ export function InvestorForm() {
       input: (
         <InputComponent
           state={company}
+          type="text"
           setState={setCompany}
           placeholder="company"
         />
@@ -53,6 +66,7 @@ export function InvestorForm() {
       input: (
         <InputComponent
           state={position}
+          type="text"
           setState={setPosition}
           placeholder="position"
         />
@@ -64,6 +78,7 @@ export function InvestorForm() {
       input: (
         <InputMessageComponent
           state={message}
+          type="text"
           setState={setMessage}
           placeholder="message"
         />
@@ -73,7 +88,7 @@ export function InvestorForm() {
       title: "",
       className: "lg:col-span-2 lg:row-start-5 items-center mt-6 lg:mb-10",
       input: (
-        <button className="bg-[#FF0000] py-2 airif rounded-md w-full">
+        <button type="submit" onClick={handleSubmit} className="bg-[#FF0000] py-2 airif rounded-md w-full">
           SUBMIT
         </button>
       ),
@@ -84,6 +99,9 @@ export function InvestorForm() {
     <form
       id="contact"
       className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
+      action="mailto:afizahaziz97@gmail.com"
+      method="post"
+      encType="text/plain"
     >
       <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">

@@ -1,6 +1,6 @@
 .line-1{
     position: relative;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid #CB0000;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -17,7 +17,7 @@
     width: 0;
   }
   to {
-    width: 14em;
+    width: 20em;
   }
 }
 
