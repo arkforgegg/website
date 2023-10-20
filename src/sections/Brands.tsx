@@ -3,14 +3,7 @@ import amd from "../assets/img/Brands/amd.png";
 import pizzahut from "../assets/img/Brands/pizzahut.png";
 
 export function Brands() {
-  const brands = [
-    uniqlo,
-    amd,
-    pizzahut,
-    uniqlo,
-    amd,
-    pizzahut,
-  ];
+  const brands = [uniqlo, amd, pizzahut, uniqlo, amd, pizzahut];
 
   return (
     <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0">
@@ -20,8 +13,8 @@ export function Brands() {
         <p>- A glimpse into brands we've partnered with</p>
       </div>
       <div className="m-8 xl:mt-20 grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4 xl:gap-y-8 justify-items-center">
-        {brands.map((brand) => (
-          <div className="flexcenter">
+        {brands.map((brand, i) => (
+          <div key={i} className="flexcenter">
             <img src={brand} alt="" />
           </div>
         ))}

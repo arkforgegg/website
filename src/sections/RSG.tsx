@@ -18,9 +18,9 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG MALAYSIA</p>
-          <span>
-            {TextBlue("MLBB")} / {TextBlue("LOL")} / {TextBlue("PUBG")}
-          </span>
+          <ul className="list-disc lg:ml-4">
+            <li>{TextBlue("MPL Malaysia Season 7 Champions")}</li>
+          </ul>
         </div>
       ),
     },
@@ -29,9 +29,10 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG PHILIPPINES</p>
-          <span>
-            {TextBlue("MLBB")} / {TextBlue("LOL")} / {TextBlue("PUBG")}
-          </span>
+          <ul className="list-disc lg:ml-4">
+            <li>{TextBlue("MPL Philippines Season 9 Champions")}</li>
+            <li>{TextBlue("MLBB Southeast Asia Cup 2022")}</li>
+          </ul>
         </div>
       ),
     },
@@ -40,9 +41,12 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG SINGAPORE</p>
-          <span>
-            {TextBlue("MLBB")} / {TextBlue("PUBG")}
-          </span>
+          <ul className="list-disc lg:ml-4">
+            <li>{TextBlue("MPL SG Season 5 Champions")}</li>
+            <li>{TextBlue("MPL SG Season 4 Champions")}</li>
+            <li>{TextBlue("MPL SG Season 3 Champions")}</li>
+            <li>{TextBlue("MPL MY/SG Season 5 Champions")}</li>
+          </ul>
         </div>
       ),
     },
@@ -56,11 +60,7 @@ export function RSG() {
         logo={logo}
         reverseFlex={true}
         companyName="RSG"
-        companyDesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        bibendum vitae quam vitae volutpat. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Praesent bibendum vitae quam vitae
-        volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent bibendum vitae quam vitae volutpat."
+        companyDesc="RSG, the foremost MOBA esports team, proudly carries a legacy spanning six years, marked by participation in over 200 international competitions and securing an impressive 21 titles. With three dominant domestic teams and a roster of 35 professional players, RSG stands as a powerhouse, commanding a formidable regional presence. Notably, RSG has achieved an unparalleled feat as the only esports team to clinch seven MPL championships across three distinct domestic leagues in the past six years, underscoring their consistent excellence and dominance in the competitive gaming arena."
         companyOffer="REGIONS CONQUERED"
         offerList={services}
         imageList={images}

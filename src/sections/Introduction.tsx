@@ -26,7 +26,7 @@ const company = [
     name: "Aghs Labs",
     image_black: black_AL,
     image_red: red_AL,
-    text: "EMPOWERING BRANDS",
+    text: "BRIDGING WEB2 TO WEB3",
   },
 ];
 
@@ -65,15 +65,23 @@ export function Introduction() {
     <>
       <div className="bg-black lg:mx-40 mx-8  ">
         <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen w-full  md:-mt-8">
-          <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4">
-            <h1 className="montserrat font-bold lg:text-5xl text-xl">
-              Empowering Influence, Creating Value. Become Asia’s Biggest Gamer
-              Community
+          <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
+            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+              EMPOWERING GAMING.
+            </h1>
+            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+              AMPLIFYING INFLUENCE
+            </h1>
+            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+              ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              bibendum vitae quam vitae volutpat. Cras ipsum mi, porttitor a
-              aliquet sit amet, accumsan vel nulla.
+              ArkForge has united over 200 million gamers worldwide by
+              seamlessly merging engaging gameplay, community building, and
+              innovative services. With a commitment to innovation and community
+              engagement, ArkForge stands as a frontrunner, dedicated to
+              crafting a globalized and engaged ecosystem for the world through
+              gaming.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button
@@ -98,6 +106,7 @@ export function Introduction() {
             <div className="flex flex-row absolute lg:top-72  md:top-60 top-40 space-x-10">
               {company.map((comp, index) => (
                 <img
+                  key={index}
                   src={
                     index === activeCompanyIndex
                       ? imageColor === "red"

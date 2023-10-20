@@ -77,7 +77,7 @@ export function GridComponent({
           reverseFlex ? "lg:flex-row-reverse" : "lg:flex-row"
         } gap-4`}
       >
-        <div className="mx-2 lg:mx-10 w-[50%]">
+        <div className="mx-2 lg:mx-10 lg:w-[50%]">
           <div className="hmontserrat flex items-center justify-center gap-3 lg:justify-start py-10">
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
@@ -109,13 +109,13 @@ export function GridComponent({
                     <img className="aspect-square" src={item.img} alt="" />
                   </div>
                 </div>
-                <p
+                <div
                   className={`airif text-[14px] mt-2 ${
                     id === "nova" ? "text-center" : "text-left"
                   } 3xl:text-xl`}
                 >
                   {item.service}
-                </p>
+                </div>
               </div>
             ))}
           </div>
@@ -123,7 +123,7 @@ export function GridComponent({
             <VisitWebsite />
           </div>
         </div>
-        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52 w-[50%]">
+        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52 lg:w-[50%]">
           <b className="mt-10 montserrat lg:text-3xl 3xl:text-[40px]">
             SUCCESS STORIES
           </b>

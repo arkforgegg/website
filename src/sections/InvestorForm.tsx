@@ -101,8 +101,9 @@ export function InvestorForm() {
         </section>
 
         <section className="my-10 mx-4 lg:px-20 grid lg:grid-cols-2 gap-x-10">
-          {forms.map((form) => (
+          {forms.map((form, i) => (
             <div
+              key={i}
               className={`flex flex-col items-start justify-center w-full ${form.className}`}
             >
               <p className="airif text-left text-sm ml-1">{form.title}</p>
