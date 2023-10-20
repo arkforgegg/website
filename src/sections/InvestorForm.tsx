@@ -20,8 +20,6 @@ export function InvestorForm() {
     );
   };
 
-  console.log(name.length > 1);
-
   const handleSubmit = (event: any) => {
     event.preventDefault();
 
@@ -29,7 +27,7 @@ export function InvestorForm() {
     const body: string = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nPosition: ${position}\nMessage: \n${message}`;
 
     const encodedBody = encodeURIComponent(body);
-    const mailtoLink = `mailto:afizahaziz97@gmail.com?subject=${subject}&body=${encodedBody}`;
+    const mailtoLink = `mailto:Hello@arkforge.gg?subject=${subject}&body=${encodedBody}`;
     window.location.href = mailtoLink;
   };
 
@@ -126,7 +124,7 @@ export function InvestorForm() {
     <form
       id="contact"
       className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
-      action="mailto:afizahaziz97@gmail.com"
+      action="mailto:Hello@arkforge.gg"
       method="post"
       encType="text/plain"
     >

@@ -10,6 +10,7 @@ interface Props {
   companyOffer: string;
   offerList: any[];
   imageList: string[];
+  storyName: string;
   storyTitle: string;
   storyDesc: string;
   linkWebsite?: string;
@@ -28,6 +29,7 @@ export function GridComponent({
   storyTitle,
   linkWebsite,
   reverseFlex,
+  storyName,
 }: Props) {
   const [imgCrsl, setImgCrsl] = useState(0);
 
@@ -84,7 +86,7 @@ export function GridComponent({
         } gap-4`}
       >
         <div className="mx-2 lg:mx-10 lg:w-[50%]">
-          <div className="hmontserrat flex items-center justify-center gap-3 lg:justify-start py-10">
+          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start py-10">
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
           </div>
@@ -125,31 +127,35 @@ export function GridComponent({
               </div>
             ))}
           </div>
-          <div className="my-10 mt-24 hidden lg:flex ">
+          <div className="my-10 mt-24 hidden lg:flex">
             <VisitWebsite />
           </div>
         </div>
-        <div className="mx-2 lg:mx-10 pt-20 lg:pt-40 3xl:mx-52 lg:w-[50%]">
+        <div className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-40 lg:w-[50%]">
           <b className="mt-10 montserrat lg:text-3xl 3xl:text-[40px]">
-            SUCCESS STORIES
+            {storyName}
           </b>
           <div className="mb-6 mt-10">
             <div className="relative">
-              <button
-                onClick={nextImage}
-                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
-              >
-                <WhiteArrow />
-              </button>
-              <button
-                onClick={prevImage}
-                className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
-              >
-                <div className="rotate-180">
+              {imageList.length > 1 && (
+                <button
+                  onClick={nextImage}
+                  className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
+                >
                   <WhiteArrow />
-                </div>
-              </button>
-              <div className="h-40 sm:h-80 lg:h-80 flexcenter">
+                </button>
+              )}
+              {imageList.length > 1 && (
+                <button
+                  onClick={prevImage}
+                  className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
+                >
+                  <div className="rotate-180">
+                    <WhiteArrow />
+                  </div>
+                </button>
+              )}
+              <div className="flexcenter">
                 <img src={imageList[imgCrsl]} alt="" />
               </div>
             </div>

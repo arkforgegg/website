@@ -3,6 +3,11 @@ import React from "react";
 import logo from "../assets/img/section/rsg.png";
 import nova1 from "../assets/img/section/nova1.png";
 import eion1 from "../assets/img/section/eion1.png";
+
+import sg from "../assets/img/rsg/sg.png";
+import my from "../assets/img/rsg/my.png";
+import ph from "../assets/img/rsg/ph.png";
+
 import { GridComponent } from "../components";
 
 export function RSG() {
@@ -14,30 +19,7 @@ export function RSG() {
 
   const services = [
     {
-      img: "",
-      service: (
-        <div className="">
-          <p>RSG MALAYSIA</p>
-          <ul className="list-disc lg:ml-4">
-            <li>{TextBlue("MPL Malaysia Season 7 Champions")}</li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      img: "",
-      service: (
-        <div className="">
-          <p>RSG PHILIPPINES</p>
-          <ul className="list-disc lg:ml-4">
-            <li>{TextBlue("MPL Philippines Season 9 Champions")}</li>
-            <li>{TextBlue("MLBB Southeast Asia Cup 2022")}</li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      img: "",
+      img: sg,
       service: (
         <div className="">
           <p>RSG SINGAPORE</p>
@@ -50,11 +32,35 @@ export function RSG() {
         </div>
       ),
     },
+    {
+      img: ph,
+      service: (
+        <div className="">
+          <p>RSG PHILIPPINES</p>
+          <ul className="list-disc lg:ml-4">
+            <li>{TextBlue("MPL Philippines Season 9 Champions")}</li>
+            <li>{TextBlue("MLBB Southeast Asia Cup 2022")}</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      img: my,
+      service: (
+        <div className="">
+          <p>RSG MALAYSIA</p>
+          <ul className="list-disc lg:ml-4">
+            <li>{TextBlue("MPL Malaysia Season 7 Champions")}</li>
+          </ul>
+        </div>
+      ),
+    },
   ];
 
   return (
     <div>
       <GridComponent
+        storyName="SUCCESS STORIES"
         linkWebsite={`https://www.rsg.gg/`}
         id="rsg"
         logo={logo}
