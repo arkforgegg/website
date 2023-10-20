@@ -135,9 +135,9 @@ export function Introduction() {
           </div>
           <div className="md:-mt-16 mt-16 relative md:flex-1 mx-auto">
             <div className="flex justify-center">
-              <img src={main} alt="Arkforge" className="ml-10" />
+              <img src={main} alt="Arkforge" className="md:ml-10" />
             </div>
-            <div className="flex flex-row absolute 3xl:left-28 lg:left-14 md:left-10 left-4 2xl:top-72 lg:top-56 md:top-44 top-40 space-x-10">
+            <div className="flex flex-row absolute 3xl:left-28 lg:left-14 md:left-10 2xl:top-72 lg:top-56 md:top-44 top-40 space-x-10">
               {company.map((comp, index) => (
                 <img
                   key={index}
@@ -158,7 +158,7 @@ export function Introduction() {
             </div>
             <div className="flex justify-center md:h-[40px] h-[28px] md:mt-10">
               <p
-                className={`airif text-[#CB0000] 2xl:text-4xl md:text-2xl line-1 ${
+                className={`airif text-[#CB0000] 2xl:text-4xl md:text-xl line-1 ${
                   imageColor === "red"
                 }`}
               >
