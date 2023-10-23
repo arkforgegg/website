@@ -1,8 +1,8 @@
 import React from "react";
 
 import logo from "../assets/img/section/rsg.png";
-import nova1 from "../assets/img/section/nova1.png";
-import eion1 from "../assets/img/section/eion1.png";
+import trophy from "../assets/img/rsg/TROPHY LIFTING.png";
+import msc from "../assets/img/rsg/msc.jpg";
 
 import sg from "../assets/img/rsg/sg.png";
 import my from "../assets/img/rsg/my.png";
@@ -11,7 +11,7 @@ import ph from "../assets/img/rsg/ph.png";
 import { GridComponent } from "../components";
 
 export function RSG() {
-  const images = [nova1, eion1];
+  const images = [trophy, msc];
 
   const TextBlue = (text: string) => (
     <span className="text-[#0047FE]">{text}</span>
