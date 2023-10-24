@@ -17,7 +17,7 @@ const navs = [
     id: "rsg",
   },
   {
-    title: "AGHS LAB",
+    title: "AGHS LABS",
     image: aghs,
     id: "aghs",
   },

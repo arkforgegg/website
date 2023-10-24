@@ -59,7 +59,7 @@ export function AghsLab() {
         id="aghs"
         logo={logo}
         linkWebsite="https://eion.gg/"
-        companyName="AGHS LABs"
+        companyName="AGHS LABS"
         companyDesc="Aghs Labs is at the forefront of bridging Web 2 to Web 3 through specializing in solutions tailored for IP owners within the gaming space. Aghs Labs aims to empower the fan economy by harnessing and integrating innovative web3 technologies and introducing engaging highly complimentary and synergistic gaming products to the real gamers. Aghs Labs believes that the future of a sustainable ecosystem for IP owners can be achieved through precision and quality definition while implementing cross reality mechanisms and creating utility and value. "
         companyOffer="PRODUCTS"
         offerList={services}

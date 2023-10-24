@@ -6,8 +6,13 @@
   src: url("/src/assets/font/airif.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "titilium";
+  src: url("/src/assets/font/titilium.ttf") format("truetype");
+}
+
 .airif {
-  font-family: "airif";
+  font-family: "titilium";
 }
 
 .montserrat {

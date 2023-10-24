@@ -81,7 +81,11 @@ export function GridComponent({
         } text-[14px] airif flexcenter justify-between`}
       >
         <p className="3xl:text-lg">
-          {linkWebsite ? "VISIT WEBSITE" : "COMING SOON"}
+          {id === "nova"
+            ? "VISIT PULSENOVA.GG"
+            : id === "rsg"
+            ? "VISIT RSG.GG"
+            : "VISIT EION.GG"}
         </p>
         {linkWebsite && <WhiteArrow />}
       </button>
@@ -89,21 +93,24 @@ export function GridComponent({
   );
 
   return (
-    <div id={id} className="mt-10 mx-4 lg:m-10 flex flex-col gap-4 lg:mb-0">
+    <div
+      id={id}
+      className="mt-10 mx-5 lg:m-10 lg:mx-28 3xl:mx-52 flex flex-col gap-4 lg:mb-0"
+    >
       <div
         className={`flex flex-col ${
           reverseFlex ? "lg:flex-row-reverse" : "lg:flex-row"
         } gap-4`}
       >
         <div className="mx-2 lg:mx-10 lg:w-[50%]">
-          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start py-10">
+          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start pt-10">
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
           </div>
-          <p className="airif text-[16px] mb-10 lg:mt-10 3xl:text-lg text-justify">
+          <p className="airif text-[16px] mb-10 lg:mt-10 3xl:text-[16px] text-justify">
             {companyDesc}
           </p>
-          <b className="mt-10 montserrat 3xl:text-[40px]">{companyOffer}</b>
+          <b className="mt-10 montserrat 2xl:text-[30px]">{companyOffer}</b>
           <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {offerList.map((item, i) => (
               <div
@@ -130,7 +137,7 @@ export function GridComponent({
                 <div
                   className={`airif text-[14px] mt-2 ${
                     id === "nova" ? "text-center" : "text-left"
-                  } 3xl:text-xl`}
+                  } 3xl:text-base`}
                 >
                   {item.service}
                 </div>
@@ -141,8 +148,8 @@ export function GridComponent({
             <VisitWebsite />
           </div>
         </div>
-        <div className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-40 lg:w-[50%]">
-          <b className="mt-10 montserrat lg:text-3xl 3xl:text-[40px]">
+        <div className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-32 lg:w-[50%]">
+          <b className="mt-10 montserrat lg:text-2xl 3xl:text-[30px]">
             {storyName}
           </b>
           <div className="mb-6 mt-10">
@@ -170,7 +177,7 @@ export function GridComponent({
               </div>
             </div>
           </div>
-          <p className="airif text-sm lg:text-lg 3xl:text-3xl 3xl:pt-10 pt-5">
+          <p className="montserrat text-sm lg:text-lg 3xl:text-lg 3xl:pt-10 pt-5">
             {stories[imgCrsl].title}
           </p>
           <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem] text-justify">

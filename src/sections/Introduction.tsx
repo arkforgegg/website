@@ -90,20 +90,20 @@ export function Introduction() {
             setImageColor("red");
             setActiveCompanyIndex((prev) => prev + 1);
           }, 1000);
-        }, 2000);
+        }, 1000);
       }
     };
 
     updateText(); // Call the to start the animation
 
     // Set an interval to continue updating the text
-    intervalRef.current = setInterval(updateText, 250);
+    intervalRef.current = setInterval(updateText, 80);
   };
 
   return (
     <>
-      <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden ">
-        <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen w-full  md:-mt-8">
+      <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden">
+        <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen sm:h-auto sm:py-28 w-full  md:-mt-8">
           <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
             <h1 className="montserrat font-bold lg:text-4xl text-2xl">
               EMPOWERING GAMING.
@@ -115,7 +115,12 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
-              ArkForge has united over 805 million gamers worldwide by seamlessly merging engaging gameplay, community building and innovative technology. We champion sustainable gaming communities with a commitment to empowering influence and creating true value. ArkForge stands as a frontrunner, dedicated to crafting a globalized and hyper engaged ecosystem for the world through gaming.
+              ArkForge has united over 200 million gamers worldwide by
+              seamlessly merging engaging gameplay, community building, and
+              innovative services. With a commitment to innovation and community
+              engagement, ArkForge stands as a frontrunner, dedicated to
+              crafting a globalized and engaged ecosystem for the world through
+              gaming.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button
@@ -128,7 +133,7 @@ export function Introduction() {
               <button
                 onClick={() => scrollToElement("nova")}
                 type="button"
-                className="border border-white hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center gap-4 text-sm lg:text-lg"
+                className="border hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center gap-4 text-sm lg:text-lg"
               >
                 DISCOVER NOW
                 <img src={arrow} alt="arrow" />
