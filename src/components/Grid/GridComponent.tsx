@@ -40,6 +40,20 @@ export function GridComponent({
 }: Props) {
   const [imgCrsl, setImgCrsl] = useState(0);
 
+  const companyValue = (nova: string, rsg: string, aghs: string) => {
+    switch (id) {
+      case "aghs":
+        return aghs;
+      case "nova":
+        return nova;
+      case "rsg":
+        return rsg;
+
+      default:
+        break;
+    }
+  };
+
   const nextImage = () => {
     if (imgCrsl < stories.length - 1) {
       setImgCrsl((prev) => prev + 1);
@@ -70,22 +84,14 @@ export function GridComponent({
       target={linkWebsite ? "_blank" : ""}
     >
       <button
-        className={`bg-gradient-to-r p-4 w-full rounded-md ${
-          id === "nova"
-            ? "from-[#0A604B] to-[#4EA993] hover:from-[#084032] hover:to-[#0B4A3B]"
-            : id === "rsg"
-            ? "from-[#002073] to-[#0047FE] hover:from-[#001A5C] hover:to-[#002B99]"
-            : id === "aghs"
-            ? "from-[#003A7E] to-[#0075FF] hover:from-[#012E63] hover:to-[#00499F]"
-            : ""
-        } text-[14px] airif flexcenter justify-between`}
+        className={`bg-gradient-to-r p-4 w-full rounded-md ${companyValue(
+          "from-[#0A604B] to-[#4EA993] hover:from-[#084032] hover:to-[#0B4A3B]",
+          "from-[#002073] to-[#0047FE] hover:from-[#001A5C] hover:to-[#002B99]",
+          "from-[#003A7E] to-[#0075FF] hover:from-[#012E63] hover:to-[#00499F]"
+        )} text-[14px] airif flexcenter justify-between`}
       >
         <p className="3xl:text-lg">
-          {id === "nova"
-            ? "VISIT PULSENOVA.GG"
-            : id === "rsg"
-            ? "VISIT RSG.GG"
-            : "VISIT EION.GG"}
+          {`VISIT ${companyValue("PULSENOVA.GG", "RSG.GG", "EION.GG")}`}
         </p>
         {linkWebsite && <WhiteArrow />}
       </button>
@@ -103,7 +109,7 @@ export function GridComponent({
         } gap-4`}
       >
         <div className="mx-2 lg:mx-10 lg:w-[50%]">
-          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start pt-10">
+          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start pt-10 pb-10 lg:pb-0">
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
           </div>
@@ -120,15 +126,11 @@ export function GridComponent({
                 }`}
               >
                 <div
-                  className={`w-full aspect-square bg-gradient-to-br p-[0.1rem] rounded-md ${
-                    id === "nova"
-                      ? "from-[#4FAA94]"
-                      : id === "rsg"
-                      ? "from-[#002073]"
-                      : id === "aghs"
-                      ? "from-[#0075FF]"
-                      : ""
-                  } to-[#000000]`}
+                  className={`w-full aspect-square bg-gradient-to-br p-[0.1rem] rounded-md ${companyValue(
+                    "from-[#4FAA94]",
+                    "from-[#002073]",
+                    "from-[#0075FF]"
+                  )} to-[#000000]`}
                 >
                   <div className="bg-[#242424] w-full h-full flexcenter rounded-md">
                     <img className="aspect-square" src={item.img} alt="" />
