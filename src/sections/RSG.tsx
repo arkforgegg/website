@@ -77,7 +77,7 @@ export function RSG() {
         logo={logo}
         reverseFlex={true}
         companyName="RSG"
-        companyDesc="RSG, the foremost MOBA esports team, proudly carries a legacy spanning six years, marked by participation in over 200 international competitions and securing an impressive 21 titles. With three dominant domestic teams and a roster of 35 professional players, RSG stands as a powerhouse, commanding a formidable regional presence. Notably, RSG has achieved an unparalleled feat as the only esports team to clinch seven MPL championships across three distinct domestic leagues in the past six years, underscoring their consistent excellence and dominance in the competitive gaming arena."
+        companyDesc="RSG, the premier esports team in Southeast Asia proudly carries a legacy spanning six years, marked by participation in over 200 International competitions and securing over 21 Championship Titles. Fueled by its' relentless pursuit of excellence, RSG stands as Southeast Asia's top esports brand amongst the Southeast Asia gaming audience. Notably RSG has achieved an unparalleled feat as the only esports team to clinch 6 local MPL Championships and 1 regional MSC Championship in the past six years with it's most popular match reaching over 2,300,000 peak concurrent viewers."
         companyOffer="REGIONS CONQUERED"
         offerList={services}
         stories={stories}

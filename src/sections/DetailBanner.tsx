@@ -11,7 +11,7 @@ export function DetailBanner() {
       desc: "ACROSS SOUTHEAST ASIA",
     },
     {
-      title: "600M+",
+      title: "805M+",
       desc: "COMMUNITY SIZE",
     },
     {

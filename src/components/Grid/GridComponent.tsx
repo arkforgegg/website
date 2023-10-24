@@ -49,8 +49,11 @@ export function GridComponent({
   };
 
   const prevImage = () => {
-    if (imgCrsl <= 0) return;
-    setImgCrsl((prev) => (prev -= 1));
+    if (imgCrsl <= 0) {
+      setImgCrsl(stories.length - 1);
+    } else {
+      setImgCrsl((prev) => (prev -= 1));
+    }
   };
 
   useEffect(() => {
@@ -97,7 +100,7 @@ export function GridComponent({
             <img src={logo} alt="" />
             <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
           </div>
-          <p className="airif text-[16px] mb-10 lg:mt-10 3xl:text-lg">
+          <p className="airif text-[16px] mb-10 lg:mt-10 3xl:text-lg text-justify">
             {companyDesc}
           </p>
           <b className="mt-10 montserrat 3xl:text-[40px]">{companyOffer}</b>
@@ -167,10 +170,10 @@ export function GridComponent({
               </div>
             </div>
           </div>
-          <p className="airif text-sm lg:text-xl 3xl:text-3xl 3xl:pt-10 pt-5">
+          <p className="airif text-sm lg:text-lg 3xl:text-3xl 3xl:pt-10 pt-5">
             {stories[imgCrsl].title}
           </p>
-          <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem]">
+          <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem] text-justify">
             {stories[imgCrsl].desc}
           </p>
         </div>

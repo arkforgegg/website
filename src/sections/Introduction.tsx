@@ -114,7 +114,7 @@ export function Introduction() {
             <h1 className="montserrat font-bold lg:text-4xl text-2xl">
               ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
-            <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10">
+            <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
               ArkForge has united over 200 million gamers worldwide by
               seamlessly merging engaging gameplay, community building, and
               innovative services. With a commitment to innovation and community
