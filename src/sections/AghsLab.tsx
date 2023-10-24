@@ -9,7 +9,14 @@ import invoke from "../assets/img/aghs-lab/invoke.png";
 import story from "../assets/img/aghs-lab/story.png";
 
 export function AghsLab() {
-  const images = [story];
+  const stories = [
+    {
+      img: story,
+      title:
+        "STEP INTO THE FANTASY REALM OF ESPORTS: Where Fans, Teams, and Players Unite to Create Epic Moments Together!",
+      desc: "Welcome to Eion, the platform for Locker, Invoke and more esports products developed by Aghs Labs. We are the connecting terminal that aims to bring in all the different esports teams, clubs and fans together into one thriving community.",
+    },
+  ];
 
   const TextBlue = (text: string) => (
     <span className="text-[#0075FF]">{text}</span>
@@ -51,13 +58,12 @@ export function AghsLab() {
         storyName="EION"
         id="aghs"
         logo={logo}
+        linkWebsite="https://eion.gg/"
         companyName="AGHS LAB"
         companyDesc="Aghs Labs is at the forefront of the web3 solutions industry, specializing in solutions tailored for the talent and esports sectors. We empower the fan economy by harnessing and integrating innovative web3 technologies. We aim to be the bridge connecting gamers as the world transitions from the traditional web2 landscape to the emerging web3 ecosystem."
         companyOffer="PRODUCTS"
         offerList={services}
-        imageList={images}
-        storyTitle="STEP INTO THE FANTASY REALM OF ESPORTS: Where Fans, Teams, and Players Unite to Create Epic Moments Together!"
-        storyDesc="Welcome to Eion, the platform for Locker, Invoke and more esports products developed by Aghs Labs. We are the connecting terminal that aims to bring in all the different esports teams, clubs and fans together into one thriving community."
+        stories={stories}
       />
     </div>
   );

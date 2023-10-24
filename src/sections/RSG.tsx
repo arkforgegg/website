@@ -1,8 +1,8 @@
 import React from "react";
 
 import logo from "../assets/img/section/rsg.png";
-import trophy from "../assets/img/rsg/TROPHY LIFTING.png";
 import msc from "../assets/img/rsg/msc.jpg";
+import rsg2 from "../assets/img/rsg/rsg2.png";
 
 import sg from "../assets/img/rsg/sg.png";
 import my from "../assets/img/rsg/my.png";
@@ -11,7 +11,18 @@ import ph from "../assets/img/rsg/ph.png";
 import { GridComponent } from "../components";
 
 export function RSG() {
-  const images = [trophy, msc];
+  const stories = [
+    {
+      img: msc,
+      title: "RSG PH MSC 2022 Champions",
+      desc: `In 2022, RSG Philippines achieved a monumental milestone by clinching the MSC Championship, a prestigious Mobile Legends: Bang Bang tournament. With unwavering determination and exceptional gameplay, the team emerged as the undisputed champions, showcasing their skills and teamwork on the global stage. RSG Philippines' victory in the MSC Championship not only marked a moment of triumph for the team but also solidified their position as one of the most formidable forces in the competitive Mobile Legends esports scene. This achievement is a testament to their dedication and skill, earning them a well-deserved place in the annals of esports history.`,
+    },
+    {
+      img: rsg2,
+      title: "RSG SG 3-time back to back to back Champions",
+      desc: "RSG Singapore has achieved a remarkable feat by becoming three-time champions in the Mobile Legends Professional League Singapore (MPL SG). Their journey to three consecutive MPL SG championships is a testament to their skill and determination, and it cements their legacy as one of the most successful teams in the league's history.",
+    },
+  ];
 
   const TextBlue = (text: string) => (
     <span className="text-[#0047FE]">{text}</span>
@@ -69,14 +80,7 @@ export function RSG() {
         companyDesc="RSG, the foremost MOBA esports team, proudly carries a legacy spanning six years, marked by participation in over 200 international competitions and securing an impressive 21 titles. With three dominant domestic teams and a roster of 35 professional players, RSG stands as a powerhouse, commanding a formidable regional presence. Notably, RSG has achieved an unparalleled feat as the only esports team to clinch seven MPL championships across three distinct domestic leagues in the past six years, underscoring their consistent excellence and dominance in the competitive gaming arena."
         companyOffer="REGIONS CONQUERED"
         offerList={services}
-        imageList={images}
-        storyTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        bibendum vitae quam vitae volutpat."
-        storyDesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        bibendum vitae quam vitae volutpat. Cras ipsum mi, porttitor a aliquet
-        sit amet, accumsan vel nulla. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Praesent bibendum vitae quam vitae volutpat. Cras ipsum
-        mi, porttitor a aliquet sit amet, accumsan vel nulla."
+        stories={stories}
       />
     </div>
   );

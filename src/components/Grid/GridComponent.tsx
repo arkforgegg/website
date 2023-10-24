@@ -2,17 +2,26 @@ import { useEffect, useState } from "react";
 import { WhiteArrow } from "../Icons";
 import { Link } from "react-router-dom";
 
+interface Stories {
+  img: string;
+  title: string;
+  desc: string;
+}
+
+interface Services {
+  img: string;
+  service: JSX.Element;
+}
+
 interface Props {
   id: "nova" | "aghs" | "rsg";
   companyName: string;
   logo: string;
   companyDesc: string;
   companyOffer: string;
-  offerList: any[];
-  imageList: string[];
+  offerList: Services[];
+  stories: Stories[];
   storyName: string;
-  storyTitle: string;
-  storyDesc: string;
   linkWebsite?: string;
   reverseFlex?: boolean;
 }
@@ -24,9 +33,7 @@ export function GridComponent({
   companyDesc,
   companyOffer,
   offerList,
-  imageList,
-  storyDesc,
-  storyTitle,
+  stories,
   linkWebsite,
   reverseFlex,
   storyName,
@@ -34,7 +41,7 @@ export function GridComponent({
   const [imgCrsl, setImgCrsl] = useState(0);
 
   const nextImage = () => {
-    if (imgCrsl < imageList.length - 1) {
+    if (imgCrsl < stories.length - 1) {
       setImgCrsl((prev) => prev + 1);
     } else {
       setImgCrsl(0);
@@ -137,7 +144,7 @@ export function GridComponent({
           </b>
           <div className="mb-6 mt-10">
             <div className="relative">
-              {imageList.length > 1 && (
+              {stories.length > 1 && (
                 <button
                   onClick={nextImage}
                   className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
@@ -145,7 +152,7 @@ export function GridComponent({
                   <WhiteArrow />
                 </button>
               )}
-              {imageList.length > 1 && (
+              {stories.length > 1 && (
                 <button
                   onClick={prevImage}
                   className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
@@ -156,15 +163,15 @@ export function GridComponent({
                 </button>
               )}
               <div className="flexcenter">
-                <img src={imageList[imgCrsl]} alt="" />
+                <img src={stories[imgCrsl].img} alt="" />
               </div>
             </div>
           </div>
           <p className="airif text-sm lg:text-xl 3xl:text-3xl 3xl:pt-10 pt-5">
-            {storyTitle}
+            {stories[imgCrsl].title}
           </p>
           <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem]">
-            {storyDesc}
+            {stories[imgCrsl].desc}
           </p>
         </div>
       </div>
