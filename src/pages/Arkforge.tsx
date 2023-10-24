@@ -1,3 +1,4 @@
+import { Footer, Navbar } from "../components";
 import {
   AghsLab,
   BannerTagline,
@@ -10,7 +11,6 @@ import {
   RSG,
 } from "../sections";
 import "../css/arkforge.css";
-import { Footer, Navbar } from "../components";
 
 export function ArkforgePage() {
   return (
