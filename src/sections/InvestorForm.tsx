@@ -33,7 +33,11 @@ export function InvestorForm() {
 
   const forms = [
     {
-      title: "NAME",
+      title: (
+        <p>NAME
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "",
       input: (
         <InputComponent
@@ -45,7 +49,11 @@ export function InvestorForm() {
       ),
     },
     {
-      title: "EMAIL",
+      title: (
+        <p>EMAIL
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "",
       input: (
         <InputComponent
@@ -57,7 +65,11 @@ export function InvestorForm() {
       ),
     },
     {
-      title: "PHONE",
+      title: (
+        <p>PHONE
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "",
       input: (
         <InputComponent
@@ -69,7 +81,11 @@ export function InvestorForm() {
       ),
     },
     {
-      title: "COMPANY",
+      title: (
+        <p>COMPANY
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "",
       input: (
         <InputComponent
@@ -81,7 +97,11 @@ export function InvestorForm() {
       ),
     },
     {
-      title: "POSITION",
+      title: (
+        <p>POSITION
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "",
       input: (
         <InputComponent
@@ -93,14 +113,18 @@ export function InvestorForm() {
       ),
     },
     {
-      title: "MESSAGE",
+      title: (
+        <p>MESSAGE
+          <span className="text-red-500 ml-1">*</span>
+        </p>
+      ),
       className: "lg:col-span-2 lg:row-start-4",
       input: (
         <InputMessageComponent
           state={message}
           type="text"
           setState={setMessage}
-          placeholder="message"
+          placeholder="Enter your message here"
         />
       ),
     },
@@ -141,10 +165,7 @@ export function InvestorForm() {
         <section className="bg-[#CB0000] p-3">
           <b className="montserrat xl:text-3xl">GET IN TOUCH</b>
           <p className="text-sm my-3 xl:mx-5 airif">
-            Discover the difference that our team of seasoned professionals can
-            make for your business. With years of experience and unmatched
-            gaming expertise, we're eager to help you unlock your potential and
-            achieve new heights
+            Uncover the impact our team of seasoned experts can bring to your business. With years of valuable experience and unparalleled gaming knowledge, we are enthusiastic about assisting you in realizing your full potential and reaching greater success.
           </p>
         </section>
 
