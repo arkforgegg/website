@@ -115,12 +115,7 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
-              ArkForge has united over 200 million gamers worldwide by
-              seamlessly merging engaging gameplay, community building, and
-              innovative services. With a commitment to innovation and community
-              engagement, ArkForge stands as a frontrunner, dedicated to
-              crafting a globalized and engaged ecosystem for the world through
-              gaming.
+              ArkForge has united over 805 million gamers worldwide by seamlessly merging engaging gameplay, community building and innovative technology. We champion sustainable gaming communities with a commitment to empowering influence and creating true value. ArkForge stands as a frontrunner, dedicated to crafting a globalized and hyper engaged ecosystem for the world through gaming.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button
@@ -133,7 +128,7 @@ export function Introduction() {
               <button
                 onClick={() => scrollToElement("nova")}
                 type="button"
-                className="border border-black hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center gap-4 text-sm lg:text-lg"
+                className="border border-white hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center gap-4 text-sm lg:text-lg"
               >
                 DISCOVER NOW
                 <img src={arrow} alt="arrow" />
