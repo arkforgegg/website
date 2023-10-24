@@ -1,5 +1,5 @@
 import logo from "../assets/img/section/nova.png";
-import nova1 from "../assets/img/section/nova1.png";
+import nova1 from "../assets/img/pulse-nova/nova1.png";
 import nova2 from "../assets/img/pulse-nova/nova2.png";
 
 import sponsor from "../assets/img/pulse-nova/Sponsorship.png";

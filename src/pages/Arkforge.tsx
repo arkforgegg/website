@@ -21,7 +21,6 @@ export function ArkforgePage() {
         <DetailBanner />
         <Brands />
         <Navigation />
-        <hr className="w-full mb-10 -mt-4 border border-[#3A3A3A]" />
         <PulseNova />
         <RSG />
         <AghsLab />
