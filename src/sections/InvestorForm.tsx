@@ -152,7 +152,7 @@ export function InvestorForm() {
       // method="post"
       // encType="text/plain"
     >
-      <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
+      <b className="montserrat-bold xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">
         {/* <p className="text-sm my-3 text-[#6C6C6C] airif">
           Empowering Investors with information and Access. Explore our
@@ -163,7 +163,7 @@ export function InvestorForm() {
 
       <div className="my-14 border border-[#CB0000]">
         <section className="bg-[#CB0000] p-3">
-          <b className="montserrat xl:text-3xl">GET IN TOUCH</b>
+          <b className="montserrat-bold xl:text-3xl">GET IN TOUCH</b>
           <p className="text-sm my-3 xl:mx-5 airif">
             Uncover the impact our team of seasoned experts can bring to your business. With years of valuable experience and unparalleled gaming knowledge, we are enthusiastic about assisting you in realizing your full potential and reaching greater success.
           </p>

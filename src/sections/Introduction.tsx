@@ -105,13 +105,13 @@ export function Introduction() {
       <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden">
         <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen sm:h-auto sm:py-28 w-full  md:-mt-8">
           <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
-            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               EMPOWERING GAMING.
             </h1>
-            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               AMPLIFYING INFLUENCE.
             </h1>
-            <h1 className="montserrat font-bold lg:text-4xl text-2xl">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
