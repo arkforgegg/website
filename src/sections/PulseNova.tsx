@@ -16,13 +16,13 @@ export function PulseNova() {
     {
       img: nova1,
       title:
-        "Leveling Up Engagement: Pulse Nova's Partnership with Pizza Hut in Singapore's Esports Scene",
-      desc: `Pulse Nova's unparalleled ability to forge branded partnerships shines through in its collaboration with Pizza Hut. With the primary goal of uniting Singapore's vibrant esports community with the younger demographic, Pulse Nova ensures strong brand awareness and recall. Pizza Hut showcased their products and services through task-based activations, including the creation of branded "Pizza Hut Charity Co-Op" livestreams in collaboration with charitable organizations, exclusive community tournaments featuring professional esports players, and engaging branded livestreams with KOLs to promote new products and campaigns. Pulse Nova's expertise in curating dynamic branded content ensures that partners like Pizza Hut receive maximum visibility and engagement within the gaming and esports world.`,
+        "Pulse Nova's Partnership with Pizza Hut in Singapore's Esports Scene",
+      desc: `Pulse Nova's expertise in branded partnerships shines through its collaboration with Pizza Hut, uniting the esports community with a younger demographic. Activities include "Pizza Hut Charity Co-Op" livestreams, community tournaments, and KOL-branded livestreams, ensuring strong brand awareness and recall.`,
     },
     {
       img: nova2,
       title: "Pulse Nova's Impactful Partnership with DLLM in Esports",
-      desc: "Pulse Nova's prowess in crafting impactful branded partnerships can be seen with a brand such as DLLM. As a jersey sponsor of RSG, Pulse Nova facilitates a unique partnership that not only supports the local esports team but also fosters community engagement and top of the mind recall. DLLM was the official supper venue where fans could come together to relish MLBB gaming and delectable lok lok. This partnership united the community and cultivated a sense of togetherness among fans. Partner showcase opportunities offer distinctive ways for brands to shine, including dedicated branded video content featuring, exclusive branding awareness in local news reports, and special offers for esports fans and gamers. Pulse Nova's expertise ensures that brands like DLLM Lok Lok find a compelling platform to connect with their audience and enhance their visibility within the esports and gaming realm.",
+      desc: "Pulse Nova's partnership with DLLM as a jersey sponsor for RSG goes beyond supporting the local esports team. It fosters community engagement, making DLLM the official supper venue for MLBB gaming. This unique partnership offers brand showcase opportunities, including dedicated video content and special offers for esports fans, enhancing brand visibility in the esports scene.",
     },
   ];
 
@@ -73,7 +73,7 @@ export function PulseNova() {
         id="nova"
         logo={logo}
         companyName="PULSE NOVA ENTERTAINMENT"
-        companyDesc="Pulse Nova is a global leader in comprehensive gaming marketing leveraging partnerships with major platforms such as YouTube, Twitch, Facebook and TikTok. With its' globalized network, Pulse Nova's influence extends across North America, Europe, Asia, South America and Middle East. Boasting an impressive 805 million strong fan base, Pulse Nova stands as a testament to unparalleled success in the Esports and Gaming industry. Pulse Nova's strategic positioning and resources solidify our position as a powerhouse in connecting brands with gaming audiences on a global scale."
+        companyDesc="Pulse Nova is a global leader in gaming marketing, partnering with major platforms like YouTube, Twitch, Facebook, and TikTok. With an 805 million-strong fan base and a global presence across North America, Europe, Asia, South America, and the Middle East, we excel in connecting brands with global gaming audiences."
         companyOffer="SERVICES"
         offerList={services}
         stories={stories}

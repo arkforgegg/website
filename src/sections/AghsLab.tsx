@@ -12,8 +12,7 @@ export function AghsLab() {
   const stories = [
     {
       img: story,
-      title:
-        "STEP INTO THE FANTASY REALM OF ESPORTS: Where Fans, Teams, and Players Unite to Create Epic Moments Together!",
+      title: "STEP INTO THE FANTASY REALM OF ESPORTS",
       desc: "Welcome to Eion, the platform for Locker, Invoke and more esports products developed by Aghs Labs. We are the connecting terminal that aims to bring in all the different esports teams, clubs and fans together into one thriving community.",
     },
   ];
@@ -61,7 +60,7 @@ export function AghsLab() {
         logo={logo}
         linkWebsite="https://eion.gg/"
         companyName="AGHS LABS"
-        companyDesc="Aghs Labs is at the forefront of bridging Web 2 to Web 3 through specializing in solutions tailored for IP owners within the gaming space. Aghs Labs aims to empower the fan economy by harnessing and integrating innovative web3 technologies and introducing engaging highly complimentary and synergistic gaming products to the real gamers. Aghs Labs believes that the future of a sustainable ecosystem for IP owners can be achieved through precision and quality definition while implementing cross reality mechanisms and creating utility and value. "
+        companyDesc="Aghs Labs leads the way in connecting Web 2 to Web 3, with a focus on customized solutions for IP owners in gaming. They aim to boost the fan economy by integrating innovative web3 tech and introducing complementary gaming products. Aghs Labs believes in a sustainable IP ecosystem achieved through precision, cross-reality mechanisms, and creating utility and value."
         companyOffer="PRODUCTS"
         offerList={services}
         stories={stories}

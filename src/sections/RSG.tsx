@@ -15,12 +15,12 @@ export function RSG() {
     {
       img: msc,
       title: "RSG PH MSC 2022 Champions",
-      desc: `In 2022, RSG Philippines achieved a monumental milestone by clinching the MSC Championship, a prestigious Mobile Legends: Bang Bang tournament. With unwavering determination and exceptional gameplay, the team emerged as the undisputed champions, showcasing their skills and teamwork on the global stage. RSG Philippines' victory in the MSC Championship not only marked a moment of triumph for the team but also solidified their position as one of the most formidable forces in the competitive Mobile Legends esports scene. This achievement is a testament to their dedication and skill, earning them a well-deserved place in the annals of esports history.`,
+      desc: `In 2022, RSG Philippines achieved a monumental victory in the Mobile Legends MSC Championship, solidifying their position as a top esports team. This win showcases their exceptional skills and teamwork on the global stage, earning them a well-deserved place in esports history.`,
     },
     {
       img: rsg2,
       title: "RSG SG 3-time back to back to back Champions",
-      desc: "RSG Singapore has achieved a remarkable feat by becoming three-time champions in the Mobile Legends Professional League Singapore (MPL SG). Their journey to three consecutive MPL SG championships is a testament to their skill and determination, and it cements their legacy as one of the most successful teams in the league's history.",
+      desc: "RSG Singapore's three consecutive championships in the Mobile Legends Professional League Singapore (MPL SG) attest to their skill and determination, securing their legacy as one of the league's most successful teams.",
     },
   ];
 
@@ -77,8 +77,7 @@ export function RSG() {
         logo={logo}
         reverseFlex={true}
         companyName="RSG ESPORTS"
-        companyDesc="RSG, the premier esports team in Southeast Asia proudly carries a legacy spanning six years, marked by participation in over 200 International competitions and securing over 21 Championship Titles. Fueled by its' relentless pursuit of excellence, RSG stands as Southeast Asia's top esports brand amongst the Southeast Asia gaming audience. Notably RSG has achieved an unparalleled feat as the only esports team to clinch 6 local MPL Championships and 1 regional MSC Championship in the past six years with it's most popular match reaching over 2,300,000 peak concurrent viewers.
-        "
+        companyDesc="RSG, the leading Southeast Asian esports team, boasts a six-year legacy with over 200 international competitions and 21 Championship Titles. They are Southeast Asia's top esports brand, known for clinching 6 local MPL Championships and 1 regional MSC Championship in the past six years, with their most popular match reaching over 2.3 million peak concurrent viewers."
         companyOffer="REGIONS CONQUERED"
         offerList={services}
         stories={stories}

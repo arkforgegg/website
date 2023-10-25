@@ -112,13 +112,13 @@ export function GridComponent({
         <img src={logo} alt="" />
         <b className={`${text.primary} font`}>{companyName}</b>
       </div>
-      <p className="airif text-[12px] mb-10 lg:mt-10 3xl:text-[16px] text-justify">
+      <p className="airif mb-10 lg:mt-10 text-sm 3xl:text-[1rem] text-justify">
         {companyDesc}
       </p>
       <b className={`mt-10 montserrat-bold ${text.secondary}`}>
         {companyOffer}
       </b>
-      <div className="m-5 lg:mx-0 grid grid-cols-3 sm:grid-cols-3 gap-8">
+      <div className="my-5 lg:mx-0 grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-8">
         {offerList.map((item, i) => (
           <div
             key={i}
@@ -156,7 +156,7 @@ export function GridComponent({
   const SecondSection = () => (
     <div
       id="second"
-      className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-32 lg:w-[50%]"
+      className="hidden lg:block mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-32 lg:w-[50%]"
     >
       <b className={`mt-10 montserrat-bold ${text.secondary}`}>{storyName}</b>
       <div className="mt-10">
