@@ -109,10 +109,10 @@ export function Introduction() {
               EMPOWERING GAMING.
             </h1>
             <h1 className="montserrat font-bold lg:text-4xl text-2xl">
-              AMPLIFYING INFLUENCE
+              AMPLIFYING INFLUENCE.
             </h1>
             <h1 className="montserrat font-bold lg:text-4xl text-2xl">
-              ASIA'S BIGGEST GAMER COMMUNITY
+              ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
               ArkForge has united over 200 million gamers worldwide by

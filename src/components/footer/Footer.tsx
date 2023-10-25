@@ -1,5 +1,4 @@
 import logos from "../../assets/img/footer/logo_footer.png";
-import logo from "../../assets/img/mini logo.png";
 
 import fb from "../../assets/img/Facebook.png";
 import linked from "../../assets/img/LinkedIn.png";
@@ -17,7 +16,7 @@ export function Footer() {
       <div className="w-full inset-x-0 bottom-0 bg-black py-6 ">
         <div className="container mx-auto flex md:flex-row flex-col text-white md:px-0 px-8 justify-between w-full">
           <div className="flex flex-col md:mx-auto space-y-4 airif ">
-            <img src={logo} className="md:w-80 w-60 md:-ml-0 -ml-3 -mt-4" />
+            <img src={logos} className="md:w-80 w-60 md:-ml-0 -ml-3 -mt-4" />
             {/* <p>
                     Empowering Investors with Information and Access. Explore our downloadable resources and reach out to us for any inquiries or opportunities.
                 </p>
@@ -42,10 +41,10 @@ export function Footer() {
               For business inquiries: <br />
               <a href="mailto:Hello@arkforge.gg">Hello@arkforge.gg</a>
             </p>
-            <p className="airif md:text-sm text-xs">
+            {/* <p className="airif md:text-sm text-xs">
               For partnership: <br />
               <a href="mailto:email@partnership.com">email@partnership.com</a>
-            </p>
+            </p> */}
             <div className="gap-2 flex flex-row">
               {socmed.map((socmeds, i) => (
                 <a key={i} target="_blank" href={socmeds.link}>
