@@ -43,8 +43,8 @@ export function GridComponent({
   const [imgCrsl, setImgCrsl] = useState(0);
 
   const text = {
-    primary: "text-base xl:text-3xl 3xl:text-3xl",
-    secondary: "xl:text-xl 2xl:text-2xl 3xl:text-2xl",
+    primary: "text-base xl:text-2xl 3xl:text-3xl",
+    secondary: "xl:text-xl 2xl:text-xl 3xl:text-2xl",
     small: "text-[10px] lg:text-[16px]",
   };
 

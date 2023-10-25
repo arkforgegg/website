@@ -89,7 +89,7 @@ export function Navigation() {
             key={i}
           >
             <img src={nav.image} alt="" />
-            <b className="montserrat">{nav.title}</b>
+            <b className="montserrat-bold">{nav.title}</b>
           </button>
         ))}
       </div>
