@@ -79,13 +79,13 @@ export function Navigation() {
         <GrayArrow />
         <p className="airif text-[#4B4B4B] text-[18px]">Back to Top</p>
       </button>
-      <div className="airif flex items-center justify-between my-8 gap-2 sm:gap-10 sm:px-5 text-[16px] bg-[#1313131] border border-[#5E5E5E] py-1 px-2 rounded-md">
+      <div className="airif flex items-center justify-between my-3 gap-2 sm:gap-10 sm:px-5 text-[16px] bg-[#1313131] border border-[#5E5E5E] py-1 px-2 rounded-md">
         {navs.map((nav, i) => (
           <button
             onClick={() => scrollToElement(nav.id)}
             className={`${
               currentSection === nav.id ? "bg-[#4B4B4B]" : ""
-            } flexcenter gap-1 rounded-md px-1 sm:px-4 py-3`}
+            } flexcenter gap-1 rounded-md px-1 sm:px-4 py-2`}
             key={i}
           >
             <img src={nav.image} alt="" />

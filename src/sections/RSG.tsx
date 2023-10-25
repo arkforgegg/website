@@ -34,7 +34,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG SINGAPORE</p>
-          <ul className="list-disc lg:ml-4 text-[16px]">
+          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
             <li>{TextBlue("MPL SG Season 5 Champions")}</li>
             <li>{TextBlue("MPL SG Season 4 Champions")}</li>
             <li>{TextBlue("MPL SG Season 3 Champions")}</li>
@@ -48,7 +48,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG PHILIPPINES</p>
-          <ul className="list-disc lg:ml-4 text-[16px]">
+          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
             <li>{TextBlue("MPL PH Season 9 Champions")}</li>
             <li>{TextBlue("MLBB SEA Cup 2022")}</li>
           </ul>
@@ -60,7 +60,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG MALAYSIA</p>
-          <ul className="list-disc lg:ml-4 text-[16px]">
+          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
             <li>{TextBlue("MPL MY Season 7 Champions")}</li>
           </ul>
         </div>
@@ -76,7 +76,7 @@ export function RSG() {
         id="rsg"
         logo={logo}
         reverseFlex={true}
-        companyName="RSG"
+        companyName="RSG ESPORTS"
         companyDesc="RSG, the premier esports team in Southeast Asia proudly carries a legacy spanning six years, marked by participation in over 200 International competitions and securing over 21 Championship Titles. Fueled by its' relentless pursuit of excellence, RSG stands as Southeast Asia's top esports brand amongst the Southeast Asia gaming audience. Notably RSG has achieved an unparalleled feat as the only esports team to clinch 6 local MPL Championships and 1 regional MSC Championship in the past six years with it's most popular match reaching over 2,300,000 peak concurrent viewers.
         "
         companyOffer="REGIONS CONQUERED"

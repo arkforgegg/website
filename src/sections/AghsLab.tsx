@@ -55,6 +55,7 @@ export function AghsLab() {
   return (
     <div>
       <GridComponent
+        noLineBreak={true}
         storyName="EION"
         id="aghs"
         logo={logo}

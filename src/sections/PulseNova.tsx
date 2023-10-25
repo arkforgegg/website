@@ -72,7 +72,7 @@ export function PulseNova() {
         linkWebsite={`https://pulsenova.gg/`}
         id="nova"
         logo={logo}
-        companyName="PULSE NOVA"
+        companyName="PULSE NOVA ENTERTAINMENT"
         companyDesc="Pulse Nova is a global leader in comprehensive gaming marketing leveraging partnerships with major platforms such as YouTube, Twitch, Facebook and TikTok. With its' globalized network, Pulse Nova's influence extends across North America, Europe, Asia, South America and Middle East. Boasting an impressive 805 million strong fan base, Pulse Nova stands as a testament to unparalleled success in the Esports and Gaming industry. Pulse Nova's strategic positioning and resources solidify our position as a powerhouse in connecting brands with gaming audiences on a global scale."
         companyOffer="SERVICES"
         offerList={services}

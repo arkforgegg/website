@@ -52,7 +52,7 @@ export function Brands() {
   ];
 
   return (
-    <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0">
+    <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0 w-full lg:px-20">
       <b className="montserrat xl:text-3xl">BRANDS WE HAVE COLLABORATED WITH</b>
       {/* <div className="text-sm my-3 text-[#6C6C6C] airif xl:flex xl:flexcenter">
         <p>Exploring new horizons with our diverse clientele</p>

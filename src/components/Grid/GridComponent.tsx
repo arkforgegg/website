@@ -24,6 +24,7 @@ interface Props {
   storyName: string;
   linkWebsite?: string;
   reverseFlex?: boolean;
+  noLineBreak?: boolean;
 }
 
 export function GridComponent({
@@ -37,8 +38,15 @@ export function GridComponent({
   linkWebsite,
   reverseFlex,
   storyName,
+  noLineBreak,
 }: Props) {
   const [imgCrsl, setImgCrsl] = useState(0);
+
+  const text = {
+    primary: "text-base xl:text-3xl 3xl:text-4xl",
+    secondary: "xl:text-xl 2xl:text-2xl 3xl:text-3xl",
+    small: "text-[12px] lg:text-[16px]",
+  };
 
   const companyValue = (nova: string, rsg: string, aghs: string) => {
     switch (id) {
@@ -98,98 +106,110 @@ export function GridComponent({
     </Link>
   );
 
+  const FirstSection = () => (
+    <div id="first" className="mx-2 lg:mx-10 lg:w-[50%]">
+      <div className="montserrat flex items-center justify-center lg:gap-0 3xl:gap-3 lg:justify-start xl:pt-10 pb-10 lg:pb-0">
+        <img src={logo} alt="" />
+        <b className={`${text.primary} font`}>{companyName}</b>
+      </div>
+      <p className="airif text-[12px] mb-10 lg:mt-10 3xl:text-[16px] text-justify">
+        {companyDesc}
+      </p>
+      <b className={`mt-10 montserrat-bold ${text.secondary}`}>
+        {companyOffer}
+      </b>
+      <div className="m-5 lg:mx-0 grid grid-cols-2 sm:grid-cols-3 gap-8">
+        {offerList.map((item, i) => (
+          <div
+            key={i}
+            className={`flex flex-col ${
+              id === "nova" ? "items-center" : "items-start"
+            }`}
+          >
+            <div
+              className={`w-full aspect-square bg-gradient-to-br p-[0.1rem] rounded-md ${companyValue(
+                "from-[#4FAA94]",
+                "from-[#002073]",
+                "from-[#0075FF]"
+              )} to-[#000000]`}
+            >
+              <div className="bg-[#242424] w-full h-full flexcenter rounded-md">
+                <img className="aspect-square" src={item.img} alt="" />
+              </div>
+            </div>
+            <div
+              className={`airif ${text.small} mt-2 ${
+                id === "nova" ? "text-center" : "text-left"
+              }`}
+            >
+              {item.service}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="my-10 mt-24 hidden lg:flex">
+        <VisitWebsite />
+      </div>
+    </div>
+  );
+
+  const SecondSection = () => (
+    <div
+      id="second"
+      className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-32 lg:w-[50%]"
+    >
+      <b className={`mt-10 montserrat-bold ${text.secondary}`}>{storyName}</b>
+      <div className="mt-10">
+        <div className="relative">
+          {stories.length > 1 && (
+            <button
+              onClick={nextImage}
+              className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
+            >
+              <WhiteArrow />
+            </button>
+          )}
+          {stories.length > 1 && (
+            <button
+              onClick={prevImage}
+              className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
+            >
+              <div className="rotate-180">
+                <WhiteArrow />
+              </div>
+            </button>
+          )}
+          <div className="flexcenter">
+            <img src={stories[imgCrsl].img} alt="" />
+          </div>
+        </div>
+      </div>
+      <p className="montserrat-bold text-sm lg:text-lg 3xl:text-lg my-2">
+        {stories[imgCrsl].title}
+      </p>
+      <p className="airif text-xs text-[#939393] lg:text-sm 3xl:text-[1rem] text-justify">
+        {stories[imgCrsl].desc}
+      </p>
+    </div>
+  );
+
   return (
     <div
       id={id}
-      className="mt-10 mx-5 lg:m-10 lg:mx-28 3xl:mx-52 flex flex-col gap-4 lg:mb-0"
+      className="mx-5 lg:m-10 lg:mx-28 3xl:mx-52 flex flex-col gap-4 lg:mb-0"
     >
       <div
         className={`flex flex-col ${
           reverseFlex ? "lg:flex-row-reverse" : "lg:flex-row"
         } gap-4`}
       >
-        <div className="mx-2 lg:mx-10 lg:w-[50%]">
-          <div className="hmontserrat flex items-center justify-center lg:gap-3 lg:justify-start pt-10 pb-10 lg:pb-0">
-            <img src={logo} alt="" />
-            <b className="text-4xl 3xl:text-5xl font">{companyName}</b>
-          </div>
-          <p className="airif text-[16px] mb-10 lg:mt-10 3xl:text-[16px] text-justify">
-            {companyDesc}
-          </p>
-          <b className="mt-10 montserrat 2xl:text-[30px]">{companyOffer}</b>
-          <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {offerList.map((item, i) => (
-              <div
-                key={i}
-                className={`flex flex-col ${
-                  id === "nova" ? "items-center" : "items-start"
-                }`}
-              >
-                <div
-                  className={`w-full aspect-square bg-gradient-to-br p-[0.1rem] rounded-md ${companyValue(
-                    "from-[#4FAA94]",
-                    "from-[#002073]",
-                    "from-[#0075FF]"
-                  )} to-[#000000]`}
-                >
-                  <div className="bg-[#242424] w-full h-full flexcenter rounded-md">
-                    <img className="aspect-square" src={item.img} alt="" />
-                  </div>
-                </div>
-                <div
-                  className={`airif text-[14px] mt-2 ${
-                    id === "nova" ? "text-center" : "text-left"
-                  } 3xl:text-base`}
-                >
-                  {item.service}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="my-10 mt-24 hidden lg:flex">
-            <VisitWebsite />
-          </div>
-        </div>
-        <div className="mx-2 lg:mx-10 xl:mx-20 pt-20 lg:pt-32 lg:w-[50%]">
-          <b className="mt-10 montserrat lg:text-2xl 3xl:text-[30px]">
-            {storyName}
-          </b>
-          <div className="mb-6 mt-10">
-            <div className="relative">
-              {stories.length > 1 && (
-                <button
-                  onClick={nextImage}
-                  className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:right-5 lg:-right-5 top-1/2 -translate-y-1/2"
-                >
-                  <WhiteArrow />
-                </button>
-              )}
-              {stories.length > 1 && (
-                <button
-                  onClick={prevImage}
-                  className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:left-5 lg:-left-5 top-1/2 -translate-y-1/2"
-                >
-                  <div className="rotate-180">
-                    <WhiteArrow />
-                  </div>
-                </button>
-              )}
-              <div className="flexcenter">
-                <img src={stories[imgCrsl].img} alt="" />
-              </div>
-            </div>
-          </div>
-          <p className="montserrat text-sm lg:text-lg 3xl:text-lg 3xl:pt-10 pt-5">
-            {stories[imgCrsl].title}
-          </p>
-          <p className="airif text-xs mt-2 text-[#939393] lg:text-sm lg:mt-5 3xl:text-[1rem] text-justify">
-            {stories[imgCrsl].desc}
-          </p>
-        </div>
+        <FirstSection />
+        <SecondSection />
       </div>
       <div className="mt-5 lg:hidden">
         <VisitWebsite />
       </div>
+      <div className="w-full my-14">{!noLineBreak && <hr />}</div>
     </div>
   );
 }
