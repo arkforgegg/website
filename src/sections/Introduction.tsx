@@ -38,7 +38,7 @@ export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
   const [typewriterText, setTypewriterText] = useState("");
   const [imageColor, setImageColor] = useState("red");
-  const [isAnimationInProgress, setIsAnimationInProgress] = useState(false);
+  const [, setIsAnimationInProgress] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
   let i = 0;
 
@@ -115,12 +115,7 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
-              ArkForge has united over 200 million gamers worldwide by
-              seamlessly merging engaging gameplay, community building, and
-              innovative services. With a commitment to innovation and community
-              engagement, ArkForge stands as a frontrunner, dedicated to
-              crafting a globalized and engaged ecosystem for the world through
-              gaming.
+              ArkForge unites 805 million gamers worldwide through seamless gameplay, community, and technology. We champion sustainable gaming communities and lead in crafting a hyper-engaged global ecosystem.
             </p>
             <div className="flex flex-row gap-4 md:mt-24 mt-10">
               <button

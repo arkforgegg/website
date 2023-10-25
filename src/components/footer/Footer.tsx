@@ -16,7 +16,7 @@ export function Footer() {
       <div className="w-full inset-x-0 bottom-0 bg-black py-8 md:mt-[8rem] mt-[5rem] border-t-2 border-[#212121]">
         <div className="container mx-auto flex md:flex-row flex-col text-white md:px-0 px-8 justify-between w-full lg:space-y-0 space-y-8">
           <div className="flex flex-col md:mx-auto space-y-4 airif ">
-            <img src={logos} className="md:w-80 w-60 md:-ml-0 -ml-3 -mt-4" />
+            <img src={logos} alt="ARKFORGE" className="md:w-80 w-60 md:-ml-0 -ml-3 -mt-4" />
             {/* <p>
                     Empowering Investors with Information and Access. Explore our downloadable resources and reach out to us for any inquiries or opportunities.
                 </p>
