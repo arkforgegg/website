@@ -18,7 +18,7 @@ export function InputComponent({
       className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md text-sm px-4 py-2 airif"
       type={type}
       value={state}
-      placeholder={`Enter your ${placeholder.toLowerCase()} here`}
+      placeholder={`${placeholder}`}
       onChange={hanldeInput}
     />
   );

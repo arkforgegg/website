@@ -44,7 +44,7 @@ export function InvestorForm() {
           type="text"
           state={name}
           setState={setName}
-          placeholder="name"
+          placeholder="Jane Doe"
         />
       ),
     },
@@ -60,7 +60,7 @@ export function InvestorForm() {
           type="email"
           state={email}
           setState={setEmail}
-          placeholder="email"
+          placeholder="jane@example.com"
         />
       ),
     },
@@ -76,7 +76,7 @@ export function InvestorForm() {
           type="text"
           state={phone}
           setState={setPhone}
-          placeholder="phone"
+          placeholder="+6012345678"
         />
       ),
     },
@@ -92,7 +92,7 @@ export function InvestorForm() {
           state={company}
           type="text"
           setState={setCompany}
-          placeholder="company"
+          placeholder="Example Company"
         />
       ),
     },
@@ -108,7 +108,7 @@ export function InvestorForm() {
           state={position}
           type="text"
           setState={setPosition}
-          placeholder="position"
+          placeholder="Manager"
         />
       ),
     },
@@ -145,12 +145,12 @@ export function InvestorForm() {
   ];
 
   return (
-    <form
+    <div
       id="contact"
       className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
-      action="mailto:Hello@arkforge.gg"
-      method="post"
-      encType="text/plain"
+      // action="mailto:Hello@arkforge.gg"
+      // method="post"
+      // encType="text/plain"
     >
       <b className="montserrat xl:text-3xl">INVESTOR RELATION</b>
       <div className="flex text-left sm:text-center">
@@ -181,6 +181,6 @@ export function InvestorForm() {
           ))}
         </section>
       </div>
-    </form>
+    </div>
   );
 }
