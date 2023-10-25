@@ -8,7 +8,7 @@ export function DetailBanner() {
     },
     {
       title: "5 CONTINENTS",
-      desc: "ACROSS SOUTHEAST ASIA",
+      desc: "ACROSS THE WORLD",
     },
     {
       title: "805M+",
