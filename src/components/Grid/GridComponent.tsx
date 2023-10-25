@@ -43,9 +43,9 @@ export function GridComponent({
   const [imgCrsl, setImgCrsl] = useState(0);
 
   const text = {
-    primary: "text-base xl:text-3xl 3xl:text-4xl",
-    secondary: "xl:text-xl 2xl:text-2xl 3xl:text-3xl",
-    small: "text-[12px] lg:text-[16px]",
+    primary: "text-base xl:text-3xl 3xl:text-3xl",
+    secondary: "xl:text-xl 2xl:text-2xl 3xl:text-2xl",
+    small: "text-[10px] lg:text-[16px]",
   };
 
   const companyValue = (nova: string, rsg: string, aghs: string) => {
@@ -118,7 +118,7 @@ export function GridComponent({
       <b className={`mt-10 montserrat-bold ${text.secondary}`}>
         {companyOffer}
       </b>
-      <div className="m-5 lg:mx-0 grid grid-cols-2 sm:grid-cols-3 gap-8">
+      <div className="m-5 lg:mx-0 grid grid-cols-3 sm:grid-cols-3 gap-8">
         {offerList.map((item, i) => (
           <div
             key={i}

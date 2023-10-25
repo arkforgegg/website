@@ -66,7 +66,7 @@ export function PulseNova() {
   ];
 
   return (
-    <div>
+    <div className="mt-10 lg:mt-0">
       <GridComponent
         storyName="CASE STUDIES"
         linkWebsite={`https://pulsenova.gg/`}
