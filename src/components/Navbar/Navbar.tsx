@@ -22,7 +22,7 @@ export function Navbar() {
         </a>
         <div className="gap-4 flex flex-row">
           {socmed.map((socmeds, i) => (
-            <a key={i} target="_blank" href={socmeds.link}>
+            <a key={i} target="_blank" rel="noreferrer" href={socmeds.link}>
               <img src={socmeds.image} alt="Icon" className="w-6 md:w-8" />
             </a>
           ))}
