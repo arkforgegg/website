@@ -1,6 +1,6 @@
 .line-1{
     position: relative;
-    border-right: 2px solid #CB0000;
+    /* border-right: 2px solid #CB0000; */
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -28,4 +28,24 @@
   to {
     border-right-color: transparent;
   }
+}
+
+.typewriter-text {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: fadeIn 3.5s linear infinite;
+}
+.typewriter-text.active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-text {
+  animation: fadeIn 3.5s linear infinite;
+  -webkit-animation: fadeIn 3.5s linear infinite;
 }

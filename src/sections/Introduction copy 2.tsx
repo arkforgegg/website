@@ -36,33 +36,87 @@ const company = [
 
 export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
+  const [typewriterText, setTypewriterText] = useState("");
   const [imageColor, setImageColor] = useState("red");
-  const text = company[activeCompanyIndex].text;
+  const [, setIsAnimationInProgress] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  let i = 0;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCompanyIndex((prevIndex) =>
-        prevIndex === company.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change text every 4 seconds
+    changeCompany();
+  }, [activeCompanyIndex]);
 
+  useEffect(() => {
     return () => {
-      clearInterval(interval);
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
     };
   }, []);
+
+  const changeCompany = () => {
+    setActiveCompanyIndex(activeCompanyIndex);
+    setTypewriterText(""); // Reset typewriterText to an empty string when changing companies
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    i = 0; // Reset the index when changing companies
+    if (activeCompanyIndex > company.length - 1) {
+      setActiveCompanyIndex(0);
+    } else {
+      startTypewriterAnimation(company[activeCompanyIndex].text);
+    }
+  };
+
+  const startTypewriterAnimation = (text: any) => {
+    setIsAnimationInProgress(true);
+
+    const updateText = () => {
+      if (i < text.length) {
+        const currentChar = text[i];
+        setTypewriterText((prevText) => prevText + currentChar);
+        if (currentChar === " ") {
+          setTypewriterText((prevText) => prevText + " ");
+        }
+        i++;
+      } else {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+        setIsAnimationInProgress(false);
+        setTimeout(() => {
+          setImageColor("black");
+          setTimeout(() => {
+            setImageColor("red");
+            setActiveCompanyIndex((prev) => prev + 1);
+            // Remove the text element from DOM to trigger fade-out
+            const textElement = document.querySelector(".typewriter-text");
+            if (textElement) {
+              textElement.classList.remove("active");
+            }
+          }, 1000);
+        }, 1000);
+      }
+    };
+
+    updateText(); // Call the to start the animation
+
+    // Set an interval to continue updating the text
+    intervalRef.current = setInterval(updateText, 80);
+  };
 
   return (
     <>
       <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden">
         <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen sm:h-auto sm:py-28 w-full  md:-mt-8">
           <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               EMPOWERING GAMING.
             </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               AMPLIFYING INFLUENCE.
             </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl text-2xl">
               ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
@@ -90,7 +144,7 @@ export function Introduction() {
             <div className="flex justify-center">
               <img src={main} alt="Arkforge" className="md:ml-10" />
             </div>
-            <div className="flex flex-row absolute w-full justify-center md:left-2 2xl:top-72 lg:top-56 md:top-44 top-[9.5rem] space-x-8 xs:space-x-0 xs:top-32">
+            <div className="flex flex-row absolute 3xl:left-28 lg:left-14 md:left-10 2xl:top-72 lg:top-56 md:top-44 top-40 space-x-10">
               {company.map((comp, index) => (
                 <img
                   key={index}
@@ -115,7 +169,7 @@ export function Introduction() {
                   imageColor === "red" ? "active" : ""
                 }`}
               >
-                {text}
+                {typewriterText}
               </p>
             </div>
           </div>
