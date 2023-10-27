@@ -43,9 +43,9 @@ export function GridComponent({
   const [imgCrsl, setImgCrsl] = useState(0);
 
   const text = {
-    primary: "text-base xl:text-2xl 3xl:text-3xl",
-    secondary: "xl:text-xl 2xl:text-xl 3xl:text-2xl",
-    small: "text-[10px] lg:text-[16px]",
+    primary: "xs:text-sm text-base xl:text-2xl 3xl:text-3xl",
+    secondary: "xs:text-base xl:text-xl 2xl:text-xl 3xl:text-2xl",
+    small: "xs:text-[8px] text-[10px] lg:text-[16px]",
   };
 
   const companyValue = (nova: string, rsg: string, aghs: string) => {
@@ -112,7 +112,7 @@ export function GridComponent({
         <img src={logo} alt="" />
         <b className={`${text.primary} font`}>{companyName}</b>
       </div>
-      <p className="airif mb-10 lg:mt-10 text-sm 3xl:text-[1rem] text-justify">
+      <p className="airif mb-10 lg:mt-10 xs:text-xs text-sm 3xl:text-[1rem] text-center sm:text-justify">
         {companyDesc}
       </p>
       <b className={`mt-10 montserrat-bold ${text.secondary}`}>
@@ -187,7 +187,7 @@ export function GridComponent({
       <p className="montserrat-bold text-sm lg:text-lg 3xl:text-lg my-2">
         {stories[imgCrsl].title}
       </p>
-      <p className="airif text-xs text-[#939393] lg:text-sm 3xl:text-[1rem] text-justify">
+      <p className="airif text-xs text-[#939393] lg:text-sm 3xl:text-[1rem] text-center sm:text-justify">
         {stories[imgCrsl].desc}
       </p>
     </div>

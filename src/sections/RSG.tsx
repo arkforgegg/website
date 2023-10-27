@@ -34,7 +34,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG SINGAPORE</p>
-          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
+          <ul className="list-disc lg:ml-4">
             <li>{TextBlue("MPL SG Season 5 Champions")}</li>
             <li>{TextBlue("MPL SG Season 4 Champions")}</li>
             <li>{TextBlue("MPL SG Season 3 Champions")}</li>
@@ -48,7 +48,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG PHILIPPINES</p>
-          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
+          <ul className="list-disc lg:ml-4">
             <li>{TextBlue("MPL PH Season 9 Champions")}</li>
             <li>{TextBlue("MLBB SEA Cup 2022")}</li>
           </ul>
@@ -60,7 +60,7 @@ export function RSG() {
       service: (
         <div className="">
           <p>RSG MALAYSIA</p>
-          <ul className="list-disc lg:ml-4 text-[12px] lg:text-[16px]">
+          <ul className="list-disc lg:ml-4">
             <li>{TextBlue("MPL MY Season 7 Champions")}</li>
           </ul>
         </div>
