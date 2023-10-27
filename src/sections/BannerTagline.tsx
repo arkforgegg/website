@@ -13,7 +13,6 @@ export function BannerTagline() {
 
   return (
     <>
-
       {/* <div className="bg-[#CB0000] flex overflow-hidden gap-10 marquee">
         <div className={`flex-shrink-0 p-5`}>
           {details.map((detail, i) => (
@@ -35,7 +34,7 @@ export function BannerTagline() {
         </div>
       </div>
       <br /> */}
-      <div className="marquee bg-[#CB0000] md:py-10 py-6">
+      <div className="marquee bg-[#CB0000] xs:py-4 md:py-10 py-6">
         <div className="marquee__content">
           <ul className="list-inline montsreat xl:text-[36px] font-bold">
             <li className="lg:mx-16 mx-10">EMPOWERING GAMING</li>
@@ -54,7 +53,6 @@ export function BannerTagline() {
           </ul>
         </div>
       </div>
-
     </>
   );
 }

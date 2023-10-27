@@ -2,12 +2,18 @@ import logo from "../assets/img/section/nova.png";
 import nova1 from "../assets/img/pulse-nova/nova1.png";
 import nova2 from "../assets/img/pulse-nova/nova2.png";
 
-import sponsor from "../assets/img/pulse-nova/Sponsorship.png";
-import gaming from "../assets/img/pulse-nova/Gaming Management-cropped.png";
-import community from "../assets/img/pulse-nova/Community Management-cropped.png";
-import talent from "../assets/img/pulse-nova/Talent Management - cropped.png";
-import pr from "../assets/img/pulse-nova/Public Relations - cropped.png";
-import video from "../assets/img/pulse-nova/video - cropped.png";
+// import sponsor from "../assets/img/pulse-nova/Sponsorship.png";
+// import gaming from "../assets/img/pulse-nova/Gaming Management-cropped.png";
+// import community from "../assets/img/pulse-nova/Community Management-cropped.png";
+// import talent from "../assets/img/pulse-nova/Talent Management - cropped.png";
+// import pr from "../assets/img/pulse-nova/Public Relations - cropped.png";
+// import video from "../assets/img/pulse-nova/video - cropped.png";
+import sponsor from "../assets/img/pulse-nova/Sponsorship.jpg";
+import gaming from "../assets/img/pulse-nova/Gaming Event Management.webp";
+import community from "../assets/img/pulse-nova/Community Management.jpg";
+import talent from "../assets/img/pulse-nova/Talent Booking.jpg";
+import pr from "../assets/img/pulse-nova/Public Relation.png";
+import video from "../assets/img/pulse-nova/Video Production.webp";
 
 import { GridComponent } from "../components";
 

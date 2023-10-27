@@ -34,7 +34,8 @@ export function InvestorForm() {
   const forms = [
     {
       title: (
-        <p>NAME
+        <p>
+          NAME
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -50,7 +51,8 @@ export function InvestorForm() {
     },
     {
       title: (
-        <p>EMAIL
+        <p>
+          EMAIL
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -66,7 +68,8 @@ export function InvestorForm() {
     },
     {
       title: (
-        <p>PHONE
+        <p>
+          PHONE
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -82,7 +85,8 @@ export function InvestorForm() {
     },
     {
       title: (
-        <p>COMPANY
+        <p>
+          COMPANY
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -98,7 +102,8 @@ export function InvestorForm() {
     },
     {
       title: (
-        <p>POSITION
+        <p>
+          POSITION
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -114,7 +119,8 @@ export function InvestorForm() {
     },
     {
       title: (
-        <p>MESSAGE
+        <p>
+          MESSAGE
           <span className="text-red-500 ml-1">*</span>
         </p>
       ),
@@ -136,7 +142,7 @@ export function InvestorForm() {
           disabled={!mandatory()}
           type="submit"
           onClick={handleSubmit}
-          className="bg-[#FF0000] py-2 airif rounded-md w-full"
+          className="bg-[#FF0000] xs:text-xs py-2 airif rounded-md w-full"
         >
           SUBMIT
         </button>
@@ -163,9 +169,14 @@ export function InvestorForm() {
 
       <div className="my-14 border border-[#CB0000]">
         <section className="bg-[#CB0000] p-3">
-          <b className="montserrat-bold xl:text-3xl">GET IN TOUCH</b>
-          <p className="text-sm my-3 xl:mx-5 airif">
-            Uncover the impact our team of seasoned experts can bring to your business. With years of valuable experience and unparalleled gaming knowledge, we are enthusiastic about assisting you in realizing your full potential and reaching greater success.
+          <b className="montserrat-bold xs:text-base xl:text-3xl">
+            GET IN TOUCH
+          </b>
+          <p className="xs:text-xs text-sm my-3 xl:mx-5 airif">
+            Uncover the impact our team of seasoned experts can bring to your
+            business. With years of valuable experience and unparalleled gaming
+            knowledge, we are enthusiastic about assisting you in realizing your
+            full potential and reaching greater success.
           </p>
         </section>
 
@@ -175,7 +186,9 @@ export function InvestorForm() {
               key={i}
               className={`flex flex-col items-start justify-center w-full ${form.className}`}
             >
-              <p className="airif text-left text-sm ml-1">{form.title}</p>
+              <p className="airif text-left xs:text-xs text-sm ml-1">
+                {form.title}
+              </p>
               {form.input}
             </div>
           ))}

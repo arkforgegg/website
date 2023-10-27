@@ -26,8 +26,8 @@ export function DetailBanner() {
     >
       {details.map((detail, i) => (
         <div key={i} className="flex flex-col justify-center">
-          <b className="montsreat xl:text-[40px]">{detail.title}</b>
-          <p className="airif text-[9px] xl:text-[20px]">{detail.desc}</p>
+          <b className="montsreat xs:text-[13px] xl:text-[40px]">{detail.title}</b>
+          <p className="airif xs:text-[8px] text-[9px] xl:text-[20px]">{detail.desc}</p>
         </div>
       ))}
       {/* <CountUp end={1212} /> */}

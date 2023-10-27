@@ -15,7 +15,7 @@ export function InputComponent({
 
   return (
     <input
-      className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md text-sm px-4 py-2 airif"
+      className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md xs:text-xs text-sm px-4 xs:px-2 py-2 airif"
       type={type}
       value={state}
       placeholder={`${placeholder}`}
@@ -29,7 +29,7 @@ export function InputMessageComponent({ state, setState, placeholder }: Props) {
 
   return (
     <textarea
-      className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md text-sm px-4 py-2 h-40 airif"
+      className="mt-1 mb-5 w-full bg-[#131313] border border-[#6C6C6C] rounded-md xs:text-xs text-sm px-4 xs:px-2 py-2 xs:h-28 h-40 airif"
       value={state}
       placeholder={placeholder}
       onChange={hanldeInput}

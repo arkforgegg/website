@@ -85,7 +85,7 @@ export function Navigation() {
             onClick={() => scrollToElement(nav.id)}
             className={`${
               currentSection === nav.id ? "bg-[#4B4B4B]" : ""
-            } flexcenter gap-1 rounded-md px-1 sm:px-4 py-2`}
+            } flexcenter gap-1 rounded-md px-1 sm:px-4 py-2 xs:py-1`}
             key={i}
           >
             <img src={nav.image} alt="" />

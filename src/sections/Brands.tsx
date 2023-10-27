@@ -52,15 +52,15 @@ export function Brands() {
   ];
 
   return (
-    <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0 w-full px-5 lg:px-52">
-      <b className="montserrat-bold xl:text-3xl">BRANDS WE HAVE COLLABORATED WITH</b>
+    <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0 w-full px-5 md:px-14 lg:px-52">
+      <b className="montserrat-bold xs:text-sm xl:text-3xl">BRANDS WE HAVE COLLABORATED WITH</b>
       {/* <div className="text-sm my-3 text-[#6C6C6C] airif xl:flex xl:flexcenter">
         <p>Exploring new horizons with our diverse clientele</p>
         <p>- A glimpse into brands we've partnered with</p>
       </div> */}
-      <div className="m-8 xl:px-8 xl:mt-20 grid grid-cols-4 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-0 justify-items-center">
+      <div className="xs:mx-2 m-8 md:px-10 xl:mt-20 grid grid-cols-4 md:grid-cols-4 xl:grid-cols-6 xs:gap-3 gap-5 md:gap-4 xl:gap-0 justify-items-center">
         {brands.map((brand, i) => (
-          <div key={i} className="flexcenter xl:scale-[0.8]">
+          <div key={i} className="flexcenter md:scale-[0.8]">
             <img className="grayscale" src={brand} alt="" />
           </div>
         ))}
