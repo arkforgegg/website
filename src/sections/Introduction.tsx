@@ -8,6 +8,7 @@ import red_AL from "../assets/img/main/red_al2.png";
 import red_rsg from "../assets/img/main/red_rsg.png";
 import red_pulse from "../assets/img/main/red_pn.png";
 import { scrollToElement } from ".";
+import { WhiteArrow } from "../components";
 
 const company = [
   {
@@ -33,7 +34,6 @@ const company = [
   },
 ];
 
-
 export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
   const [imageColor, setImageColor] = useState("red");
@@ -56,33 +56,38 @@ export function Introduction() {
       <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden">
         <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen sm:h-auto sm:py-28 w-full  md:-mt-8">
           <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
               EMPOWERING GAMING.
             </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
               AMPLIFYING INFLUENCE.
             </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm">
+            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
               ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
-            <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-justify">
-              ArkForge unites 805 million gamers worldwide through seamless gameplay, community, and technology. We champion sustainable gaming communities and lead in crafting a hyper-engaged global ecosystem.
+            <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-center sm:text-justify">
+              ArkForge unites 805 million gamers worldwide through seamless
+              gameplay, community, and technology. We champion sustainable
+              gaming communities and lead in crafting a hyper-engaged global
+              ecosystem.
             </p>
-            <div className="flex flex-row gap-4 md:mt-24 mt-10">
+            <div className="flex flex-row gap-4 md:mt-24 mt-10 mb-20 sm:mb-0">
               <button
                 onClick={() => scrollToElement("contact")}
                 type="button"
-                className="border border-[#FF0000] hover:text-[#FF0000] hover:border-white rounded-md px-4 py-2  text-sm lg:text-lg"
+                className="border border-[#FF0000] hover:text-[#FF0000] hover:border-white rounded-md px-4 py-2 xs:text-[9px] text-sm lg:text-lg"
               >
                 CONTACT US
               </button>
               <button
                 onClick={() => scrollToElement("nova")}
                 type="button"
-                className="border hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center gap-4 text-sm lg:text-lg"
+                className="border hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center xs:gap-[0.1rem] gap-4 xs:text-[9px] text-sm lg:text-lg flexcenter"
               >
                 DISCOVER NOW
-                <img src={arrow} alt="arrow" />
+                <div className="rotate-90 w-3 xs:-mt-[0.45rem]">
+                  <WhiteArrow />
+                </div>
               </button>
             </div>
           </div>
