@@ -66,7 +66,7 @@ export function Introduction() {
               ASIA'S BIGGEST GAMER COMMUNITY.
             </h1>
             <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-center sm:text-justify">
-              ArkForge unites 805 million gamers worldwide through seamless
+              ArkForge unites 500 million gamers worldwide through seamless
               gameplay, community, and technology. We champion sustainable
               gaming communities and lead in crafting a hyper-engaged global
               ecosystem.

@@ -11,7 +11,7 @@ export function DetailBanner() {
       desc: "ACROSS THE WORLD",
     },
     {
-      title: "805M+",
+      title: "500M+",
       desc: "COMMUNITY SIZE",
     },
     {
