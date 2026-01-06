@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import arrow from "../assets/img/down.png";
+import { useEffect, useState } from "react";
 import main from "../assets/img/main.png";
 import black_AL from "../assets/img/main/bl_al2.png";
 import black_rsg from "../assets/img/main/bl_rsg.png";
@@ -36,7 +35,6 @@ const company = [
 
 export function Introduction() {
   const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
-  const [imageColor, setImageColor] = useState("red");
   const text = company[activeCompanyIndex].text;
 
   useEffect(() => {
@@ -104,9 +102,7 @@ export function Introduction() {
                   }}
                   src={
                     index === activeCompanyIndex
-                      ? imageColor === "red"
-                        ? comp.image_red
-                        : comp.image_red
+                      ? comp.image_red
                       : comp.image_black
                   }
                   alt={comp.name}
@@ -115,11 +111,7 @@ export function Introduction() {
               ))}
             </div>
             <div className="flex justify-center md:h-[40px] h-[28px] md:mt-10">
-              <p
-                className={`typewriter-text airif text-[#CB0000] 2xl:text-3xl lg:text-xl text-[17px] line-1 ${
-                  imageColor === "red" ? "active" : ""
-                }`}
-              >
+              <p className="typewriter-text airif text-[#CB0000] 2xl:text-3xl lg:text-xl text-[17px] line-1 active">
                 {text}
               </p>
             </div>

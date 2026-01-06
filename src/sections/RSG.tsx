@@ -1,5 +1,3 @@
-import React from "react";
-
 import logo from "../assets/img/section/rsg.png";
 import msc from "../assets/img/rsg/msc.jpg";
 import rsg2 from "../assets/img/rsg/rsg2.png";

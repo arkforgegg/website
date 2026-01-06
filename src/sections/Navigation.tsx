@@ -3,7 +3,6 @@ import nova from "../assets/img/navigation/pulse_nova.png";
 import aghs from "../assets/img/navigation/aghs.png";
 import { useEffect, useState } from "react";
 import { GrayArrow } from "../components";
-// import { useStoreContext } from "../Context/Store";
 
 const navs = [
   {
@@ -31,7 +30,6 @@ export const scrollToElement = (id: string) => {
 };
 
 export function Navigation() {
-  // const {} = useStoreContext();
   const [currentSection, setCurrentSection] = useState("");
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });

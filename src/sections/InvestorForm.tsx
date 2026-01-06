@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { InputComponent, InputMessageComponent } from "../components";
 
 export function InvestorForm() {

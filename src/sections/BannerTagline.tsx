@@ -1,16 +1,4 @@
 export function BannerTagline() {
-  const details = [
-    {
-      desc: "EMPOWERING GAMING",
-    },
-    {
-      desc: "AMPLIFYING INFLUENCE",
-    },
-    {
-      desc: "ASIA'S BIGGEST GAMER COMMUNITY",
-    },
-  ];
-
   return (
     <>
       {/* <div className="bg-[#CB0000] flex overflow-hidden gap-10 marquee">
