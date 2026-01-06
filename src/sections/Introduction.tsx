@@ -1,123 +1,93 @@
-import { useEffect, useState } from "react";
-import main from "../assets/img/main.png";
-import black_AL from "../assets/img/main/bl_al2.png";
-import black_rsg from "../assets/img/main/bl_rsg.png";
-import black_pulse from "../assets/img/main/bl_pn.png";
-import red_AL from "../assets/img/main/red_al2.png";
-import red_rsg from "../assets/img/main/red_rsg.png";
-import red_pulse from "../assets/img/main/red_pn.png";
 import { scrollToElement } from ".";
-import { WhiteArrow } from "../components";
+import { DownArrow } from "../components/Icons";
+import { Fireflies, Navbar } from "../components";
+import heroVideo from "../assets/videos/hero-video.mp4";
 
-const company = [
-  {
-    id: 1,
-    name: "Pulse Nova",
-    image_black: black_pulse,
-    image_red: red_pulse,
-    text: "Empowering Influence, Creating Value",
-  },
-  {
-    id: 2,
-    name: "RSG",
-    image_black: black_rsg,
-    image_red: red_rsg,
-    text: "SEA’s Premier Esports Organization",
-  },
-  {
-    id: 3,
-    name: "Aghs Labs",
-    image_black: black_AL,
-    image_red: red_AL,
-    text: "Bridging Web2 to Web3",
-  },
-];
-
-export function Introduction() {
-  const [activeCompanyIndex, setActiveCompanyIndex] = useState(0);
-  const text = company[activeCompanyIndex].text;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCompanyIndex((prevIndex) =>
-        prevIndex === company.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change text every 4 seconds
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
+export function HeroSection() {
   return (
-    <>
-      <div className="bg-black 3xl:px-40 lg:px-36 px-8 overflow-x-hidden">
-        <div className="flex md:flex-row flex-col-reverse mx-auto items-center justify-center h-screen sm:h-auto sm:py-28 w-full  md:-mt-8">
-          <div className="flex flex-col flex-1 md:mr-4 md:mt-0 mt-4 xl:pr-16">
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
-              EMPOWERING GAMING.
-            </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
-              AMPLIFYING INFLUENCE.
-            </h1>
-            <h1 className="montserrat-bold font-bold lg:text-4xl sm:text-2xl xs:text-sm text-center sm:text-left">
-              ASIA'S BIGGEST GAMER COMMUNITY.
-            </h1>
-            <p className="airif text-[#6C6C6C] lg:text-lg text-sm mt-10 text-center sm:text-justify">
-              ArkForge unites 500 million gamers worldwide through seamless
-              gameplay, community, and technology. We champion sustainable
-              gaming communities and lead in crafting a hyper-engaged global
-              ecosystem.
+    <div className="bg-black relative w-full h-[921px] flex flex-col items-center overflow-hidden">
+      <Navbar />
+      <Fireflies position="left" top="25%" />
+      <div className="h-[185px] md:h-[300px] lg:h-[360px] xl:h-[427px] w-full max-w-[337.506px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[779px] mix-blend-hard-light mb-[36.446px] md:mb-[42px] lg:mb-[45px] xl:mb-[39px] relative">
+        <div className="relative w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        </div>
+        <div className="pointer-events-none shadow-[inset_0px_1.733px_82.448px_0px_black] md:shadow-[inset_0px_2.5px_120px_0px_black] lg:shadow-[inset_0px_3px_150px_0px_black] xl:shadow-[inset_0px_4px_190.3px_0px_black] absolute inset-0" />
+      </div>
+      <div className="flex flex-col gap-[36.446px] md:gap-[42px] lg:gap-[45px] xl:gap-[49px] items-center max-w-[1573px] px-4 md:px-6 lg:px-8 w-full">
+        <div className="flex flex-col gap-[20.826px] md:gap-[24px] lg:gap-[26px] xl:gap-[28px] items-center text-center w-full max-w-[352px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-none">
+          <div className="font-montserrat font-medium leading-[1.349] text-white tracking-[0.7438px] md:tracking-[0.85px] lg:tracking-[0.95px] xl:tracking-[1px] uppercase w-full">
+            <p
+              className="font-bold mb-0 text-[24px] md:text-[36px] lg:text-[42px] xl:text-[48px] tracking-[0.96px] md:tracking-[1.44px] lg:tracking-[1.68px] xl:tracking-[1.92px] bg-clip-text"
+              style={{
+                background:
+                  "radial-gradient(669.73% 70.97% at 50% 49.64%, #F00 0%, #F15E02 33.14%, #E20000 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textShadow: "0px 0px 26.551px #ff0606",
+              }}
+            >
+              <span className="md:hidden">
+                Forging the Future of the ACG Ecosystem
+              </span>
+              <span className="hidden md:inline">
+                Enhancing Value Across the Gaming Ecosystem
+              </span>
             </p>
-            <div className="flex flex-row gap-4 md:mt-24 mt-10 mb-20 sm:mb-0">
-              <button
-                onClick={() => scrollToElement("contact")}
-                type="button"
-                className="border border-[#FF0000] hover:text-[#FF0000] hover:border-white rounded-md px-4 py-2 xs:text-[9px] text-sm lg:text-lg"
-              >
-                CONTACT US
-              </button>
-              <button
-                onClick={() => scrollToElement("nova")}
-                type="button"
-                className="border hover:border-[#FF0000] bg-black hover:bg-[#FF0000] rounded-md px-4 py-2 flex items-center xs:gap-[0.1rem] gap-4 xs:text-[9px] text-sm lg:text-lg flexcenter"
-              >
-                DISCOVER NOW
-                <div className="rotate-90 w-3 xs:-mt-[0.45rem]">
-                  <WhiteArrow />
-                </div>
-              </button>
-            </div>
+            <p
+              className="text-[16px] md:text-[28px] lg:text-[32px] xl:text-[36px] text-white"
+              style={{ textShadow: "0px 0px 26.551px #ff0606" }}
+            >
+              Platforms, services, and ventures advancing the ACG industry.
+            </p>
           </div>
-          <div className="md:-mt-16 mt-16 relative md:flex-1 mx-auto">
-            <div className="flex justify-center">
-              <img src={main} alt="Arkforge" className="md:ml-10" />
-            </div>
-            <div className="flex flex-row absolute w-full justify-center md:left-2 2xl:top-72 lg:top-56 md:top-44 top-[9.5rem] space-x-8 xs:space-x-0 xs:top-32">
-              {company.map((comp, index) => (
-                <img
-                  key={index}
-                  onClick={() => {
-                    setActiveCompanyIndex(index);
-                  }}
-                  src={
-                    index === activeCompanyIndex
-                      ? comp.image_red
-                      : comp.image_black
-                  }
-                  alt={comp.name}
-                  className="2xl:w-36 lg:w-28 w-20 lg:-ml-2 cursor-pointer"
-                />
-              ))}
-            </div>
-            <div className="flex justify-center md:h-[40px] h-[28px] md:mt-10">
-              <p className="typewriter-text airif text-[#CB0000] 2xl:text-3xl lg:text-xl text-[17px] line-1 active">
-                {text}
-              </p>
-            </div>
+          <div className="font-montserrat font-normal leading-normal text-[#ebebeb] text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] tracking-[0.28px] md:tracking-[0.32px] lg:tracking-[0.34px] xl:tracking-[0.36px] max-w-[352px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1183px] whitespace-pre-wrap px-4 text-center">
+            <p className="font-titillium mb-0 not-italic">
+              ArkForge is an ACG(A<span className="lowercase">nime, </span>C
+              <span className="lowercase">ollectibles and </span>G
+              <span className="lowercase">ames</span>)-focused ecosystem builder
+              and venture group. We operate across agency services, digital
+              platforms, and emerging consumer products — connecting
+              communities, creators, and brands across anime, comics, and
+              gaming.
+            </p>
+            <p className="mb-0">&nbsp;</p>
+            <p className="font-titillium not-italic">
+              Our mission is to contribute to, innovate within, and elevate the
+              ACG industry by building interconnected businesses that create
+              long-term value for the ecosystem.
+            </p>
           </div>
         </div>
+        <div className="flex flex-row gap-[15.62px] md:gap-[18px] lg:gap-[20px] xl:gap-[21px] items-center">
+          <button
+            onClick={() => scrollToElement("contact")}
+            className="bg-gradient-to-b from-[#ff0606] to-[#900000] border-[#f21616] border-[0.541px] md:border-[0.65px] lg:border-[0.7px] xl:border-[0.727px] border-solid flex items-center justify-center h-[35.702px] md:h-[42px] lg:h-[45px] xl:h-[48px] px-[17.851px] md:px-[20px] lg:px-[22px] xl:px-[24px] py-[7.438px] md:py-[9px] lg:py-[9.5px] xl:py-[10px] rounded-[2.704px] md:rounded-[3.2px] lg:rounded-[3.4px] xl:rounded-[3.636px] shadow-[0px_0px_26.551px_-2.886px_#ff0606] md:shadow-[0px_0px_30px_-3.2px_#ff0606] lg:shadow-[0px_0px_33px_-3.5px_#ff0606] xl:shadow-[0px_0px_35.696px_-3.88px_#ff0606] hover:opacity-90 transition-opacity"
+          >
+            <p className="font-montserrat font-medium leading-none text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white">
+              Contact Us
+            </p>
+          </button>
+          <button
+            onClick={() => scrollToElement("nova")}
+            className="border-[#f21616] border-[0.744px] md:border-[0.85px] lg:border-[0.9px] xl:border-[1px] border-solid flex items-center justify-center gap-[7.438px] md:gap-[8.5px] lg:gap-[9px] xl:gap-[10px] h-[35.702px] md:h-[42px] lg:h-[45px] xl:h-[48px] px-[17.851px] md:px-[20px] lg:px-[22px] xl:px-[24px] py-[7.438px] md:py-[9px] lg:py-[9.5px] xl:py-[10px] rounded-[2.704px] md:rounded-[3.2px] lg:rounded-[3.4px] xl:rounded-[3.636px] shadow-[0px_0px_6.174px_-2.886px_red] md:shadow-[0px_0px_7px_-3px_red] lg:shadow-[0px_0px_7.5px_-3.2px_red] xl:shadow-[0px_0px_8.3px_-3.88px_red] hover:opacity-90 transition-opacity"
+          >
+            <p className="font-montserrat font-medium leading-none text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white">
+              Discover Now
+            </p>
+            <div className="flex items-center justify-center">
+              <DownArrow />
+            </div>
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

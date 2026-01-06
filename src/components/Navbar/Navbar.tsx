@@ -1,32 +1,25 @@
 import logo from "../../assets/img/mini logo.png";
-import fb from "../../assets/img/Facebook.png";
-import linked from "../../assets/img/LinkedIn.png";
-import twitter from "../../assets/img/X.png";
-
-const socmed = [
-  { image: linked, link: "https://www.linkedin.com/company/arkforge/" },
-  { image: fb, link: "https://www.facebook.com/ArkForge.gg" },
-  { image: twitter, link: "https://twitter.com/ArkForge_gg" },
-];
+import { scrollToElement } from "../../sections";
 
 export function Navbar() {
   return (
-    <header className="bg-black top-0 w-full">
-      <div className="flex flex-row items-center justify-between md:px-20 px-2">
-        <a href="/" className="">
+    <header className="bg-black top-0 w-full h-[75px]">
+      <div className="flex flex-row items-center justify-between h-full md:px-20 px-4">
+        <a href="/" className="flex items-center h-full">
           <img
             src={logo}
             alt="Arkforge"
-            className="md:scale-100 scale-[0.6] md:-ml-0 -ml-8"
+            className="h-[48px] md:h-[48px] object-contain"
           />
         </a>
-        <div className="gap-4 flex flex-row">
-          {socmed.map((socmeds, i) => (
-            <a key={i} target="_blank" rel="noreferrer" href={socmeds.link}>
-              <img src={socmeds.image} alt="Icon" className="w-6 md:w-8" />
-            </a>
-          ))}
-        </div>
+        <button
+          onClick={() => scrollToElement("contact")}
+          className="bg-gradient-to-b from-[#ff0606] to-[#900000] border-[#f21616] border-[0.727px] border-solid flex items-center justify-center h-[40px] px-[16px] py-[10px] rounded-[3.636px] shadow-[0px_0px_35.696px_-3.88px_#ff0606] hover:opacity-90 transition-opacity"
+        >
+          <p className="font-['Montserrat',sans-serif] font-black leading-[0] text-[16px] text-white">
+            Contact Us
+          </p>
+        </button>
       </div>
     </header>
   );

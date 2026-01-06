@@ -4,7 +4,7 @@ import {
   BannerTagline,
   Brands,
   DetailBanner,
-  Introduction,
+  HeroSection,
   InvestorForm,
   Navigation,
   PulseNova,
@@ -15,9 +15,8 @@ import "../css/arkforge.css";
 export function ArkforgePage() {
   return (
     <>
-      <Navbar />
       <div id="arkforge">
-        <Introduction />
+        <HeroSection />
         <DetailBanner />
         <Brands />
         <Navigation />

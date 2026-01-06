@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Condensed:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 @font-face {
@@ -9,6 +9,22 @@
 @font-face {
   font-family: "titilium";
   src: url("/src/assets/font/titilium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Titillium_Web";
+  src: url("/src/assets/font/Titillium_Web/TitilliumWeb-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Titillium_Web";
+  src: url("/src/assets/font/Titillium_Web/TitilliumWeb-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 .airif {
@@ -27,4 +43,9 @@
 
 .roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.titillium-web {
+  font-family: "Titillium_Web", sans-serif;
+  font-weight: 400;
 }
