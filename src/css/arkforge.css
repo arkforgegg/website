@@ -1,7 +1,7 @@
 #arkforge {
   @apply bg-[#000000] min-h-screen flex flex-col items-center text-white text-[20px];
-  overflow-x: hidden;
   width: 100%;
+  overflow-x: clip;
 }
 
 #nova {
