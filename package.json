@@ -7,7 +7,8 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "react-scroll-trigger": "^0.6.14"
+    "react-scroll-trigger": "^0.6.14",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.4",

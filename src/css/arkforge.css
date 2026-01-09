@@ -1,5 +1,7 @@
 #arkforge {
   @apply bg-[#000000] min-h-screen flex flex-col items-center text-white text-[20px];
+  overflow-x: hidden;
+  width: 100%;
 }
 
 #nova {
@@ -45,7 +47,6 @@
   clip-path: inset(45% 15% 15% 15%);
 }
 
-
 .marquee {
   margin: 0 auto;
   width: 100%;
@@ -54,7 +55,8 @@
   box-sizing: border-box;
   position: relative;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
     top: 0;
     width: 50px;
@@ -91,7 +93,104 @@
   margin: 0;
 }
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-66.6%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
 }
 
+.brands-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, #100 -0.99%, #f00 63.16%, #6d0000 105.76%);
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .brands-carousel-container {
+    padding: 16px 0;
+  }
+}
+
+.brands-carousel-content {
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+  animation: brands-scroll 60s linear infinite;
+}
+
+.brands-carousel-content:hover {
+  animation-play-state: paused;
+}
+
+.brands-carousel-item {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .brands-carousel-item {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+.brands-carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brands-carousel-item:hover img {
+  filter: grayscale(0%);
+}
+
+@keyframes brands-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+}
+
+.ecosystem-swiper .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  top: auto !important;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ecosystem-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+}
+
+.ecosystem-swiper .swiper-pagination-bullet-active {
+  background: #ff0606;
+}

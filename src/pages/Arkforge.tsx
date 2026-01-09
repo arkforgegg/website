@@ -1,9 +1,10 @@
-import { Footer, Navbar } from "../components";
+import { Footer } from "../components";
 import {
   AghsLab,
   BannerTagline,
   Brands,
-  DetailBanner,
+  EcosystemSection,
+  LegacySection,
   HeroSection,
   InvestorForm,
   Navigation,
@@ -17,8 +18,9 @@ export function ArkforgePage() {
     <>
       <div id="arkforge">
         <HeroSection />
-        <DetailBanner />
+        <LegacySection />
         <Brands />
+        <EcosystemSection />
         <Navigation />
         <PulseNova />
         <RSG />

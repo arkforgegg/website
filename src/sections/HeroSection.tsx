@@ -1,20 +1,28 @@
+import { useState } from "react";
 import { scrollToElement } from ".";
 import { DownArrow } from "../components/Icons";
 import { Fireflies, Navbar } from "../components";
-import heroVideo from "../assets/videos/hero-video.mp4";
+import heroVideo from "../assets/videos/hero-video.webm";
 
 export function HeroSection() {
+  const [videoEnded, setVideoEnded] = useState(false);
+
   return (
-    <div className="bg-black relative w-full h-[921px] flex flex-col items-center overflow-hidden">
+    <section className="bg-black relative w-full flex flex-col items-center">
       <Navbar />
-      <Fireflies position="left" top="25%" />
-      <div className="h-[185px] md:h-[300px] lg:h-[360px] xl:h-[427px] w-full max-w-[337.506px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[779px] mix-blend-hard-light mb-[36.446px] md:mb-[42px] lg:mb-[45px] xl:mb-[39px] relative">
+      {/* <Fireflies position="left" top="25%" /> */}
+      <div
+        className={`h-[185px] md:h-[300px] lg:h-[360px] xl:h-[427px] w-full max-w-[337.506px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[779px] ${
+          videoEnded ? "" : "mix-blend-hard-light"
+        } mb-[36.446px] md:mb-[42px] lg:mb-[45px] xl:mb-[39px] relative`}
+      >
         <div className="relative w-full h-full overflow-hidden">
           <video
             autoPlay
             muted
             playsInline
             className="w-full h-full object-cover"
+            onEnded={() => setVideoEnded(true)}
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
@@ -48,7 +56,7 @@ export function HeroSection() {
               Platforms, services, and ventures advancing the ACG industry.
             </p>
           </div>
-          <div className="font-montserrat font-normal leading-normal text-[#ebebeb] text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] tracking-[0.28px] md:tracking-[0.32px] lg:tracking-[0.34px] xl:tracking-[0.36px] max-w-[352px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1183px] whitespace-pre-wrap px-4 text-center">
+          <div className="font-montserrat font-normal leading-normal text-[#ebebeb] text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] tracking-[0.28px] md:tracking-[0.32px] lg:tracking-[0.34px] xl:tracking-[0.36px] max-w-[352px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1183px] whitespace-pre-wrap text-center">
             <p className="font-titillium mb-0 not-italic">
               ArkForge is an ACG(A<span className="lowercase">nime, </span>C
               <span className="lowercase">ollectibles and </span>G
@@ -88,6 +96,6 @@ export function HeroSection() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
