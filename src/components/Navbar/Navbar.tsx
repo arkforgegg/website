@@ -1,5 +1,4 @@
-import logo from "../../assets/img/mini logo.png";
-import { scrollToElement } from "../../sections";
+import logo from "../../assets/img/mini_logo.png";
 
 export function Navbar() {
   return (
@@ -12,14 +11,14 @@ export function Navbar() {
             className="h-[48px] md:h-[48px] object-contain"
           />
         </a>
-        <button
-          onClick={() => scrollToElement("contact")}
-          className="bg-gradient-to-b from-[#ff0606] to-[#900000] border-[#f21616] border-[0.727px] border-solid flex items-center justify-center h-[40px] px-[16px] py-[10px] rounded-[3.636px] shadow-[0px_0px_35.696px_-3.88px_#ff0606] hover:opacity-90 transition-opacity"
+        <a
+          href="#contact"
+          className="bg-gradient-to-b from-[#ff0606] to-[#900000] border-[#f21616] border-[0.727px] border-solid flex items-center justify-center h-[40px] px-[16px] py-[10px] rounded-[3.636px] shadow-[0px_0px_35.696px_-3.88px_#ff0606] hover:opacity-90 transition-opacity no-underline"
         >
           <p className="font-['Montserrat',sans-serif] font-black leading-[0] text-[16px] text-white">
             Contact Us
           </p>
-        </button>
+        </a>
       </div>
     </header>
   );

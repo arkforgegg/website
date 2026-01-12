@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import { Pagination, EffectCoverflow } from "swiper/modules";
 import { DownArrow } from "../components/Icons";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,28 +22,28 @@ const ecosystemCards: EcosystemCard[] = [
     title: "Where Brands Meet ACG Communities",
     description:
       "Pulse Nova Entertainment connects brands to ACG communities through creators, esports, and culture-first digital activations.",
-    learnMoreLink: "https://pulsenova.gg/",
+    learnMoreLink: "#nova",
   },
   {
     logo: imgKyoCardsLogo,
     title: "Game-Changing Card Marketplace",
     description:
       "Kyo Cards is an AI-powered marketplace designed for the modern TCG community. With global market insights, secure escrow payments, and smart trading tools, it delivers a more trusted, transparent, and efficient way for collectors and players to trade.",
-    learnMoreLink: "#",
+    learnMoreLink: "#kyocards",
   },
   {
     logo: imgJinadaLogo,
     title: "Level Up Your Life. Play Smarter",
     description:
       "Jinada is a rewards card in incubation, built to transform everyday spending into value and access across the ACG ecosystem.",
-    learnMoreLink: "#",
+    learnMoreLink: "#jinada",
   },
   {
     logo: imgRsgLogo,
     title: "Pursuit of Excellence — an Esports Legacy",
     description:
       "RSG represents ArkForge's competitive esports roots. Its legacy of performance and community shaped our perspective on gaming culture and inspired our broader journey into building the ACG ecosystem.",
-    learnMoreLink: "#",
+    learnMoreLink: "#rsg",
   },
 ];
 
@@ -78,8 +78,6 @@ export function EcosystemSection() {
                   </p>
                   <a
                     href={card.learnMoreLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex items-center gap-[5px] font-montserrat font-bold text-sm leading-[1.349] tracking-[0.56px] uppercase no-underline mt-auto self-end bg-gradient-to-b from-[#ff0606] to-[#ff7e7e] bg-clip-text text-transparent opacity-0 transition-all duration-300 group-hover:opacity-100 hover:drop-shadow-[0_0_35.696px_#ff0606]"
                   >
                     <DownArrow className="text-[#ff0606]" />
@@ -137,8 +135,6 @@ export function EcosystemSection() {
                         {card.learnMoreLink && (
                           <a
                             href={card.learnMoreLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="flex items-center gap-[5px] font-montserrat font-bold text-[9px] leading-[1.349] tracking-[0.56px] uppercase no-underline mt-auto self-end bg-gradient-to-b from-[#ff0606] to-[#ff7e7e] bg-clip-text text-transparent drop-shadow-[0_0_35.696px_#ff0606]"
                           >
                             <DownArrow className="text-[#ff0606] w-[12px] h-[12px]" />

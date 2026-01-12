@@ -4,24 +4,6 @@
   overflow-x: clip;
 }
 
-#nova {
-  background-image: url("/src/assets/img/bg/nova.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#aghs {
-  background-image: url("/src/assets/img/bg/aghs.png");
-  background-size: cover;
-
-  background-repeat: no-repeat;
-}
-#rsg {
-  background-image: url("/src/assets/img/bg/rsg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .text-carousel-container {
   width: 100%;
   overflow: hidden;

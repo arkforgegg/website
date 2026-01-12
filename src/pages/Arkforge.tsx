@@ -1,6 +1,5 @@
 import { Footer } from "../components";
 import {
-  AghsLab,
   BannerTagline,
   Brands,
   EcosystemSection,
@@ -9,6 +8,8 @@ import {
   InvestorForm,
   Navigation,
   PulseNova,
+  KyoCards,
+  Jinada,
   RSG,
 } from "../sections";
 import "../css/arkforge.css";
@@ -22,11 +23,12 @@ export function ArkforgePage() {
       <EcosystemSection />
       <Navigation />
       <PulseNova />
+      <KyoCards />
+      <Jinada />
       <RSG />
-      <AghsLab />
-      <div className="mt-20 xl:mt-32 mb-10 w-full">
-        <BannerTagline />
-      </div>
+
+      <BannerTagline />
+
       <InvestorForm />
       <Footer />
     </div>

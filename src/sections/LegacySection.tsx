@@ -1,8 +1,13 @@
 import ecosystemImg from "../assets/img/ecosystem.png";
+import { Fireflies } from "../components";
 
 export function LegacySection() {
   return (
-    <div className="w-full bg-black py-12 px-4">
+    <div className="w-full bg-black py-12 px-4 relative overflow-hidden">
+      <div className="hidden lg:block">
+        <Fireflies position="left" top="20%" size="small" />
+        <Fireflies position="right" top="60%" size="small" />
+      </div>
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-10">
         <div
           className="text-center w-full"

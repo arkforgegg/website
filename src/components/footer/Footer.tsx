@@ -1,5 +1,4 @@
-import logos from "../../assets/img/footer/logo_footer.png";
-
+import logo from "../../assets/img/logo.png";
 import fb from "../../assets/img/Facebook.png";
 import linked from "../../assets/img/LinkedIn.png";
 import twitter from "../../assets/img/X.png";
@@ -10,55 +9,78 @@ const socmed = [
   { image: twitter, link: "https://twitter.com/ArkForge_gg" },
 ];
 
+const footerLinks = [
+  { label: "pulse nova", id: "nova" },
+  { label: "kYO CARDS", id: "kyocards" },
+  { label: "JINADA", id: "jinada" },
+  { label: "RSG", id: "rsg" },
+];
+
 export function Footer() {
   return (
-    <>
-      <div className="w-full inset-x-0 bottom-0 bg-black py-8 md:mt-[8rem] mt-[5rem] border-t-2 border-[#212121]">
-        <div className="container mx-auto flex md:flex-row flex-col text-white md:px-0 px-8 justify-between w-full lg:space-y-0 space-y-8">
-          <div className="flex flex-col md:mx-auto space-y-4 airif ">
+    <div className="w-full bg-black border-t border-[#212121] pt-[43px] pb-[43px]">
+      <div className="container mx-auto max-w-[1283px] px-4 md:px-0">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
+          <div className="flex flex-col gap-4 w-full md:w-[394px]">
             <img
-              src={logos}
+              src={logo}
               alt="ARKFORGE"
-              className="md:w-80 w-60 md:-ml-0 -ml-3 -mt-4"
+              className="h-[43px] w-auto max-w-[296px]"
             />
-            {/* <p>
-                    Empowering Investors with Information and Access. Explore our downloadable resources and reach out to us for any inquiries or opportunities.
-                </p>
-                <p>
-                    Empowering Investors with Information and Access. Explore our downloadable resources and reach out to us for any inquiries or opportunities.
-                </p> */}
-          </div>
-          <div className="flex flex-col md:mx-auto md:space-y-4 space-y-2 montserrat md:text-base text-sm">
-            <a href="https://pulsenova.gg/" className="font-bold">
-              PULSE NOVA ENTERTAINMENT
-            </a>
-            <a href="https://www.rsg.gg/" className="font-bold">
-              RSG ESPORTS
-            </a>
-            <a href="#" className="font-bold">
-              AGHS LABS
-            </a>
-          </div>
-          <div className="flex flex-col md:mx-auto space-y-4">
-            <p className="font-bold montserrat-bold text-base">CONTACT US</p>
-            <p className="airif md:text-sm text-xs">
-              For business inquiries: <br />
-              <a href="mailto:Hello@arkforge.gg">Hello@arkforge.gg</a>
+            <p className="montserrat-medium text-[18px] text-[#ebebeb] tracking-[0.36px] leading-normal">
+              Forging the Future of the ACG Ecosystem
             </p>
-            {/* <p className="airif md:text-sm text-xs">
-              For partnership: <br />
-              <a href="mailto:email@partnership.com">email@partnership.com</a>
-            </p> */}
-            <div className="gap-4 flex flex-row">
-              {socmed.map((socmeds, i) => (
-                <a key={i} target="_blank" href={socmeds.link}>
-                  <img src={socmeds.image} alt="Icon" className="w-6" />
+          </div>
+
+          <div className="flex flex-col gap-6 w-full md:w-[113px]">
+            {footerLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className="montserrat-bold font-bold text-[16px] text-white uppercase tracking-[0.4px] leading-normal text-left hover:opacity-80 transition-opacity no-underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-8 w-full md:w-[162px]">
+            <p className="montserrat-bold font-bold text-[16px] text-white uppercase tracking-[0.4px] leading-normal">
+              contact us
+            </p>
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-[3px] w-full md:w-[123px]">
+                <p className="titillium-web text-[14px] text-white leading-normal">
+                  For general Inquiries:
+                </p>
+                <a
+                  href="mailto:Hello@arkforge.gg"
+                  className="titillium-web text-[14px] text-white underline leading-normal hover:opacity-80 transition-opacity"
+                >
+                  Hello@arkforge.gg
                 </a>
-              ))}
+              </div>
+              <div className="flex gap-2">
+                {socmed.map((social, i) => (
+                  <a
+                    key={i}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={social.link}
+                    className="w-[34px] h-[34px] hover:opacity-80 transition-opacity"
+                  >
+                    <img
+                      src={social.image}
+                      alt="Social icon"
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

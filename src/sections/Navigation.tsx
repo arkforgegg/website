@@ -28,13 +28,6 @@ const navs = [
   },
 ];
 
-export const scrollToElement = (id: string) => {
-  const targetElement = document.getElementById(id);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
 export function Navigation() {
   const [currentSection, setCurrentSection] = useState("");
 
@@ -86,11 +79,11 @@ export function Navigation() {
         </button>
         <div className="airif flex items-center justify-between gap-10 text-[16px] bg-[#1313131] border border-[#5E5E5E] py-1 px-2 rounded-md">
           {navs.map((nav, i) => (
-            <button
-              onClick={() => scrollToElement(nav.id)}
+            <a
+              href={`#${nav.id}`}
               className={`${
                 currentSection === nav.id ? "bg-[#4B4B4B]" : ""
-              } flexcenter gap-3 rounded-md px-4 py-2`}
+              } flexcenter gap-3 rounded-md px-4 py-2 no-underline`}
               key={i}
             >
               <img
@@ -99,18 +92,15 @@ export function Navigation() {
                 className="h-[35px] w-[38px] object-contain"
               />
               <b className="montserrat-bold">{nav.title}</b>
-            </button>
+            </a>
           ))}
         </div>
-        <button
-          onClick={() => scrollToElement("contact")}
-          className="flexcenter gap-3"
-        >
+        <a href="#contact" className="flexcenter gap-3 no-underline">
           <div className="rotate-180">
             <GrayArrow />
           </div>
           <p className="airif text-[#4B4B4B] text-[18px]">Contact Us</p>
-        </button>
+        </a>
       </div>
 
       <div className="lg:hidden flex items-center justify-between px-4 py-3 w-full">
@@ -119,11 +109,11 @@ export function Navigation() {
         </button>
         <div className="flex items-center justify-between border border-[#5f5f5f] rounded-[7px] p-[4.7px] w-[235px]">
           {navs.map((nav, i) => (
-            <button
-              onClick={() => scrollToElement(nav.id)}
+            <a
+              href={`#${nav.id}`}
               className={`${
                 currentSection === nav.id ? "bg-[#474747]" : ""
-              } flexcenter rounded-[6px] px-[9px] py-[6px]`}
+              } flexcenter rounded-[6px] px-[9px] py-[6px] no-underline`}
               key={i}
             >
               <img
@@ -131,17 +121,14 @@ export function Navigation() {
                 alt=""
                 className="h-[21px] w-[22px] object-contain"
               />
-            </button>
+            </a>
           ))}
         </div>
-        <button
-          onClick={() => scrollToElement("contact")}
-          className="flexcenter shrink-0"
-        >
+        <a href="#contact" className="flexcenter shrink-0 no-underline">
           <div className="rotate-180">
             <GrayArrow className="w-[14px] h-[14px]" />
           </div>
-        </button>
+        </a>
       </div>
     </div>
   );
