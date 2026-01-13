@@ -13,17 +13,21 @@ export function ContentCard({
 }: ContentCardProps) {
   return (
     <div
-      className="w-full rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col"
+      className="w-full max-w-full rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col h-full"
       style={{
         background:
           "linear-gradient(144.31deg, rgba(42, 42, 42, 1) 0.72%, rgba(0, 0, 0, 1) 109.87%)",
       }}
     >
-      <div className="w-full overflow-hidden">
-        <img src={img} alt={title} className="w-full h-full object-contain" />
+      <div className="w-full min-h-[180px] lg:min-h-[482px] overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-auto max-h-[482px] object-contain"
+        />
       </div>
 
-      <div className="flex flex-col p-4 lg:p-6 gap-4">
+      <div className="flex flex-col p-4 gap-3">
         <h3 className="montserrat-bold font-bold text-[14px] lg:text-[18px] text-white leading-tight">
           {title}
         </h3>

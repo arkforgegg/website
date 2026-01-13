@@ -78,7 +78,10 @@ export function Brands() {
   const duplicatedBrands = [...brands, ...brands];
 
   return (
-    <div className="relative mt-8 md:mt-10 xl:mt-20 w-full overflow-hidden">
+    <section
+      id="brands"
+      className="relative mt-8 md:mt-10 xl:mt-20 w-full overflow-hidden"
+    >
       <div className="brands-carousel-container">
         <div className="brands-carousel-content">
           {duplicatedBrands.map((brand, i) => (
@@ -88,6 +91,6 @@ export function Brands() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

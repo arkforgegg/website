@@ -3,17 +3,17 @@ import { Fireflies } from "../components";
 
 export function LegacySection() {
   return (
-    <div className="w-full bg-black py-12 px-4 relative overflow-hidden">
+    <section className="w-full bg-black py-12 px-4 relative overflow-hidden">
       <div className="hidden lg:block">
         <Fireflies position="left" top="20%" size="small" />
         <Fireflies position="right" top="60%" size="small" />
       </div>
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-10">
         <div
-          className="text-center w-full"
+          className="text-center "
           style={{
             background:
-              "radial-gradient(669.73% 70.97% at 50% 49.64%, #F00 0%, #F15E02 33.14%, #E20000 100%)",
+              "radial-gradient(100.73% 100.97% at 60% 50%, #F00 0%, #F15E02 33.14%, #E20000 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             textShadow: "0px 0px 26.551px #ff0606",
@@ -49,21 +49,21 @@ export function LegacySection() {
           />
         </div>
 
-        <div className="flex flex-row gap-4 md:gap-16 items-center justify-between uppercase tracking-wider">
+        <div className="flex flex-row gap-10 md:gap-16 lg:gap-32 items-center justify-between uppercase tracking-wider">
           <div
             className="uppercase bg-clip-text text-transparent tracking-normal"
             style={{
               background:
-                "linear-gradient(90deg, #FF0606 0%, #FF0606 50%, #F15E02 100%)",
+                "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
               textShadow: "0px 0px 35.696px #ff0606",
               WebkitBackgroundClip: "text",
             }}
           >
             <p className="mb-0 font-bold montserrat-bold leading-[1.2] text-xs md:text-4xl">
-              GLOBAL PRESENCE
+              5 CONTINENTS
             </p>
             <p className="font-bold font-titillium text-[8px] md:text-2xl">
-              ACROSS 5 CONTINENTS
+              GLOBAL PRESENCE
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export function LegacySection() {
             className="uppercase bg-clip-text text-transparent tracking-normal flex-1"
             style={{
               background:
-                "linear-gradient(90deg, #FF0606 0%, #FF0606 50%, #F15E02 100%)",
+                "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
               textShadow: "0px 0px 35.696px #ff0606",
               WebkitBackgroundClip: "text",
             }}
@@ -88,7 +88,7 @@ export function LegacySection() {
             className="uppercase bg-clip-text text-transparent tracking-normal flex-1/2"
             style={{
               background:
-                "linear-gradient(90deg, #FF0606 0%, #FF0606 50%, #F15E02 100%)",
+                "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
               textShadow: "0px 0px 35.696px #ff0606",
               WebkitBackgroundClip: "text",
             }}
@@ -102,6 +102,6 @@ export function LegacySection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/ecosystem/kyo-cards-logo.png";
 
+import globalMarketDataIcon from "../assets/icons/global-market.svg";
 import aiScannerIcon from "../assets/icons/ai-scanner.svg";
 import auctionIcon from "../assets/icons/auction.svg";
 import verifiedIcon from "../assets/icons/verified.svg";
@@ -26,6 +27,14 @@ export function KyoCards() {
   >("key-capabilities");
 
   const keyCapabilities = [
+    {
+      icon: {
+        src: globalMarketDataIcon,
+        width: 167,
+        height: 167,
+      },
+      name: "Global Market data",
+    },
     {
       icon: {
         src: aiScannerIcon,
@@ -93,7 +102,7 @@ export function KyoCards() {
       img: offlineEventsImage1,
       title: "Kyo Cards at Singapore Card Show",
       description:
-        "Kyo Cards participates in major card shows such as the SG Card Show to build physical brand presence and engage the wider TCG community.\nAt these events, we showcase selected sellers from our marketplace, allow attendees to experience features like bargaining in real time, and conduct buybacks and community giveaways — using on-ground activations to educate, reward, and connect with collectors.",
+        "Kyo Cards participates in major card shows such as the SG Card Show to build physical brand presence and engage the wider TCG community. At these events, we showcase selected sellers from our marketplace, allow attendees to experience features like bargaining in real time, and conduct buybacks and community giveaways — using on-ground activations to educate, reward, and connect with collectors.",
       tags: [],
     },
     {
@@ -119,11 +128,7 @@ export function KyoCards() {
     <>
       <div
         id="kyocards"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-10 lg:py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
-        style={{
-          backdropFilter: "blur(8px)",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        }}
+        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
       >
         <div className="max-w-[1400px] w-full flex flex-col">
           <img
@@ -146,14 +151,13 @@ export function KyoCards() {
             2025 - Present
           </p>
 
-          <p className="font-titillium text-[14px] lg:text-[18px] text-justify max-w-[856px] mb-8 lg:mb-12 leading-normal">
+          <p className="font-titillium text-[14px] lg:text-[18px] text-justify max-w-[856px] mb-4 lg:mb-6 leading-normal">
             Kyo Cards is a game-changing, AI-powered online marketplace built
             for the global TCG community. Designed to support both players and
             collectors, the platform combines global market data, secure escrow
             payments, and intelligent trading tools to create a safer, more
             transparent trading environment.
           </p>
-
           <p className="font-titillium text-[14px] lg:text-[18px] text-justify max-w-[856px] mb-8 lg:mb-12 leading-normal">
             Beyond the marketplace, Kyo Cards actively engages the community
             through offline events and digital event experiences — bridging
@@ -161,10 +165,10 @@ export function KyoCards() {
             trust, discovery, and participation across the hobby.
           </p>
 
-          <div className="flex gap-8 lg:gap-2 mb-8 lg:mb-12 justify-between flex-wrap">
+          <div className="flex gap-1 lg:gap-2 mb-8 lg:mb-12 justify-between overflow-x-auto w-full">
             <button
               onClick={() => setActiveTab("key-capabilities")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold  text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "key-capabilities"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -174,7 +178,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("press-media")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "press-media"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -184,7 +188,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("offline-events")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "offline-events"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -194,7 +198,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("event-microsite")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "event-microsite"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -208,23 +212,41 @@ export function KyoCards() {
             <ServicesSwiper
               items={keyCapabilities}
               arrowGradient={{
-                from: "rgba(57, 82, 255, 0.6)",
-                to: "rgba(51, 161, 255, 0.6)",
+                from: "rgba(57, 82, 255, 0.9)",
+                to: "rgba(51, 161, 255, 0.9)",
               }}
               textShadowColor="0px 0px 35.696px rgba(63, 75, 254, 0.7)"
             />
           )}
 
           {activeTab === "press-media" && (
-            <ContentSwiper items={pressMediaItems} />
+            <ContentSwiper
+              items={pressMediaItems}
+              arrowGradient={{
+                from: "rgba(57, 82, 255, 0.9)",
+                to: "rgba(51, 161, 255, 0.9)",
+              }}
+            />
           )}
 
           {activeTab === "offline-events" && (
-            <ContentSwiper items={offlineEventsItems} />
+            <ContentSwiper
+              items={offlineEventsItems}
+              arrowGradient={{
+                from: "rgba(57, 82, 255, 0.9)",
+                to: "rgba(51, 161, 255, 0.9)",
+              }}
+            />
           )}
 
           {activeTab === "event-microsite" && (
-            <ContentSwiper items={eventMicrositeItems} />
+            <ContentSwiper
+              items={eventMicrositeItems}
+              arrowGradient={{
+                from: "rgba(57, 82, 255, 0.9)",
+                to: "rgba(51, 161, 255, 0.9)",
+              }}
+            />
           )}
 
           <Link
@@ -236,7 +258,7 @@ export function KyoCards() {
               className="w-full h-[48px] lg:h-[56px] rounded-[5px] border border-[#3952FF] flex items-center justify-between px-4 lg:px-6 transition-all hover:bg-[#3952FF] hover:bg-opacity-10"
               style={{
                 background:
-                  "linear-gradient(90deg, #3952FF 0.01%, #33A1FF 99.5%)",
+                  "linear-gradient(90deg, #3F4BFF 0.01%, #97CBEE 99.5%)",
               }}
             >
               <span className="airif text-[14px] lg:text-[18px] uppercase text-white font-normal">

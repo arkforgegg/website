@@ -17,7 +17,7 @@ export function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className="w-full max-w-[267px] mx-auto h-[204px] lg:h-[329px] rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col items-center justify-between p-6 lg:p-8"
+      className="w-full max-w-[267px] mx-auto h-[204px] lg:h-[329px] rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col items-center justify-between py-4 lg:py-6 px-4 lg:px-5"
       style={{
         background:
           "linear-gradient(144.31deg, rgba(42, 42, 42, 1) 0.72%, rgba(0, 0, 0, 1) 109.87%)",

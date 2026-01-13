@@ -71,11 +71,7 @@ export function RSG() {
     <>
       <div
         id="rsg"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-10 lg:py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
-        style={{
-          backdropFilter: "blur(8px)",
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-        }}
+        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
       >
         <div className="max-w-[1400px] w-full flex flex-col">
           <img
@@ -246,8 +242,8 @@ export function RSG() {
             <ContentSwiper
               items={stories}
               arrowGradient={{
-                from: "rgba(38, 54, 132, 0.60)",
-                to: "rgba(0, 108, 255, 0.60)",
+                from: "rgba(38, 54, 132, 0.9)",
+                to: "rgba(0, 108, 255, 0.9)",
               }}
             />
           )}
@@ -261,7 +257,7 @@ export function RSG() {
               className="w-full h-[48px] lg:h-[56px] rounded-[5px] border border-[#3952FF] flex items-center justify-between px-4 lg:px-6 transition-all hover:bg-[#3952FF] hover:bg-opacity-10"
               style={{
                 background:
-                  "linear-gradient(90deg, #002073 0.01%, #0047FE 99.5%)",
+                  "linear-gradient(90deg, #263684 0.01%, #3346A3 99.5%)",
               }}
             >
               <span className="airif text-[14px] lg:text-[18px] uppercase text-white font-normal">

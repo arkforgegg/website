@@ -21,8 +21,8 @@ export function Jinada() {
     {
       icon: {
         src: rewardsEngineIcon,
-        width: 196,
-        height: 180,
+        width: 147,
+        height: 147,
       },
       name: "The ACG Rewards Engine",
     },
@@ -40,11 +40,7 @@ export function Jinada() {
     <>
       <div
         id="jinada"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-10 lg:py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
-        style={{
-          backdropFilter: "blur(8px)",
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-        }}
+        className="relative flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
       >
         <div className="max-w-[1400px] w-full flex flex-col">
           <img
@@ -92,8 +88,8 @@ export function Jinada() {
           <ServicesSwiper
             items={keyCapabilities}
             arrowGradient={{
-              from: "rgba(255, 190, 74, 0.6)",
-              to: "rgba(195, 131, 28, 0.6)",
+              from: "rgba(255, 190, 74, 0.9)",
+              to: "rgba(195, 131, 28, 0.9)",
             }}
             textShadowColor="0px 0px 35.696px rgba(255, 190, 74, 0.7)"
             textGradient="radial-gradient(100.5% 94.44% at 1.7% 66.67%, #FCAA24 0%, #FFDA98 49.04%, #FCAA24 100%)"

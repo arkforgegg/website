@@ -1,21 +1,16 @@
-import { useState } from "react";
 import { DownArrow } from "../components/Icons";
 import { Fireflies, Navbar } from "../components";
 import heroVideoWebm from "../assets/videos/hero-video.webm";
 import heroVideoMp4 from "../assets/videos/hero-video.mp4";
 
 export function HeroSection() {
-  const [videoEnded, setVideoEnded] = useState(false);
-
   return (
-    <section className="bg-black relative w-full flex flex-col items-center">
+    <section className="bg-black relative w-full flex flex-col items-center pb-9 lg:pb-[72px]">
       <Navbar />
       <Fireflies position="left" top="35%" />
 
       <div
-        className={`h-[185px] md:h-[300px] lg:h-[360px] xl:h-[427px] w-full max-w-[337.506px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[779px] ${
-          videoEnded ? "" : "mix-blend-hard-light"
-        } mb-[36.446px] md:mb-[42px] lg:mb-[45px] xl:mb-[39px] relative`}
+        className={`h-[185px] md:h-[300px] lg:h-[360px] xl:h-[427px] w-full max-w-[337.506px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[779px] mb-[36.446px] md:mb-[42px] lg:mb-[45px] xl:mb-[39px] relative`}
       >
         <div className="relative w-full h-full overflow-hidden">
           <video
@@ -24,13 +19,12 @@ export function HeroSection() {
             playsInline
             preload="auto"
             className="w-full h-full object-cover"
-            onEnded={() => setVideoEnded(true)}
           >
             <source src={heroVideoMp4} type="video/mp4" />
             <source src={heroVideoWebm} type="video/webm" />
           </video>
         </div>
-        <div className="pointer-events-none shadow-[inset_0px_1.733px_82.448px_0px_black] md:shadow-[inset_0px_2.5px_120px_0px_black] lg:shadow-[inset_0px_3px_150px_0px_black] xl:shadow-[inset_0px_4px_190.3px_0px_black] absolute inset-0" />
+        <div className="pointer-events-none absolute inset-0 shadow-[inset_0px_0px_31.5px_19px_black]" />
       </div>
       <div className="flex flex-col gap-[36.446px] md:gap-[42px] lg:gap-[45px] xl:gap-[49px] items-center max-w-[1573px] px-4 md:px-6 lg:px-8 w-full">
         <div className="flex flex-col gap-[20.826px] md:gap-[24px] lg:gap-[26px] xl:gap-[28px] items-center text-center w-full max-w-[352px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-none">

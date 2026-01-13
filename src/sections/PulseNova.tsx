@@ -143,7 +143,7 @@ export function PulseNova() {
     <>
       <div
         id="nova"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-10 lg:py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
+        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
         style={{
           backdropFilter: "blur(8px)",
           backgroundColor: "rgba(0, 0, 0, 0.5)",

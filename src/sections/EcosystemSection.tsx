@@ -49,7 +49,7 @@ const ecosystemCards: EcosystemCard[] = [
 
 export function EcosystemSection() {
   return (
-    <div className="px-0 md:px-10 xl:px-20 mt-8 md:mt-10 xl:mt-20 pb-8 md:pb-10 xl:pb-20 w-full">
+    <div className="px-0 md:px-10 xl:px-20 mt-28 pb-11 xl:pb-64 w-full">
       <div className="flex flex-col items-center gap-10 md:gap-20">
         <h2 className="font-montserrat font-bold text-2xl md:text-[32px] leading-[1.349] bg-gradient-to-b from-[#ff0606] to-[#ff7e7e] bg-clip-text text-transparent drop-shadow-[0_0_35.696px_#ff0606] text-center uppercase tracking-[1.28px]">
           our ECOSYSTEM
@@ -66,7 +66,7 @@ export function EcosystemSection() {
                   <img
                     src={card.logo}
                     alt={card.title}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[200px] max-h-[120px] object-contain"
                   />
                 </div>
                 <div className="p-[14px] flex flex-col gap-[14px] flex-1">
@@ -118,11 +118,11 @@ export function EcosystemSection() {
                           : ""
                       }`}
                     >
-                      <div className="bg-black h-[117px] w-full flex items-center justify-center p-5 rounded-t-2xl">
+                      <div className="bg-black h-[120px] w-full flex items-center justify-center p-5 rounded-t-2xl">
                         <img
                           src={card.logo}
                           alt={card.title}
-                          className="max-w-full max-h-full object-contain"
+                          className="max-w-[120px] max-h-[80px] object-contain"
                         />
                       </div>
                       <div className="p-[14px] flex flex-col gap-[14px] flex-1">

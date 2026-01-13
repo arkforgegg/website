@@ -55,7 +55,7 @@ export function InvestorForm() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative flex items-center justify-center min-h-[838px] px-4 md:px-8 py-40">
+      <div className="relative flex items-center justify-center min-h-[838px] px-4 md:px-8 py-20 lg:py-28">
         <div className="relative bg-black border border-[#cb4e00] rounded-[25px] w-full max-w-[1125px] overflow-hidden">
           <div className="flex flex-col gap-3 items-center text-center px-4 md:px-12 pt-[43px] pb-8">
             <p
@@ -151,7 +151,7 @@ export function InvestorForm() {
                 <button
                   disabled={!isFormValid}
                   type="submit"
-                  className="bg-gradient-to-r from-[#900000] to-[red] h-[56px] rounded-[5px] w-full titillium-web text-[18px] text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+                  className="bg-gradient-to-r from-[#900000] to-[red] h-[56px] rounded-[5px] w-full titillium-web text-[18px] text-white uppercase disabled:bg-gradient-to-r disabled:from-[#2b0101] disabled:to-[#510000] disabled:text-[#7E7878] disabled:cursor-not-allowed transition-opacity"
                 >
                   SUBMIT
                 </button>

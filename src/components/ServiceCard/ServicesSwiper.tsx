@@ -39,8 +39,8 @@ export function ServicesSwiper({
   const [isEnd, setIsEnd] = useState(false);
 
   const defaultGradient = {
-    from: "rgba(99, 227, 196, 0.6)",
-    to: "rgba(0, 133, 101, 0.6)",
+    from: "rgba(99, 227, 196, 0.9)",
+    to: "rgba(0, 133, 101, 0.9)",
   };
 
   const gradient = arrowGradient || defaultGradient;
