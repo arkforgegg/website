@@ -1,9 +1,9 @@
-import rsg from "../assets/img/navigation/rsg.png";
 import nova from "../assets/img/navigation/pulse_nova.png";
-import aghs from "../assets/img/navigation/aghs.png";
+import rsg from "../assets/img/navigation/rsg.png";
+import kyoCardsLogo from "../assets/img/navigation/kyo_cards.png";
+import jinadaLogo from "../assets/img/navigation/jinada.png";
 import { useEffect, useState } from "react";
 import { GrayArrow } from "../components";
-// import { useStoreContext } from "../Context/Store";
 
 const navs = [
   {
@@ -12,26 +12,23 @@ const navs = [
     id: "nova",
   },
   {
+    title: "KYO CARDS",
+    image: kyoCardsLogo,
+    id: "kyocards",
+  },
+  {
+    title: "JINADA",
+    image: jinadaLogo,
+    id: "jinada",
+  },
+  {
     title: "RSG",
     image: rsg,
     id: "rsg",
   },
-  {
-    title: "AGHS LABS",
-    image: aghs,
-    id: "aghs",
-  },
 ];
 
-export const scrollToElement = (id: string) => {
-  const targetElement = document.getElementById(id);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
 export function Navigation() {
-  // const {} = useStoreContext();
   const [currentSection, setCurrentSection] = useState("");
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -40,7 +37,7 @@ export function Navigation() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      const sectionIds = ["aghs", "nova", "rsg"];
+      const sectionIds = ["nova", "kyocards", "jinada", "rsg"];
       let found = false;
 
       sectionIds.forEach((sectionId) => {
@@ -74,34 +71,65 @@ export function Navigation() {
   }, [currentSection]);
 
   return (
-    <div className="sticky top-0 flex items-center md:justify-center lg:justify-between md:w-full xl:px-16 z-50 bg-black opacity-90 border-b border-[#5E5E5E]">
-      <button onClick={scrollToTop} className="flexcenter gap-3 hidden lg:flex">
-        <GrayArrow />
-        <p className="airif text-[#4B4B4B] text-[18px]">Back to Top</p>
-      </button>
-      <div className="airif flex items-center justify-between my-3 gap-2 sm:gap-10 sm:px-5 xs:text-[8px] text-[16px] bg-[#1313131] border border-[#5E5E5E] py-1 px-2 rounded-md">
-        {navs.map((nav, i) => (
-          <button
-            onClick={() => scrollToElement(nav.id)}
-            className={`${
-              currentSection === nav.id ? "bg-[#4B4B4B]" : ""
-            } flexcenter gap-1 rounded-md px-1 sm:px-4 py-2 xs:py-1`}
-            key={i}
-          >
-            <img src={nav.image} alt="" />
-            <b className="montserrat-bold">{nav.title}</b>
-          </button>
-        ))}
-      </div>
-      <button
-        onClick={() => scrollToElement("contact")}
-        className="flexcenter gap-3 hidden lg:flex"
-      >
-        <div className="rotate-180">
+    <div className="sticky top-0 left-0 right-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-sm border-b border-[#3a3a3a] shadow-[0px_4.688px_8.086px_0px_rgba(255,0,0,0.33)]">
+      <div className="hidden lg:flex items-center justify-between w-full xl:px-16 py-3">
+        <button onClick={scrollToTop} className="flexcenter gap-3">
           <GrayArrow />
+          <p className="airif text-[#4B4B4B] text-[18px]">Back to Top</p>
+        </button>
+        <div className="airif flex items-center justify-between gap-10 text-[16px] bg-[#1313131] border border-[#5E5E5E] py-1 px-2 rounded-md">
+          {navs.map((nav, i) => (
+            <a
+              href={`#${nav.id}`}
+              className={`${
+                currentSection === nav.id ? "bg-[#4B4B4B]" : ""
+              } flexcenter gap-3 rounded-md px-4 py-2 no-underline`}
+              key={i}
+            >
+              <img
+                src={nav.image}
+                alt=""
+                className="h-[35px] w-[38px] object-contain"
+              />
+              <b className="montserrat-bold">{nav.title}</b>
+            </a>
+          ))}
         </div>
-        <p className="airif text-[#4B4B4B] text-[18px]">Contact Us</p>
-      </button>
+        <a href="#contact" className="flexcenter gap-3 no-underline">
+          <div className="rotate-180">
+            <GrayArrow />
+          </div>
+          <p className="airif text-[#4B4B4B] text-[18px]">Contact Us</p>
+        </a>
+      </div>
+
+      <div className="lg:hidden flex items-center justify-between px-4 py-3 w-full">
+        <button onClick={scrollToTop} className="flexcenter shrink-0">
+          <GrayArrow className="w-[14px] h-[14px]" />
+        </button>
+        <div className="flex items-center justify-between border border-[#5f5f5f] rounded-[7px] p-[4.7px] w-[235px]">
+          {navs.map((nav, i) => (
+            <a
+              href={`#${nav.id}`}
+              className={`${
+                currentSection === nav.id ? "bg-[#474747]" : ""
+              } flexcenter rounded-[6px] px-[9px] py-[6px] no-underline`}
+              key={i}
+            >
+              <img
+                src={nav.image}
+                alt=""
+                className="h-[21px] w-[22px] object-contain"
+              />
+            </a>
+          ))}
+        </div>
+        <a href="#contact" className="flexcenter shrink-0 no-underline">
+          <div className="rotate-180">
+            <GrayArrow className="w-[14px] h-[14px]" />
+          </div>
+        </a>
+      </div>
     </div>
   );
 }

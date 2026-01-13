@@ -1,10 +1,11 @@
-export const GrayArrow = () => (
+export const GrayArrow = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     width="16"
     height="16"
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path d="M9 8V16H7V8H0L8 0L16 8H9Z" fill="#4B4B4B" />
   </svg>
@@ -22,5 +23,18 @@ export const WhiteArrow = () => (
       d="M7.38126 7.18143L3.04377 7.18143L3.04377 6.09706L7.38126 6.09706L7.38126 2.30176L11.7188 6.63925L7.38126 10.9767L7.38126 7.18143Z"
       fill="white"
     />
+  </svg>
+);
+
+export const DownArrow = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}
+  >
+    <path d="M11 12V4H13L13 12H20L12 20L4 12H11Z" fill="currentColor" />
   </svg>
 );

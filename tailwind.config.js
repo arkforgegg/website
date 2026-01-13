@@ -12,6 +12,13 @@ module.exports = {
         "2xl": "1536px",
         "3xl": "1900px",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        titillium: ["Titillium_Web", "sans-serif"],
+        titilium: ["titilium", "sans-serif"],
+        airif: ["titilium", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
