@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import { InputComponent, InputMessageComponent } from "../components";
-import firefliesImage from "../assets/img/bg/firefiles.png";
 import firefliesBg from "../assets/img/bg/fireflies-bg.png";
 
 export function InvestorForm() {
