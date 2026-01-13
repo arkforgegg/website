@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/ecosystem/kyo-cards-logo.png";
 
-import globalMarketDataIcon from "../assets/icons/global-market.svg";
+import globalMarketDataIcon from "../assets/icons/global-market.png";
 import aiScannerIcon from "../assets/icons/ai-scanner.svg";
 import auctionIcon from "../assets/icons/auction.svg";
 import verifiedIcon from "../assets/icons/verified.svg";
@@ -83,7 +83,7 @@ export function KyoCards() {
       title:
         "SG-based Kyo Cards debuts SEA's AI-powered trading card platform - tech in asia",
       description:
-        "Kyo Cards, a Singapore-based trading card marketplace, has officially launched its AI-powered platform aimed at collectors, players, and sellers in Southeast Asia.\n The company integrates AI to help users identify card details, manage inventories, and access pricing based on global market data. Kyo Cards offers an escrow payment system for secure transactions and features tools like open offers and private negotiation options.",
+        "Kyo Cards, a Singapore-based trading card marketplace, has officially launched its AI-powered platform aimed at collectors, players, and sellers in Southeast Asia. The company integrates AI to help users identify card details, manage inventories, and access pricing based on global market data. Kyo Cards offers an escrow payment system for secure transactions and features tools like open offers and private negotiation options.",
       tags: [],
     },
 
@@ -92,7 +92,7 @@ export function KyoCards() {
       title:
         "Kyo Cards Launches SEA's AI-Powered Trading Card Platform - Asia Business Outlook",
       description:
-        "Kyo Cards, a trading card marketplace based in Singapore, has launched an AI-powered platform to support collectors, players, and sellers throughout Southeast Asia.\nThe company integrates AI technology to aid users in identifying card attributes, maintaining inventories, and gaining insights into prices derived from global market data.",
+        "Kyo Cards, a trading card marketplace based in Singapore, has launched an AI-powered platform to support collectors, players, and sellers throughout Southeast Asia. The company integrates AI technology to aid users in identifying card attributes, maintaining inventories, and gaining insights into prices derived from global market data.",
       tags: [],
     },
   ];
@@ -168,7 +168,7 @@ export function KyoCards() {
           <div className="flex gap-1 lg:gap-2 mb-8 lg:mb-12 justify-between overflow-x-auto w-full">
             <button
               onClick={() => setActiveTab("key-capabilities")}
-              className={`montserrat-bold font-bold  text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "key-capabilities"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -178,7 +178,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("press-media")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "press-media"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -188,7 +188,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("offline-events")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "offline-events"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -198,7 +198,7 @@ export function KyoCards() {
             </button>
             <button
               onClick={() => setActiveTab("event-microsite")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
                 activeTab === "event-microsite"
                   ? "border-[#6684f7] text-white"
                   : "border-transparent text-[#6c6c6c]"

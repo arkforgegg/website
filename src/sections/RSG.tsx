@@ -112,7 +112,7 @@ export function RSG() {
           <div className="flex gap-8 lg:gap-14 mb-8 lg:mb-12">
             <button
               onClick={() => setActiveTab("regions-conquered")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
                 activeTab === "regions-conquered"
                   ? "border-[#334bc1] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -122,7 +122,7 @@ export function RSG() {
             </button>
             <button
               onClick={() => setActiveTab("success-stories")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
                 activeTab === "success-stories"
                   ? "border-[#334bc1] text-white"
                   : "border-transparent text-[#6c6c6c]"

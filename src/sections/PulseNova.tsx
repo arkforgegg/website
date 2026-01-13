@@ -185,7 +185,7 @@ export function PulseNova() {
           <div className="flex gap-8 lg:gap-14 mb-8 lg:mb-12">
             <button
               onClick={() => setActiveTab("services")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
                 activeTab === "services"
                   ? "border-[#6ED7DB] text-white"
                   : "border-transparent text-[#6c6c6c]"
@@ -195,7 +195,7 @@ export function PulseNova() {
             </button>
             <button
               onClick={() => setActiveTab("case-studies")}
-              className={`montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
                 activeTab === "case-studies"
                   ? "border-[#6ED7DB] text-white"
                   : "border-transparent text-[#6c6c6c]"

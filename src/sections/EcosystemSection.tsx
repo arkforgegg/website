@@ -51,8 +51,16 @@ export function EcosystemSection() {
   return (
     <div className="px-0 md:px-10 xl:px-20 mt-28 pb-11 xl:pb-64 w-full">
       <div className="flex flex-col items-center gap-10 md:gap-20">
-        <h2 className="font-montserrat font-bold text-2xl md:text-[32px] leading-[1.349] bg-gradient-to-b from-[#ff0606] to-[#ff7e7e] bg-clip-text text-transparent drop-shadow-[0_0_35.696px_#ff0606] text-center uppercase tracking-[1.28px]">
-          our ECOSYSTEM
+        <h2
+          className="font-montserrat font-bold text-2xl md:text-[32px] leading-[1.349] text-center uppercase tracking-[1.28px] bg-clip-text text-transparent"
+          style={{
+            background:
+              "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
+            textShadow: "0px 0px 35.696px #ff0606",
+            WebkitBackgroundClip: "text",
+          }}
+        >
+          OUR ECOSYSTEM
         </h2>
 
         <div className="max-w-[1596px] mx-auto w-full">

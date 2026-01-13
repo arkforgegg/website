@@ -14,23 +14,23 @@ export function Jinada() {
       icon: {
         src: cardEcosystemIcon,
         width: 196,
-        height: 180,
+        height: 196,
       },
       name: "The ACG-First Card Ecosystem",
     },
     {
       icon: {
         src: rewardsEngineIcon,
-        width: 147,
-        height: 147,
+        width: 196,
+        height: 196,
       },
       name: "The ACG Rewards Engine",
     },
     {
       icon: {
         src: communityAccessIcon,
-        width: 147,
-        height: 147,
+        width: 196,
+        height: 196,
       },
       name: "The Community Access Layer",
     },
@@ -80,7 +80,7 @@ export function Jinada() {
               className="w-[4px] lg:w-[6px] h-[18px] lg:h-[24px] mr-2 lg:mr-3"
               style={{ backgroundColor: "#C3831C" }}
             ></div>
-            <p className="montserrat-bold font-bold text-[14px] lg:text-[18px] uppercase text-white">
+            <p className="montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase text-white">
               KEY CAPABILITIES
             </p>
           </div>

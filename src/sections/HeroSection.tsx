@@ -39,12 +39,7 @@ export function HeroSection() {
                 textShadow: "0px 0px 26.551px #ff0606",
               }}
             >
-              <span className="md:hidden">
-                Forging the Future of the ACG Ecosystem
-              </span>
-              <span className="hidden md:inline">
-                Enhancing Value Across the Gaming Ecosystem
-              </span>
+              Forging the Future of the ACG Ecosystem
             </p>
             <p
               className="text-[16px] md:text-[28px] lg:text-[32px] xl:text-[36px] text-white"
