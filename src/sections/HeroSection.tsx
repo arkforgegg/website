@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { DownArrow } from "../components/Icons";
 import { Fireflies, Navbar } from "../components";
-import heroVideo from "../assets/videos/hero-video.webm";
+import heroVideoWebm from "../assets/videos/hero-video.webm";
+import heroVideoMp4 from "../assets/videos/hero-video.mp4";
 
 export function HeroSection() {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -21,10 +22,12 @@ export function HeroSection() {
             autoPlay
             muted
             playsInline
+            preload="auto"
             className="w-full h-full object-cover"
             onEnded={() => setVideoEnded(true)}
           >
-            <source src={heroVideo} type="video/mp4" />
+            <source src={heroVideoMp4} type="video/mp4" />
+            <source src={heroVideoWebm} type="video/webm" />
           </video>
         </div>
         <div className="pointer-events-none shadow-[inset_0px_1.733px_82.448px_0px_black] md:shadow-[inset_0px_2.5px_120px_0px_black] lg:shadow-[inset_0px_3px_150px_0px_black] xl:shadow-[inset_0px_4px_190.3px_0px_black] absolute inset-0" />
