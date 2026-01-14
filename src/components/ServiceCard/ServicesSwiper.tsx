@@ -85,6 +85,7 @@ export function ServicesSwiper({
       {!isBeginning && (
         <button
           onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous service"
           className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-[41px] h-[46px] rounded-[5px] items-center justify-center"
           style={{
             background: `linear-gradient(180deg, ${gradient.from} 0%, ${gradient.to} 100%)`,
@@ -100,6 +101,7 @@ export function ServicesSwiper({
       {!isEnd && (
         <button
           onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next service"
           className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-[41px] h-[46px] rounded-[5px] items-center justify-center"
           style={{
             background: `linear-gradient(180deg, ${gradient.from} 0%, ${gradient.to} 100%)`,

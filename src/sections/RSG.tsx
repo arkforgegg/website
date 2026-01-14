@@ -209,6 +209,7 @@ export function RSG() {
               {!isRegionsBeginning && (
                 <button
                   onClick={() => regionsSwiperRef.current?.slidePrev()}
+                  aria-label="Previous region"
                   className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-[41px] h-[46px] rounded-[5px] items-center justify-center"
                   style={{
                     background:
@@ -225,6 +226,7 @@ export function RSG() {
               {!isRegionsEnd && (
                 <button
                   onClick={() => regionsSwiperRef.current?.slideNext()}
+                  aria-label="Next region"
                   className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-[41px] h-[46px] rounded-[5px] items-center justify-center"
                   style={{
                     background:

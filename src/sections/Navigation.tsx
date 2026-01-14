@@ -104,13 +104,18 @@ export function Navigation() {
       </div>
 
       <div className="lg:hidden flex items-center justify-between px-4 py-3 w-full">
-        <button onClick={scrollToTop} className="flexcenter shrink-0">
+        <button
+          onClick={scrollToTop}
+          aria-label="Back to Top"
+          className="flexcenter shrink-0"
+        >
           <GrayArrow className="w-[14px] h-[14px]" />
         </button>
         <div className="flex items-center justify-between border border-[#5f5f5f] rounded-[7px] p-[4.7px] w-[235px]">
           {navs.map((nav, i) => (
             <a
               href={`#${nav.id}`}
+              aria-label={nav.title}
               className={`${
                 currentSection === nav.id ? "bg-[#474747]" : ""
               } flexcenter rounded-[6px] px-[9px] py-[6px] no-underline`}
@@ -124,7 +129,11 @@ export function Navigation() {
             </a>
           ))}
         </div>
-        <a href="#contact" className="flexcenter shrink-0 no-underline">
+        <a
+          href="#contact"
+          aria-label="Contact Us"
+          className="flexcenter shrink-0 no-underline"
+        >
           <div className="rotate-180">
             <GrayArrow className="w-[14px] h-[14px]" />
           </div>

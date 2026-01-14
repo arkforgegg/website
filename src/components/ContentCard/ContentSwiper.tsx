@@ -132,6 +132,7 @@ export function ContentSwiper({
       {!isBeginning && (
         <button
           onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous content"
           className="flex absolute left-0 top-1/2 -translate-y-1/2 z-10 lg:w-[41px] lg:h-[46px] w-[32px] h-[36px] rounded-[5px] items-center justify-center"
           style={{
             background: `linear-gradient(180deg, ${gradient.from} 0%, ${gradient.to} 100%)`,
@@ -147,6 +148,7 @@ export function ContentSwiper({
       {!isEnd && (
         <button
           onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next content"
           className="flex absolute right-0 top-1/2 -translate-y-1/2 z-10 lg:w-[41px] lg:h-[46px] w-[32px] h-[36px] rounded-[5px] items-center justify-center"
           style={{
             background: `linear-gradient(180deg, ${gradient.from} 0%, ${gradient.to} 100%)`,

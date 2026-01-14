@@ -164,6 +164,7 @@ export function GridComponent({
           {stories.length > 1 && (
             <button
               onClick={nextImage}
+              aria-label="Next story"
               className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -right-3 md:-right-5 top-1/2 -translate-y-1/2"
             >
               <WhiteArrow />
@@ -172,6 +173,7 @@ export function GridComponent({
           {stories.length > 1 && (
             <button
               onClick={prevImage}
+              aria-label="Previous story"
               className="absolute w-8 h-8 flexcenter rounded-md bg-[#4B4B4B] bg-opacity-80 -left-3 md:-left-5 top-1/2 -translate-y-1/2"
             >
               <div className="rotate-180">

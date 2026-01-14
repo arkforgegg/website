@@ -16,7 +16,7 @@ import "../css/arkforge.css";
 
 export function ArkforgePage() {
   return (
-    <div id="arkforge">
+    <main id="arkforge">
       <HeroSection />
       <LegacySection />
       <Brands />
@@ -31,6 +31,6 @@ export function ArkforgePage() {
 
       <InvestorForm />
       <Footer />
-    </div>
+    </main>
   );
 }
