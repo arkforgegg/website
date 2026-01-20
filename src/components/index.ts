@@ -3,3 +3,5 @@ export * from "./Icons";
 export * from "./Grid/GridComponent";
 export * from "./footer/Footer";
 export * from "./Navbar/Navbar";
+export * from "./ContentCard";
+export * from "./ServiceCard";

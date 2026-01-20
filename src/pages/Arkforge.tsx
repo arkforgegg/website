@@ -1,35 +1,36 @@
-import { Footer, Navbar } from "../components";
+import { Footer } from "../components";
 import {
-  AghsLab,
   BannerTagline,
   Brands,
-  DetailBanner,
-  Introduction,
+  EcosystemSection,
+  LegacySection,
+  HeroSection,
   InvestorForm,
   Navigation,
   PulseNova,
+  KyoCards,
+  Jinada,
   RSG,
 } from "../sections";
 import "../css/arkforge.css";
 
 export function ArkforgePage() {
   return (
-    <>
-      <Navbar />
-      <div id="arkforge">
-        <Introduction />
-        <DetailBanner />
-        <Brands />
-        <Navigation />
-        <PulseNova />
-        <RSG />
-        <AghsLab />
-        <div className="mt-20 xl:mt-32 mb-10 w-full">
-          <BannerTagline />
-        </div>
-        <InvestorForm />
-        <Footer />
-      </div>
-    </>
+    <main id="arkforge">
+      <HeroSection />
+      <LegacySection />
+      <Brands />
+      <EcosystemSection />
+      <Navigation />
+      <PulseNova />
+      <KyoCards />
+      <Jinada />
+      <RSG />
+
+      <BannerTagline />
+
+      <InvestorForm />
+      <Footer />
+    </main>
   );
 }

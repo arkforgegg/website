@@ -2,7 +2,6 @@ import uniqlo from "../assets/img/Brands/uniqlo.png";
 import blizzard from "../assets/img/Brands/Blizzard.png";
 import pizzahut from "../assets/img/Brands/pizzahut.png";
 import amd from "../assets/img/Brands/amd.png";
-import legion from "../assets/img/Brands/legion.png";
 import samsung from "../assets/img/Brands/samsung.png";
 import omni from "../assets/img/Brands/OmniDream.png";
 import prism from "../assets/img/Brands/Prism.png";
@@ -22,6 +21,20 @@ import tiktok from "../assets/img/Brands/TikTok.png";
 import osim from "../assets/img/Brands/osim.png";
 import byteDance from "../assets/img/Brands/ByteDance.png";
 import moonton from "../assets/img/Brands/moonton.png";
+import lilithGames from "../assets/img/Brands/lilith-games.png";
+import iteaLogo from "../assets/img/Brands/itea-logo.png";
+import myrepublic from "../assets/img/Brands/myrepublic.png";
+import netease from "../assets/img/Brands/netease.png";
+import oppoLogo from "../assets/img/Brands/oppo-logo.png";
+import paperGames from "../assets/img/Brands/paper-games.png";
+import pathea from "../assets/img/Brands/pathea.png";
+import seasun from "../assets/img/Brands/seasun.png";
+import xdCom from "../assets/img/Brands/xd-com.png";
+import dxracerLogo from "../assets/img/Brands/dxracer-logo.png";
+import fhyxCom from "../assets/img/Brands/fhyx-com.png";
+import funplus from "../assets/img/Brands/funplus.png";
+import huanlehuyu from "../assets/img/Brands/huanlehuyu.png";
+import legion from "../assets/img/Brands/legion.png";
 
 export function Brands() {
   const brands = [
@@ -49,22 +62,37 @@ export function Brands() {
     osim,
     byteDance,
     moonton,
+    lilithGames,
+    iteaLogo,
+    myrepublic,
+    netease,
+    oppoLogo,
+    paperGames,
+    pathea,
+    seasun,
+    xdCom,
+    dxracerLogo,
+    fhyxCom,
+    funplus,
+    huanlehuyu,
   ];
 
+  const duplicatedBrands = [...brands, ...brands];
+
   return (
-    <div className="text-center mt-10 xl:mt-20 m-5 sm:mx-0 w-full px-5 md:px-14 lg:px-52">
-      <b className="montserrat-bold xs:text-sm xl:text-3xl">BRANDS WE HAVE COLLABORATED WITH</b>
-      {/* <div className="text-sm my-3 text-[#6C6C6C] airif xl:flex xl:flexcenter">
-        <p>Exploring new horizons with our diverse clientele</p>
-        <p>- A glimpse into brands we've partnered with</p>
-      </div> */}
-      <div className="xs:mx-2 m-8 md:px-10 xl:mt-20 grid grid-cols-4 md:grid-cols-4 xl:grid-cols-6 xs:gap-3 gap-5 md:gap-4 xl:gap-0 justify-items-center">
-        {brands.map((brand, i) => (
-          <div key={i} className="flexcenter md:scale-[0.8]">
-            <img className="grayscale" src={brand} alt="" />
-          </div>
-        ))}
+    <section
+      id="brands"
+      className="relative mt-8 md:mt-10 xl:mt-20 w-full overflow-hidden"
+    >
+      <div className="brands-carousel-container">
+        <div className="brands-carousel-content">
+          {duplicatedBrands.map((brand, i) => (
+            <div key={i} className="brands-carousel-item">
+              <img src={brand} alt="" />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

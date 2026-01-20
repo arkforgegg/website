@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useMemo } from "react";
 import { InputComponent, InputMessageComponent } from "../components";
 
 export function InvestorForm() {
@@ -9,16 +9,28 @@ export function InvestorForm() {
   const [position, setPosition] = useState("");
   const [message, setMessage] = useState("");
 
-  const mandatory = () => {
-    return (
-      name.length > 0 &&
-      email.length > 0 &&
-      phone.length > 0 &&
-      company.length > 0 &&
-      position.length > 0 &&
-      message.length > 0
-    );
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
+
+  const isFormValid = useMemo(() => {
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPhone = phone.trim();
+    const trimmedCompany = company.trim();
+    const trimmedPosition = position.trim();
+    const trimmedMessage = message.trim();
+
+    return (
+      trimmedName.length > 0 &&
+      trimmedEmail.length > 0 &&
+      isValidEmail(trimmedEmail) &&
+      trimmedPhone.length > 0 &&
+      trimmedCompany.length > 0 &&
+      trimmedPosition.length > 0 &&
+      trimmedMessage.length > 0
+    );
+  }, [name, email, phone, company, position, message]);
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -31,168 +43,117 @@ export function InvestorForm() {
     window.location.href = mailtoLink;
   };
 
-  const forms = [
-    {
-      title: (
-        <p>
-          NAME
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "",
-      input: (
-        <InputComponent
-          type="text"
-          state={name}
-          setState={setName}
-          placeholder="Jane Doe"
-        />
-      ),
-    },
-    {
-      title: (
-        <p>
-          EMAIL
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "",
-      input: (
-        <InputComponent
-          type="email"
-          state={email}
-          setState={setEmail}
-          placeholder="jane@example.com"
-        />
-      ),
-    },
-    {
-      title: (
-        <p>
-          PHONE
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "",
-      input: (
-        <InputComponent
-          type="text"
-          state={phone}
-          setState={setPhone}
-          placeholder="+6012345678"
-        />
-      ),
-    },
-    {
-      title: (
-        <p>
-          COMPANY
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "",
-      input: (
-        <InputComponent
-          state={company}
-          type="text"
-          setState={setCompany}
-          placeholder="Example Company"
-        />
-      ),
-    },
-    {
-      title: (
-        <p>
-          POSITION
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "",
-      input: (
-        <InputComponent
-          state={position}
-          type="text"
-          setState={setPosition}
-          placeholder="Manager"
-        />
-      ),
-    },
-    {
-      title: (
-        <p>
-          MESSAGE
-          <span className="text-red-500 ml-1">*</span>
-        </p>
-      ),
-      className: "lg:col-span-2 lg:row-start-4",
-      input: (
-        <InputMessageComponent
-          state={message}
-          type="text"
-          setState={setMessage}
-          placeholder="Enter your message here"
-        />
-      ),
-    },
-    {
-      title: "",
-      className: "lg:col-span-2 lg:row-start-5 items-center mt-6 lg:mb-10",
-      input: (
-        <button
-          disabled={!mandatory()}
-          type="submit"
-          onClick={handleSubmit}
-          className="bg-[#FF0000] xs:text-xs py-2 airif rounded-md w-full"
-        >
-          SUBMIT
-        </button>
-      ),
-    },
-  ];
-
   return (
     <div
       id="contact"
-      className="mx-5 text-center mt-10 xl:mt-20 xl:mx-44 2xl:mx-56"
-      // action="mailto:Hello@arkforge.gg"
-      // method="post"
-      // encType="text/plain"
+      className="relative w-full min-h-screen bg-black overflow-hidden"
     >
-      <b className="montserrat-bold xl:text-3xl">INVESTOR RELATION</b>
-      <div className="flex text-left sm:text-center">
-        {/* <p className="text-sm my-3 text-[#6C6C6C] airif">
-          Empowering Investors with information and Access. Explore our
-          downloadable resources and reach out to us for any inquiries or
-          opportunities.
-        </p> */}
-      </div>
-
-      <div className="my-14 border border-[#CB0000]">
-        <section className="bg-[#CB0000] p-3">
-          <b className="montserrat-bold xs:text-base xl:text-3xl">
-            GET IN TOUCH
-          </b>
-          <p className="xs:text-xs text-sm my-3 xl:mx-5 airif">
-            Uncover the impact our team of seasoned experts can bring to your
-            business. With years of valuable experience and unparalleled gaming
-            knowledge, we are enthusiastic about assisting you in realizing your
-            full potential and reaching greater success.
-          </p>
-        </section>
-
-        <section className="my-10 mx-4 lg:px-20 grid lg:grid-cols-2 gap-x-10">
-          {forms.map((form, i) => (
-            <div
-              key={i}
-              className={`flex flex-col items-start justify-center w-full ${form.className}`}
+      <div className="relative flex items-center justify-center min-h-[838px] px-4 md:px-8 py-20 lg:py-28">
+        <div className="relative bg-black border border-[#cb4e00] rounded-[25px] w-full max-w-[1125px] overflow-hidden">
+          <div className="flex flex-col gap-3 items-center text-center px-4 md:px-12 pt-[43px] pb-8">
+            <p
+              className="montserrat-bold font-bold leading-[1.349] text-[20px] md:text-[32px] uppercase w-fit tracking-[0.96px] md:tracking-[1.28px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
             >
-              <p className="airif text-left xs:text-xs text-sm ml-1">
-                {form.title}
-              </p>
-              {form.input}
+              Connect with ArkForge
+            </p>
+            <p className="titillium-web leading-normal text-[14px] md:text-[18px] text-white w-full">
+              For partnerships, collaborations, or enquiries across our
+              ecosystem, get in touch with our team.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="px-4 md:px-[92px] pb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-[12px]">
+              <div className="flex flex-col">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  NAME
+                </p>
+                <InputComponent
+                  type="text"
+                  state={name}
+                  setState={setName}
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  EMAIL
+                </p>
+                <InputComponent
+                  type="email"
+                  state={email}
+                  setState={setEmail}
+                  placeholder="Your email address"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  PHONE
+                </p>
+                <InputComponent
+                  type="text"
+                  state={phone}
+                  setState={setPhone}
+                  placeholder="Contact number with area code"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  COMPANY
+                </p>
+                <InputComponent
+                  state={company}
+                  type="text"
+                  setState={setCompany}
+                  placeholder="Company or organisation name"
+                />
+              </div>
+
+              <div className="flex flex-col md:col-span-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  POSITION
+                </p>
+                <InputComponent
+                  state={position}
+                  type="text"
+                  setState={setPosition}
+                  placeholder="Your role or designation"
+                />
+              </div>
+
+              <div className="flex flex-col md:col-span-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
+                  MESSAGE
+                </p>
+                <InputMessageComponent
+                  state={message}
+                  type="text"
+                  setState={setMessage}
+                  placeholder="Tell us about your idea, partnership, or enquiry…"
+                />
+              </div>
+
+              <div className="md:col-span-2 mt-2">
+                <button
+                  disabled={!isFormValid}
+                  type="submit"
+                  className="bg-gradient-to-r from-[#900000] to-[red] h-[56px] rounded-[5px] w-full titillium-web text-[14px] md:text-[18px] text-white uppercase disabled:bg-gradient-to-r disabled:from-[#2b0101] disabled:to-[#510000] disabled:text-[#7E7878] disabled:cursor-not-allowed transition-opacity"
+                >
+                  SUBMIT
+                </button>
+              </div>
             </div>
-          ))}
-        </section>
+          </form>
+        </div>
       </div>
     </div>
   );
