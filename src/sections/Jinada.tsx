@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/img/ecosystem/jinada-logo.png";
 
-import cardEcosystemIcon from "../assets/icons/card-ecosystem.svg";
-import rewardsEngineIcon from "../assets/icons/rewards-engine.svg";
-import communityAccessIcon from "../assets/icons/community-access.svg";
+import cardEcosystemIcon from "../assets/icons/card-ecosystem.png";
+import rewardsEngineIcon from "../assets/icons/rewards-engine.png";
+import communityAccessIcon from "../assets/icons/community-access.png";
 
 import { WhiteArrow } from "../components/Icons";
 import { ServicesSwiper } from "../components/ServiceCard";
@@ -11,27 +11,15 @@ import { ServicesSwiper } from "../components/ServiceCard";
 export function Jinada() {
   const keyCapabilities = [
     {
-      icon: {
-        src: cardEcosystemIcon,
-        width: 196,
-        height: 196,
-      },
+      icon: cardEcosystemIcon,
       name: "The ACG-First Card Ecosystem",
     },
     {
-      icon: {
-        src: rewardsEngineIcon,
-        width: 196,
-        height: 196,
-      },
+      icon: rewardsEngineIcon,
       name: "The ACG Rewards Engine",
     },
     {
-      icon: {
-        src: communityAccessIcon,
-        width: 196,
-        height: 196,
-      },
+      icon: communityAccessIcon,
       name: "The Community Access Layer",
     },
   ];
@@ -56,7 +44,6 @@ export function Jinada() {
                 "radial-gradient(100.09% 100.56% at 1.7% 66.67%, #FFF2DC 0%, #FFD48A 56.25%, #FFF 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0px 0px 35.696px rgba(255, 190, 74, 0.7)",
               lineHeight: "1.349",
             }}
           >
@@ -91,7 +78,6 @@ export function Jinada() {
               from: "rgba(255, 190, 74, 0.9)",
               to: "rgba(195, 131, 28, 0.9)",
             }}
-            textShadowColor="0px 0px 35.696px rgba(255, 190, 74, 0.7)"
             textGradient="radial-gradient(100.5% 94.44% at 1.7% 66.67%, #FCAA24 0%, #FFDA98 49.04%, #FCAA24 100%)"
           />
 

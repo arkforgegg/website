@@ -1,47 +1,82 @@
 import logo from "../../assets/img/logo.png";
-import fb from "../../assets/img/Facebook.png";
-import linked from "../../assets/img/LinkedIn.png";
-import twitter from "../../assets/img/X.png";
-
-const socmed = [
-  { image: linked, link: "https://www.linkedin.com/company/arkforge/" },
-  { image: fb, link: "https://www.facebook.com/ArkForge.gg" },
-  { image: twitter, link: "https://twitter.com/ArkForge_gg" },
-];
+import instagram from "../../assets/img/instagram.png";
 
 const footerLinks = [
-  { label: "pulse nova", id: "nova" },
-  { label: "kYO CARDS", id: "kyocards" },
-  { label: "JINADA", id: "jinada" },
-  { label: "RSG", id: "rsg" },
+  {
+    label: "pulse nova",
+    igLink: "https://www.instagram.com/pulsenova.ent",
+    href: "https://pulsenova.gg/",
+    id: "nova",
+  },
+  {
+    label: "kyo cards",
+    igLink: "https://www.instagram.com/kyocards",
+    href: "https://kyocards.com/",
+    id: "kyocards",
+  },
+  {
+    label: "jinada",
+    igLink: "https://www.instagram.com/jinada.gg",
+    href: "https://jinada.gg/",
+    id: "jinada",
+  },
+  {
+    label: "rsg",
+    igLink: "https://www.instagram.com/rsg.malaysia",
+    href: "https://www.rsg.gg/",
+    id: "rsg",
+  },
 ];
 
 export function Footer() {
   return (
-    <div className="w-full bg-black border-t border-[#212121] pt-[43px] pb-[43px]">
-      <div className="container mx-auto max-w-[1283px] px-4 md:px-0">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
-          <div className="flex flex-col gap-4 w-full md:w-[394px]">
+    <div className="w-full bg-black border-t border-[#212121] pt-[43px] pb-[100px] relative overflow-hidden">
+      <div className="container mx-auto max-w-[1283px] px-4 md:px-0 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-0">
+          <div className="flex flex-col gap-2 w-full md:w-[390px]">
             <img
               src={logo}
               alt="ARKFORGE"
-              className="h-[43px] w-auto max-w-[296px]"
+              className="max-w-[296px]"
             />
-            <p className="montserrat-medium text-[18px] text-[#ebebeb] tracking-[0.36px] leading-normal">
-              Forging the Future of the ACG Ecosystem
+            <p className="font-montserrat text-[18px] text-[#ebebeb] tracking-[0.36px] leading-normal">
+              Where ACG Worlds Are Forged
             </p>
           </div>
 
-          <div className="flex flex-col gap-6 w-full md:w-[113px]">
-            {footerLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                className="montserrat-bold font-bold text-[16px] text-white uppercase tracking-[0.4px] leading-normal text-left hover:opacity-80 transition-opacity no-underline"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex flex-col gap-6 w-[150px]">
+            <p className="montserrat-bold font-bold text-[16px] text-white uppercase tracking-[0.4px] leading-normal">
+              our ecosystem
+            </p>
+            <div className="flex flex-col gap-4">
+              {footerLinks.map((link) => (
+                <div
+                  key={link.id}
+                  className="flex items-center gap-2 justify-between"
+                >
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-titillium text-[14px] text-white uppercase tracking-[0.4px] leading-normal text-left hover:opacity-80 transition-opacity no-underline"
+                  >
+                    {link.label}
+                  </a>
+                  <a
+                    href={link.igLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img
+                      src={instagram}
+                      alt="Instagram"
+                      className="w-[20px] h-[20px] object-contain"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-col gap-8 w-full md:w-[162px]">
@@ -59,23 +94,6 @@ export function Footer() {
                 >
                   Hello@arkforge.gg
                 </a>
-              </div>
-              <div className="flex gap-2">
-                {socmed.map((social, i) => (
-                  <a
-                    key={i}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={social.link}
-                    className="w-[34px] h-[34px] hover:opacity-80 transition-opacity"
-                  >
-                    <img
-                      src={social.image}
-                      alt="Social icon"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                ))}
               </div>
             </div>
           </div>

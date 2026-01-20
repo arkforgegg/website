@@ -71,8 +71,8 @@ export function Navigation() {
   }, [currentSection]);
 
   return (
-    <div className="sticky top-0 left-0 right-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-sm border-b border-[#3a3a3a] shadow-[0px_4.688px_8.086px_0px_rgba(255,0,0,0.33)]">
-      <div className="hidden lg:flex items-center justify-between w-full xl:px-16 py-3">
+    <div className="sticky top-0 left-0 right-0 w-full z-50 bg-black bg-opacity-70 backdrop-blur-sm border-b border-[#3a3a3a]">
+      <div className="hidden lg:flex items-center justify-between w-full xl:px-16 py-2">
         <button onClick={scrollToTop} className="flexcenter gap-3">
           <GrayArrow />
           <p className="airif text-[#4B4B4B] text-[18px]">Back to Top</p>
@@ -83,7 +83,7 @@ export function Navigation() {
               href={`#${nav.id}`}
               className={`${
                 currentSection === nav.id ? "bg-[#4B4B4B]" : ""
-              } flexcenter gap-3 rounded-md px-4 py-2 no-underline`}
+              } flexcenter gap-3 rounded-md px-4 py-1 no-underline`}
               key={i}
             >
               <img

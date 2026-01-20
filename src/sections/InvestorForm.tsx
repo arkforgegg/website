@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import { InputComponent, InputMessageComponent } from "../components";
-import firefliesBg from "../assets/img/bg/fireflies-bg.png";
 
 export function InvestorForm() {
   const [name, setName] = useState("");
@@ -48,26 +47,22 @@ export function InvestorForm() {
     <div
       id="contact"
       className="relative w-full min-h-screen bg-black overflow-hidden"
-      style={{
-        backgroundImage: `url(${firefliesBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
       <div className="relative flex items-center justify-center min-h-[838px] px-4 md:px-8 py-20 lg:py-28">
         <div className="relative bg-black border border-[#cb4e00] rounded-[25px] w-full max-w-[1125px] overflow-hidden">
           <div className="flex flex-col gap-3 items-center text-center px-4 md:px-12 pt-[43px] pb-8">
             <p
-              className="montserrat-bold font-bold leading-[1.349] text-[24px] md:text-[32px] uppercase w-full tracking-[0.96px] md:tracking-[1.28px]"
+              className="montserrat-bold font-bold leading-[1.349] text-[20px] md:text-[32px] uppercase w-fit tracking-[0.96px] md:tracking-[1.28px]"
               style={{
-                textShadow: "0px 0px 35.696px #ff0606",
-                color: "#ff0000",
+                background:
+                  "linear-gradient(90deg, #F00 0%, #FF9D4C 51.93%, #F00 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               Connect with ArkForge
             </p>
-            <p className="titillium-web leading-normal text-[16px] md:text-[18px] text-white w-full">
+            <p className="titillium-web leading-normal text-[14px] md:text-[18px] text-white w-full">
               For partnerships, collaborations, or enquiries across our
               ecosystem, get in touch with our team.
             </p>
@@ -76,7 +71,7 @@ export function InvestorForm() {
           <form onSubmit={handleSubmit} className="px-4 md:px-[92px] pb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-[12px]">
               <div className="flex flex-col">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   NAME
                 </p>
                 <InputComponent
@@ -88,7 +83,7 @@ export function InvestorForm() {
               </div>
 
               <div className="flex flex-col">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   EMAIL
                 </p>
                 <InputComponent
@@ -100,7 +95,7 @@ export function InvestorForm() {
               </div>
 
               <div className="flex flex-col">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   PHONE
                 </p>
                 <InputComponent
@@ -112,7 +107,7 @@ export function InvestorForm() {
               </div>
 
               <div className="flex flex-col">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   COMPANY
                 </p>
                 <InputComponent
@@ -124,7 +119,7 @@ export function InvestorForm() {
               </div>
 
               <div className="flex flex-col md:col-span-2">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   POSITION
                 </p>
                 <InputComponent
@@ -136,7 +131,7 @@ export function InvestorForm() {
               </div>
 
               <div className="flex flex-col md:col-span-2">
-                <p className="titillium-web leading-normal text-[16px] text-white uppercase mb-2">
+                <p className="titillium-web leading-normal text-[14px] md:text-[16px] text-white uppercase mb-2">
                   MESSAGE
                 </p>
                 <InputMessageComponent
@@ -151,7 +146,7 @@ export function InvestorForm() {
                 <button
                   disabled={!isFormValid}
                   type="submit"
-                  className="bg-gradient-to-r from-[#900000] to-[red] h-[56px] rounded-[5px] w-full titillium-web text-[18px] text-white uppercase disabled:bg-gradient-to-r disabled:from-[#2b0101] disabled:to-[#510000] disabled:text-[#7E7878] disabled:cursor-not-allowed transition-opacity"
+                  className="bg-gradient-to-r from-[#900000] to-[red] h-[56px] rounded-[5px] w-full titillium-web text-[14px] md:text-[18px] text-white uppercase disabled:bg-gradient-to-r disabled:from-[#2b0101] disabled:to-[#510000] disabled:text-[#7E7878] disabled:cursor-not-allowed transition-opacity"
                 >
                   SUBMIT
                 </button>

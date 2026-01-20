@@ -34,14 +34,16 @@ import dxracerLogo from "../assets/img/Brands/dxracer-logo.png";
 import fhyxCom from "../assets/img/Brands/fhyx-com.png";
 import funplus from "../assets/img/Brands/funplus.png";
 import huanlehuyu from "../assets/img/Brands/huanlehuyu.png";
+import legion from "../assets/img/Brands/legion.png";
 
 export function Brands() {
   const brands = [
     uniqlo,
     blizzard,
     pizzahut,
-    samsung,
     amd,
+    legion,
+    samsung,
     omni,
     prism,
     singtel,

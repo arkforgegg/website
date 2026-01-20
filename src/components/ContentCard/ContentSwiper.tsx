@@ -12,6 +12,7 @@ export interface ContentItem {
   title: string;
   description?: string;
   tags?: string[];
+  link?: string;
 }
 
 interface ContentSwiperProps {
@@ -123,6 +124,7 @@ export function ContentSwiper({
                 title={item.title}
                 description={item.description}
                 tags={item.tags}
+                link={item.link}
               />
             </div>
           </SwiperSlide>

@@ -8,11 +8,7 @@ import { WhiteArrow } from "../Icons";
 import { ServiceCard } from "./ServiceCard";
 
 export interface ServiceItem {
-  icon: {
-    src: string;
-    width: number;
-    height: number;
-  };
+  icon: string;
   name: string;
 }
 
@@ -22,7 +18,6 @@ interface ServicesSwiperProps {
     from: string;
     to: string;
   };
-  textShadowColor?: string;
   textGradient?: string;
   className?: string;
 }
@@ -30,12 +25,11 @@ interface ServicesSwiperProps {
 export function ServicesSwiper({
   items,
   arrowGradient,
-  textShadowColor,
   textGradient,
   className = "",
 }: ServicesSwiperProps) {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [isBeginning, setIsBeginning] = useState(true);
+  const [isBeginning, setIsBeginning] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
 
   const defaultGradient = {
@@ -75,7 +69,6 @@ export function ServicesSwiper({
             <ServiceCard
               icon={item.icon}
               name={item.name}
-              textShadowColor={textShadowColor}
               textGradient={textGradient}
             />
           </SwiperSlide>

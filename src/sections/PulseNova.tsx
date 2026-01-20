@@ -7,12 +7,12 @@ import caseStudy3 from "../assets/img/pulse-nova/case-study-3.png";
 import caseStudy4 from "../assets/img/pulse-nova/case-study-4.png";
 import caseStudy5 from "../assets/img/pulse-nova/case-study-5.png";
 
-import handshakeIcon from "../assets/icons/handshake.svg";
-import calendarIcon from "../assets/icons/calendar-game.svg";
-import communityIcon from "../assets/icons/community.svg";
-import talentIcon from "../assets/icons/talent.svg";
-import prIcon from "../assets/icons/pr.svg";
-import videoIcon from "../assets/icons/video.svg";
+import handshakeIcon from "../assets/icons/handshake.png";
+import calendarIcon from "../assets/icons/calendar-game.png";
+import communityIcon from "../assets/icons/community.png";
+import talentIcon from "../assets/icons/talent.png";
+import prIcon from "../assets/icons/pr.png";
+import videoIcon from "../assets/icons/video.png";
 
 import { WhiteArrow } from "../components/Icons";
 import { ContentSwiper } from "../components/ContentCard";
@@ -25,7 +25,7 @@ export function PulseNova() {
 
   const caseStudies = [
     {
-      title: "MPL SG",
+      title: "Mobile Legends Professional League Singapore (MPL SG)",
       desc: "National Tournament - MPL SG S9&S10 - Moonton (2025). The country’s only professional tournament of MLBB held officially. Service Provided:",
       img: caseStudy1,
       tags: [
@@ -63,8 +63,8 @@ export function PulseNova() {
       ],
     },
     {
-      title: "Omniheros Global launch",
-      desc: "Ominiheros is a mobile game published by Omni Games; It's global launch engages various KOLs among multiple regions. Service Provided:",
+      title: "Omniheroes Global Launch",
+      desc: "Omniheroes is a mobile game published by Omni Games; It's global launch engages various KOLs among multiple regions. Service Provided:",
       img: caseStudy4,
       tags: [
         "KOL Sourcing",
@@ -90,52 +90,28 @@ export function PulseNova() {
 
   const services = [
     {
-      icon: {
-        src: handshakeIcon,
-        width: 129,
-        height: 129,
-      },
-      name: "SPONSORSHIP",
+      icon: handshakeIcon,
+      name: "SPONSORSHIPS & \nPARTNERSHIPS",
     },
     {
-      icon: {
-        src: calendarIcon,
-        width: 196,
-        height: 129,
-      },
+      icon: calendarIcon,
       name: "GAMING EVENT\nMANAGEMENT",
     },
     {
-      icon: {
-        src: communityIcon,
-        width: 128,
-        height: 128,
-      },
+      icon: communityIcon,
       name: "COMMUNITY\nMANAGEMENT",
     },
     {
-      icon: {
-        src: talentIcon,
-        width: 197,
-        height: 197,
-      },
-      name: "TALENT BOOKING",
+      icon: talentIcon,
+      name: "TALENT\nBOOKING",
     },
     {
-      icon: {
-        src: prIcon,
-        width: 185,
-        height: 128,
-      },
-      name: "PUBLIC RELATIONS",
+      icon: prIcon,
+      name: "PUBLIC\nRELATIONS",
     },
     {
-      icon: {
-        src: videoIcon,
-        width: 130,
-        height: 128,
-      },
-      name: "VIDEO PRODUCTION",
+      icon: videoIcon,
+      name: "VIDEO\nPRODUCTION",
     },
   ];
 
@@ -143,7 +119,7 @@ export function PulseNova() {
     <>
       <div
         id="nova"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
+        className="relative flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
         style={{
           backdropFilter: "blur(8px)",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -163,7 +139,6 @@ export function PulseNova() {
                 "radial-gradient(1414.09% 100.56% at 1.7% 66.67%, #96B7EF 0%, #6CE5DE 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0px 0px 22.5px rgba(24, 255, 199, 0.7)",
               lineHeight: "1.349",
             }}
           >
@@ -185,21 +160,19 @@ export function PulseNova() {
           <div className="flex gap-8 lg:gap-14 mb-8 lg:mb-12">
             <button
               onClick={() => setActiveTab("services")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
-                activeTab === "services"
-                  ? "border-[#6ED7DB] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${activeTab === "services"
+                ? "border-[#6ED7DB] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Services
             </button>
             <button
               onClick={() => setActiveTab("case-studies")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
-                activeTab === "case-studies"
-                  ? "border-[#6ED7DB] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${activeTab === "case-studies"
+                ? "border-[#6ED7DB] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Case Studies
             </button>

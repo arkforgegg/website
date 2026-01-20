@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 interface ContentCardProps {
   img: string;
   title: string;
   description?: string;
   tags?: string[];
+  link?: string;
 }
 
 export function ContentCard({
@@ -10,15 +13,10 @@ export function ContentCard({
   title,
   description,
   tags,
+  link,
 }: ContentCardProps) {
-  return (
-    <div
-      className="w-full max-w-full rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col h-full"
-      style={{
-        background:
-          "linear-gradient(144.31deg, rgba(42, 42, 42, 1) 0.72%, rgba(0, 0, 0, 1) 109.87%)",
-      }}
-    >
+  const cardContent = (
+    <>
       <div className="w-full min-h-[180px] lg:min-h-[482px] overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
         <img
           src={img}
@@ -26,7 +24,6 @@ export function ContentCard({
           className="w-full h-auto max-h-[482px] object-contain"
         />
       </div>
-
       <div className="flex flex-col p-4 gap-3">
         <h3 className="montserrat-bold font-bold text-[14px] lg:text-[18px] text-white leading-tight">
           {title}
@@ -55,6 +52,43 @@ export function ContentCard({
           </div>
         )}
       </div>
+    </>
+  );
+
+  const cardWrapperClassName =
+    "w-full max-w-full rounded-[16px] border border-[#fff2f2] overflow-hidden flex flex-col h-full";
+  const cardWrapperStyle = {
+    background:
+      "linear-gradient(144.31deg, rgba(42, 42, 42, 1) 0.72%, rgba(0, 0, 0, 1) 109.87%)",
+  };
+
+  if (link) {
+    const isExternalLink = link.startsWith("http://") || link.startsWith("https://");
+
+    if (isExternalLink) {
+      return (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cardWrapperClassName}
+          style={cardWrapperStyle}
+        >
+          {cardContent}
+        </a>
+      );
+    }
+
+    return (
+      <Link to={link} className={cardWrapperClassName} style={cardWrapperStyle}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={cardWrapperClassName} style={cardWrapperStyle}>
+      {cardContent}
     </div>
   );
 }

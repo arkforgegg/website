@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import logo from "../assets/img/ecosystem/kyo-cards-logo.png";
 
 import globalMarketDataIcon from "../assets/icons/global-market.png";
-import aiScannerIcon from "../assets/icons/ai-scanner.svg";
-import auctionIcon from "../assets/icons/auction.svg";
-import verifiedIcon from "../assets/icons/verified.svg";
-import bargainIcon from "../assets/icons/bargain.svg";
-import openOfferIcon from "../assets/icons/open-offer.svg";
+import aiScannerIcon from "../assets/icons/ai-scanner.png";
+import auctionIcon from "../assets/icons/auction.png";
+import verifiedIcon from "../assets/icons/verified.png";
+import bargainIcon from "../assets/icons/bargain.png";
+import openOfferIcon from "../assets/icons/open-offer.png";
 
 import { WhiteArrow } from "../components/Icons";
 import { ContentSwiper } from "../components/ContentCard";
@@ -28,51 +28,27 @@ export function KyoCards() {
 
   const keyCapabilities = [
     {
-      icon: {
-        src: globalMarketDataIcon,
-        width: 167,
-        height: 167,
-      },
+      icon: globalMarketDataIcon,
       name: "Global Market data",
     },
     {
-      icon: {
-        src: aiScannerIcon,
-        width: 153,
-        height: 152,
-      },
+      icon: aiScannerIcon,
       name: "AI Scanner",
     },
     {
-      icon: {
-        src: auctionIcon,
-        width: 156,
-        height: 161,
-      },
+      icon: auctionIcon,
       name: "Auction",
     },
     {
-      icon: {
-        src: verifiedIcon,
-        width: 143,
-        height: 143,
-      },
+      icon: verifiedIcon,
       name: "OPTIONAL\nAUTHENTICATION",
     },
     {
-      icon: {
-        src: bargainIcon,
-        width: 128,
-        height: 112,
-      },
+      icon: bargainIcon,
       name: "Bargain",
     },
     {
-      icon: {
-        src: openOfferIcon,
-        width: 128,
-        height: 112,
-      },
+      icon: openOfferIcon,
       name: "Open Offer",
     },
   ];
@@ -81,10 +57,11 @@ export function KyoCards() {
     {
       img: pressMediaImage1,
       title:
-        "SG-based Kyo Cards debuts SEA's AI-powered trading card platform - tech in asia",
+        "SG-based Kyo Cards debuts SEA's AI-powered trading card platform - TECH IN ASIA",
       description:
-        "Kyo Cards, a Singapore-based trading card marketplace, has officially launched its AI-powered platform aimed at collectors, players, and sellers in Southeast Asia. The company integrates AI to help users identify card details, manage inventories, and access pricing based on global market data. Kyo Cards offers an escrow payment system for secure transactions and features tools like open offers and private negotiation options.",
+        "Kyo Cards, a Singapore-based trading card marketplace, has officially launched its AI-powered platform aimed at collectors, players, and sellers in Southeast Asia. The company integrates AI to help users identify card details, manage inventories, and access pricing based on global market data. Kyo Cards offers secure transactions and features tools like open offers and private negotiation options.",
       tags: [],
+      link: "https://techinasia.com/sg-based-kyo-cards-debuts-seas-ai-powered-trading-card-platform",
     },
 
     {
@@ -94,6 +71,7 @@ export function KyoCards() {
       description:
         "Kyo Cards, a trading card marketplace based in Singapore, has launched an AI-powered platform to support collectors, players, and sellers throughout Southeast Asia. The company integrates AI technology to aid users in identifying card attributes, maintaining inventories, and gaining insights into prices derived from global market data.",
       tags: [],
+      link: "https://www.asiabusinessoutlook.com/news/kyo-cards-launches-sea-s-aipowered-trading-card-platform-nwid-10097.html",
     },
   ];
 
@@ -128,7 +106,7 @@ export function KyoCards() {
     <>
       <div
         id="kyocards"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
+        className="relative  flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
       >
         <div className="max-w-[1400px] w-full flex flex-col">
           <img
@@ -144,7 +122,6 @@ export function KyoCards() {
                 "radial-gradient(1414.09% 100.56% at 1.7% 66.67%, #96B7EF 0%, #6CE5DE 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0px 0px 35.696px rgba(53, 139, 255, 0.7)",
               lineHeight: "1.349",
             }}
           >
@@ -154,55 +131,52 @@ export function KyoCards() {
           <p className="font-titillium text-[14px] lg:text-[18px] text-justify max-w-[856px] mb-4 lg:mb-6 leading-normal">
             Kyo Cards is a game-changing, AI-powered online marketplace built
             for the global TCG community. Designed to support both players and
-            collectors, the platform combines global market data, secure escrow
-            payments, and intelligent trading tools to create a safer, more
-            transparent trading environment.
+            collectors, the platform combines global market data, live auctions
+            with anti-sniping and second chance offers, and intelligent trading
+            tools to create a more trusted, transparent, and efficient trading
+            environment.
           </p>
           <p className="font-titillium text-[14px] lg:text-[18px] text-justify max-w-[856px] mb-8 lg:mb-12 leading-normal">
             Beyond the marketplace, Kyo Cards actively engages the community
             through offline events and digital event experiences — bridging
             online infrastructure with real-world interactions to strengthen
-            trust, discovery, and participation across the hobby.
+            discovery, participation, and connection across the hobby.
           </p>
 
-          <div className="flex gap-1 lg:gap-2 mb-8 lg:mb-12 justify-between overflow-x-auto w-full">
+          <div className="flex gap-1 lg:-gap-12 mb-8 lg:mb-12 justify-between overflow-x-auto w-full">
             <button
               onClick={() => setActiveTab("key-capabilities")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
-                activeTab === "key-capabilities"
-                  ? "border-[#6684f7] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${activeTab === "key-capabilities"
+                ? "border-[#6684f7] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Key Capabilities
             </button>
             <button
               onClick={() => setActiveTab("press-media")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
-                activeTab === "press-media"
-                  ? "border-[#6684f7] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${activeTab === "press-media"
+                ? "border-[#6684f7] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Press & Media
             </button>
             <button
               onClick={() => setActiveTab("offline-events")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
-                activeTab === "offline-events"
-                  ? "border-[#6684f7] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${activeTab === "offline-events"
+                ? "border-[#6684f7] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Offline Events
             </button>
             <button
               onClick={() => setActiveTab("event-microsite")}
-              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${
-                activeTab === "event-microsite"
-                  ? "border-[#6684f7] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors whitespace-nowrap ${activeTab === "event-microsite"
+                ? "border-[#6684f7] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Event Microsite
             </button>
@@ -215,7 +189,6 @@ export function KyoCards() {
                 from: "rgba(57, 82, 255, 0.9)",
                 to: "rgba(51, 161, 255, 0.9)",
               }}
-              textShadowColor="0px 0px 35.696px rgba(63, 75, 254, 0.7)"
             />
           )}
 

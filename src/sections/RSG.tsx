@@ -22,7 +22,7 @@ export function RSG() {
     "regions-conquered" | "success-stories"
   >("regions-conquered");
   const regionsSwiperRef = useRef<SwiperType | null>(null);
-  const [isRegionsBeginning, setIsRegionsBeginning] = useState(true);
+  const [isRegionsBeginning, setIsRegionsBeginning] = useState(false);
   const [isRegionsEnd, setIsRegionsEnd] = useState(false);
 
   const stories = [
@@ -71,23 +71,22 @@ export function RSG() {
     <>
       <div
         id="rsg"
-        className="relative min-h-screen flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
+        className="relative flex flex-col items-center text-white px-5 lg:px-20 py-20 max-w-sm md:max-w-2xl lg:max-w-5xl"
       >
         <div className="max-w-[1400px] w-full flex flex-col">
           <img
             src={logo}
             alt="RSG"
-            className="w-[200px] lg:w-[250px] h-auto  mx-auto"
+            className="w-[200px] lg:w-[250px] h-auto  mx-auto mb-4 lg:mb-6"
           />
 
           <p
             className="montserrat-bold text-[16px] lg:text-[20px] font-bold uppercase text-center mb-6 lg:mb-8 tracking-[0.8px] bg-clip-text"
             style={{
               background:
-                "radial-gradient(1414.09% 100.56% at 1.7% 66.67%, #96B7EF 0%, #6CE5DE 100%)",
+                "radial-gradient(1414.09% 100.56% at 1.7% 66.67%, #0125D5 0%, #263684 43.27%, #113AFF 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0px 0px 35.696px rgba(192, 202, 255, 0.7)",
               lineHeight: "1.349",
             }}
           >
@@ -112,21 +111,19 @@ export function RSG() {
           <div className="flex gap-8 lg:gap-14 mb-8 lg:mb-12">
             <button
               onClick={() => setActiveTab("regions-conquered")}
-              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
-                activeTab === "regions-conquered"
-                  ? "border-[#334bc1] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${activeTab === "regions-conquered"
+                ? "border-[#334bc1] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Regions conquered
             </button>
             <button
               onClick={() => setActiveTab("success-stories")}
-              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${
-                activeTab === "success-stories"
-                  ? "border-[#334bc1] text-white"
-                  : "border-transparent text-[#6c6c6c]"
-              }`}
+              className={`whitespace-nowrap montserrat-bold font-bold text-[12px] lg:text-[18px] uppercase px-2 lg:px-3 border-l-[4px] lg:border-l-[6px] transition-colors ${activeTab === "success-stories"
+                ? "border-[#334bc1] text-white"
+                : "border-transparent text-[#6c6c6c]"
+                }`}
             >
               Success stories
             </button>
@@ -145,7 +142,7 @@ export function RSG() {
                   setIsRegionsEnd(swiper.isEnd);
                 }}
                 modules={[Navigation]}
-                slidesPerView={2}
+                slidesPerView={2.1}
                 spaceBetween={16}
                 breakpoints={{
                   1024: {
@@ -176,14 +173,12 @@ export function RSG() {
                           </div>
                           <p
                             className="montserrat-bold font-bold text-[11px] lg:text-[18px] text-center uppercase tracking-[0.72px] text-white"
-                            style={{
-                              textShadow: "0px 0px 11.9px #002bff",
-                            }}
+
                           >
                             {region.name}
                           </p>
                         </div>
-                        <div className="flex flex-col gap-[12px] items-start w-full">
+                        <div className="flex flex-col gap-[8px] items-start w-full">
                           {region.achievements.map((achievement, idx) => (
                             <div
                               key={idx}

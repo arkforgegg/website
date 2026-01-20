@@ -1,18 +1,12 @@
 interface ServiceCardProps {
-  icon: {
-    src: string;
-    width: number;
-    height: number;
-  };
+  icon: string;
   name: string;
-  textShadowColor?: string;
   textGradient?: string;
 }
 
 export function ServiceCard({
   icon,
   name,
-  textShadowColor = "0px 0px 22.5px rgba(24, 255, 199, 0.7)",
   textGradient = "radial-gradient(1414.09% 100.56% at 1.7% 66.67%, #96B7EF 0%, #6CE5DE 100%)",
 }: ServiceCardProps) {
   return (
@@ -25,11 +19,9 @@ export function ServiceCard({
     >
       <div className="flex-1 flex items-center justify-center">
         <img
-          src={icon.src}
-          width={icon.width}
-          height={icon.height}
+          src={icon}
           alt={name}
-          className="object-contain max-w-[80px] max-h-[80px] lg:max-w-none lg:max-h-none"
+          className="object-contain w-auto h-auto max-w-[80px] max-h-[80px] lg:max-w-none lg:max-h-none"
         />
       </div>
 
@@ -40,7 +32,6 @@ export function ServiceCard({
             background: textGradient,
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            textShadow: textShadowColor,
             lineHeight: "1.349",
           }}
         >
